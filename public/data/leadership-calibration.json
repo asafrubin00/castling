@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-03T08:14:32.330612+00:00",
+    "generatedAt": "2026-11-09T17:18:22.927034+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "1.2",
     "outcomeCount": 56,
@@ -5025,15 +5025,11 @@
       "priorWarningCount": 0,
       "priorSevereWarningCount": 0,
       "priorWarningIds": [],
-      "priorDissentCount": 6,
+      "priorDissentCount": 2,
       "maxPriorDissentPct": 30.49,
       "priorDissentIds": [
         "f384011acceb",
-        "4a6c3a4216bc",
-        "340d0c704c44",
-        "e4f622787b16",
-        "2385b95f421a",
-        "2d71c80317b9"
+        "4a6c3a4216bc"
       ],
       "warningCoverageStatus": "current-window",
       "dissentCoverageStatus": "current-window",
@@ -5063,15 +5059,11 @@
       "priorWarningCount": 0,
       "priorSevereWarningCount": 0,
       "priorWarningIds": [],
-      "priorDissentCount": 6,
+      "priorDissentCount": 2,
       "maxPriorDissentPct": 30.49,
       "priorDissentIds": [
         "f384011acceb",
-        "4a6c3a4216bc",
-        "340d0c704c44",
-        "e4f622787b16",
-        "2385b95f421a",
-        "2d71c80317b9"
+        "4a6c3a4216bc"
       ],
       "warningCoverageStatus": "current-window",
       "dissentCoverageStatus": "current-window",

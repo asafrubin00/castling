@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-11-03T08:14:32.666036+00:00",
+  "updatedAt": "2026-11-09T17:18:23.187039+00:00",
   "candidates": [
+    {
+      "id": "mtln-dabc3c1e34061def",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "VIEW MORE",
+      "url": "https://www.metlen.com/media/ghfdmqcf/metlen-trading-update-9m-2026_eng.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-09T17:18:23.187039+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-28dce49a47f70bf4",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "Nine Months 2026 Trading Update",
+      "url": "https://www.metlen.com/media/zfudh02w/9-11-26_metlen_buyback-weekly-transaction-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-09T17:18:23.187039+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "ihg-f69290fade2776e0",
       "ticker": "IHG",

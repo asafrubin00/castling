@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-11-03T08:14:17.993523+00:00",
+    "generatedAt": "2026-11-09T17:18:00.071379+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -3741,16 +3741,16 @@
           "datePrecision": "month",
           "rated": true,
           "tenureYears": 3.1,
-          "score": 44.8,
+          "score": 35.8,
           "band": "Watch",
           "components": {
             "tenurePressure": 24.8,
-            "registeredDissentUplift": 20.0
+            "registeredDissentUplift": 11.0
           },
           "dissentEvidence": {
-            "count": 6,
+            "count": 2,
             "maxManagementDissentPct": 30.49,
-            "scoredCount": 6,
+            "scoredCount": 2,
             "maxScoredManagementDissentPct": 30.49,
             "records": [
               {
@@ -3761,50 +3761,6 @@
                 "meetingDate": "2025-05-08",
                 "category": "remuneration",
                 "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "e4f622787b16",
-                "title": "Directors\u2019 Remuneration Policy",
-                "votesAgainstPct": 25.15,
-                "managementDissentPct": 25.15,
-                "meetingDate": "2023-05-05",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "340d0c704c44",
-                "title": "Directors\u2019 Remuneration Report 2022",
-                "votesAgainstPct": 23.06,
-                "managementDissentPct": 23.06,
-                "meetingDate": "2023-05-05",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "2385b95f421a",
-                "title": "Directors\u2019 Remuneration Policy",
-                "votesAgainstPct": 22.86,
-                "managementDissentPct": 22.86,
-                "meetingDate": "2020-05-07",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "2d71c80317b9",
-                "title": "Amendment of Long Term Incentive Plan Rules",
-                "votesAgainstPct": 22.74,
-                "managementDissentPct": 22.74,
-                "meetingDate": "2020-05-07",
-                "category": "other-governance",
-                "categoryLabel": "Other governance",
                 "managementSponsored": true,
                 "scoreTreatment": "included"
               },
@@ -3821,7 +3777,7 @@
               }
             ]
           },
-          "reason": "3.1 years in role plus 6 qualifying management-resolution dissent signal(s)."
+          "reason": "3.1 years in role plus 2 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
           "name": "Deanna Oppenheimer",
@@ -3831,16 +3787,16 @@
           "datePrecision": "day",
           "rated": true,
           "tenureYears": 4.0,
-          "score": 55.6,
-          "band": "Elevated",
+          "score": 46.6,
+          "band": "Watch",
           "components": {
             "tenurePressure": 35.6,
-            "registeredDissentUplift": 20.0
+            "registeredDissentUplift": 11.0
           },
           "dissentEvidence": {
-            "count": 6,
+            "count": 2,
             "maxManagementDissentPct": 30.49,
-            "scoredCount": 6,
+            "scoredCount": 2,
             "maxScoredManagementDissentPct": 30.49,
             "records": [
               {
@@ -3851,50 +3807,6 @@
                 "meetingDate": "2025-05-08",
                 "category": "remuneration",
                 "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "e4f622787b16",
-                "title": "Directors\u2019 Remuneration Policy",
-                "votesAgainstPct": 25.15,
-                "managementDissentPct": 25.15,
-                "meetingDate": "2023-05-05",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "340d0c704c44",
-                "title": "Directors\u2019 Remuneration Report 2022",
-                "votesAgainstPct": 23.06,
-                "managementDissentPct": 23.06,
-                "meetingDate": "2023-05-05",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "2385b95f421a",
-                "title": "Directors\u2019 Remuneration Policy",
-                "votesAgainstPct": 22.86,
-                "managementDissentPct": 22.86,
-                "meetingDate": "2020-05-07",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              },
-              {
-                "id": "2d71c80317b9",
-                "title": "Amendment of Long Term Incentive Plan Rules",
-                "votesAgainstPct": 22.74,
-                "managementDissentPct": 22.74,
-                "meetingDate": "2020-05-07",
-                "category": "other-governance",
-                "categoryLabel": "Other governance",
                 "managementSponsored": true,
                 "scoreTreatment": "included"
               },
@@ -3911,7 +3823,7 @@
               }
             ]
           },
-          "reason": "4.0 years in role plus 6 qualifying management-resolution dissent signal(s)."
+          "reason": "4.0 years in role plus 2 qualifying management-resolution dissent signal(s)."
         }
       },
       "profitWarningEvidence": {

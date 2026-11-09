@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-03T08:14:32.666036+00:00",
+    "generatedAt": "2026-11-09T17:18:23.187039+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 51,
-    "reachableSourceCount": 80,
-    "unavailableSourceCount": 20,
+    "activeSourceCount": 46,
+    "reachableSourceCount": 79,
+    "unavailableSourceCount": 21,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 18,
+      "access-blocked": 19,
       "not-found": 1,
       "timeout": 1
     },
-    "newCandidateCount": 0,
-    "pendingCandidateCount": 79,
+    "newCandidateCount": 2,
+    "pendingCandidateCount": 81,
     "pendingCandidateCountBySignal": {
-      "earnings": 61,
+      "earnings": 63,
       "succession": 19
     },
     "validation": {
@@ -45,9 +45,9 @@
     {
       "ticker": "MKS",
       "status": "active",
-      "matchedLinkCount": 9,
+      "matchedLinkCount": 8,
       "matchedLinkCountBySignal": {
-        "earnings": 9,
+        "earnings": 8,
         "succession": 0
       }
     },
@@ -74,12 +74,9 @@
     },
     {
       "ticker": "IHG",
-      "status": "active",
-      "matchedLinkCount": 15,
-      "matchedLinkCountBySignal": {
-        "earnings": 15,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.ihgplc.com/investors/results-reports-and-presentations: 403 Client Error: Forbidden for url: https://www.ihgplc.com/investors/results-reports-and-presentations"
     },
     {
       "ticker": "RIO",
@@ -245,10 +242,10 @@
     },
     {
       "ticker": "BAB",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -272,11 +269,11 @@
     },
     {
       "ticker": "BATS",
-      "status": "active",
-      "matchedLinkCount": 72,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 39,
-        "succession": 34
+        "earnings": 0,
+        "succession": 0
       }
     },
     {
@@ -288,9 +285,9 @@
     {
       "ticker": "BT.A",
       "status": "active",
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 2,
         "succession": 0
       }
     },
@@ -365,10 +362,10 @@
     },
     {
       "ticker": "GLEN",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -543,9 +540,9 @@
     {
       "ticker": "HSX",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 2,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -561,9 +558,9 @@
     {
       "ticker": "ICG",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 2,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -663,9 +660,9 @@
     {
       "ticker": "MTLN",
       "status": "active",
-      "matchedLinkCount": 3,
+      "matchedLinkCount": 4,
       "matchedLinkCountBySignal": {
-        "earnings": 3,
+        "earnings": 4,
         "succession": 0
       }
     },
@@ -797,10 +794,10 @@
     },
     {
       "ticker": "SSE",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
