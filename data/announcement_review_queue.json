@@ -1,6 +1,175 @@
 {
-  "updatedAt": "2026-11-09T17:18:23.187039+00:00",
+  "updatedAt": "2026-11-16T16:52:40.161318+00:00",
   "candidates": [
+    {
+      "id": "av-d66d4f629a017872",
+      "ticker": "AV",
+      "companyName": "Aviva",
+      "title": "Q3 2026 Trading Update",
+      "url": "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2026/11/q32026-trading-update",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-6a741730f6a46cf4",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "AGM trading update Investors 14.07.2026",
+      "url": "https://www.britishland.com/news/agm-trading-update-1",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-e5f6aab76c35084f",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "British Land appoints Joanne McNamara as Chief Executive Officer Corporate 02.06.2026 1 min read",
+      "url": "https://www.britishland.com/news/british-land-appoints-joanne-mcnamara-as-chief-executive-officer",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-8d8f006fe3bcd850",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "Fitch affirms British Land credit ratings with Stable Outlook Corporate 22.07.2026",
+      "url": "https://www.britishland.com/news/fitch-affirms-british-land-credit-ratings-with-stable-outlook",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-403cd13657ee470c",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "Full Year Results 2026 Investors 20.05.2026",
+      "url": "https://www.britishland.com/news/full-year-results-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-3a90886698687e3c",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "Q2 trading update Investors 15.10.2026 1 min read",
+      "url": "https://www.britishland.com/news/q2-trading-update",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-edf9bbdeb61a9110",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "Q4 trading update Corporate 21.04.2026",
+      "url": "https://www.britishland.com/news/q4-trading-update",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "rr-bd2e93a4d4e198c6",
+      "ticker": "RR",
+      "companyName": "Rolls-Royce Holdings",
+      "title": "Rolls-Royce Holdings Plc Trading Update",
+      "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "dcc-030eeb6794328063",
+      "ticker": "DCC",
+      "companyName": "DCC",
+      "title": "Announcement of Interim Results - 30 September 2026",
+      "url": "https://www.dccenergy.com/~/media/Files/D/Dcc-Corp-v3/documents/results-and-presentations/2026/interim-results-announcement-30-09-2026.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "icg-e09d9f396045d761",
+      "ticker": "ICG",
+      "companyName": "ICG",
+      "title": "Interim results statement for the six months ended 30 September 2026",
+      "url": "https://www.icgam.com/2026/11/11/interim-results-statement-for-the-six-months-ended-30-september-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "icg-4ab51361dea21ed0",
+      "ticker": "ICG",
+      "companyName": "ICG",
+      "title": "Presentation transcript: Interim results statement for the six months ended 30 September 2026",
+      "url": "https://www.icgam.com/2026/11/12/presentation-transcript-interim-results-statement-for-the-six-months-ended-30-september-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "lgen-de01d091e6c8e77f",
+      "ticker": "LGEN",
+      "companyName": "Legal & General",
+      "title": "Press release Positive Q3 momentum, remain on track to meet or exceed our strategic targets Institutional Retirement had several new business wins. Asset Management performance continued to improve. And Retail delivered strong growth in all",
+      "url": "https://group.legalandgeneral.com/newsroom/press-releases/2026/11/positive-q3-momentum-remain-on-track-to-meet-or-exceed-our-strategic-targets",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-615739d92d7f1d33",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "Nine Months 2026 Trading Update",
+      "url": "https://www.metlen.com/media/e3qpx0hk/16-11-26_metlen_buyback-weekly-transaction-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-16T16:52:40.161318+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "mtln-dabc3c1e34061def",
       "ticker": "MTLN",

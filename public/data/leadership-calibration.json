@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-09T17:18:22.927034+00:00",
+    "generatedAt": "2026-11-16T16:52:39.951961+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "1.2",
     "outcomeCount": 56,
@@ -3680,9 +3680,9 @@
       "warningSensitivityScore": 68.8,
       "marketWindowStart": "2024-08-31",
       "marketWindowEnd": "2026-07-31",
-      "companyDividendAdjustedReturnPct": -1.1,
+      "companyDividendAdjustedReturnPct": -0.8,
       "benchmarkPriceReturnPct": 31.4,
-      "relativePerformancePct": -32.6,
+      "relativePerformancePct": -32.2,
       "marketStress": true,
       "exploratoryPerformanceUplift": 8,
       "combinedSensitivityScore": 76.8
@@ -3711,9 +3711,9 @@
       "warningSensitivityScore": 50.7,
       "marketWindowStart": "2024-08-31",
       "marketWindowEnd": "2026-07-31",
-      "companyDividendAdjustedReturnPct": -1.1,
+      "companyDividendAdjustedReturnPct": -0.8,
       "benchmarkPriceReturnPct": 31.4,
-      "relativePerformancePct": -32.6,
+      "relativePerformancePct": -32.2,
       "marketStress": true,
       "exploratoryPerformanceUplift": 8,
       "combinedSensitivityScore": 58.7
@@ -5025,11 +5025,15 @@
       "priorWarningCount": 0,
       "priorSevereWarningCount": 0,
       "priorWarningIds": [],
-      "priorDissentCount": 2,
+      "priorDissentCount": 6,
       "maxPriorDissentPct": 30.49,
       "priorDissentIds": [
         "f384011acceb",
-        "4a6c3a4216bc"
+        "4a6c3a4216bc",
+        "340d0c704c44",
+        "e4f622787b16",
+        "2385b95f421a",
+        "2d71c80317b9"
       ],
       "warningCoverageStatus": "current-window",
       "dissentCoverageStatus": "current-window",
@@ -5059,11 +5063,15 @@
       "priorWarningCount": 0,
       "priorSevereWarningCount": 0,
       "priorWarningIds": [],
-      "priorDissentCount": 2,
+      "priorDissentCount": 6,
       "maxPriorDissentPct": 30.49,
       "priorDissentIds": [
         "f384011acceb",
-        "4a6c3a4216bc"
+        "4a6c3a4216bc",
+        "340d0c704c44",
+        "e4f622787b16",
+        "2385b95f421a",
+        "2d71c80317b9"
       ],
       "warningCoverageStatus": "current-window",
       "dissentCoverageStatus": "current-window",

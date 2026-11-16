@@ -75,41 +75,61 @@
     "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2020/ihg-agm-results-final.pdf",
     "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
     "meetingDate": "2020-05-07",
-    "status": "fetch-failed",
+    "status": "parsed",
     "documentType": "pdf-results",
-    "error": "403 Client Error: Forbidden for url: https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2020/ihg-agm-results-final.pdf"
+    "rawPdfPath": "data/raw/issuer-documents/a19bd5d71710.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 2,
+    "parserHint": "ihg-agm-results"
   },
   {
     "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2021/ihg-agm-results-rns-final-7521-2.pdf",
     "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
     "meetingDate": "2021-05-07",
-    "status": "fetch-failed",
+    "status": "parsed",
     "documentType": "pdf-results",
-    "error": "403 Client Error: Forbidden for url: https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2021/ihg-agm-results-rns-final-7521-2.pdf"
+    "rawPdfPath": "data/raw/issuer-documents/e5ffe6c5d0f7.pdf",
+    "rowsExtracted": 25,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
   },
   {
     "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2022/result-of-agm-2022.pdf",
     "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
     "meetingDate": "2022-05-06",
-    "status": "fetch-failed",
+    "status": "parsed",
     "documentType": "pdf-results",
-    "error": "403 Client Error: Forbidden for url: https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2022/result-of-agm-2022.pdf"
+    "rawPdfPath": "data/raw/issuer-documents/40e00636437f.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
   },
   {
     "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2023/2023-agm-results.pdf",
     "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
     "meetingDate": "2023-05-05",
-    "status": "fetch-failed",
+    "status": "parsed",
     "documentType": "pdf-results",
-    "error": "403 Client Error: Forbidden for url: https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2023/2023-agm-results.pdf"
+    "rawPdfPath": "data/raw/issuer-documents/c5f9d20fc3ca.pdf",
+    "rowsExtracted": 22,
+    "rowsMatched": 0,
+    "rowsAdded": 2,
+    "parserHint": "ihg-agm-results"
   },
   {
     "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/agm/2026/results-of-annual-general-meeting-2026.pdf",
     "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
     "meetingDate": "2026-05-07",
-    "status": "fetch-failed",
+    "status": "parsed",
     "documentType": "pdf-results",
-    "error": "403 Client Error: Forbidden for url: https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/agm/2026/results-of-annual-general-meeting-2026.pdf"
+    "rawPdfPath": "data/raw/issuer-documents/65dd60088611.pdf",
+    "rowsExtracted": 20,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
   },
   {
     "url": "https://cumbria.unitedutilities.com/globalassets/documents/pdf/26-july-2019-agm-poll-result.pdf",

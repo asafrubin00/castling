@@ -1,11 +1,11 @@
 {
-  "lastRunAt": "2026-11-09T17:18:23.187039+00:00",
+  "lastRunAt": "2026-11-16T16:52:40.161318+00:00",
   "sources": {
     "SHEL": {
       "companyName": "Shell",
       "configuredUrl": "https://www.shell.com/investors/results-and-reporting.html",
       "resolvedUrl": "https://www.shell.com/investors/results-and-reporting.html",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -14,7 +14,7 @@
       "companyName": "Next",
       "configuredUrl": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26",
       "resolvedUrl": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 6,
       "seenIds": [
@@ -30,7 +30,7 @@
       "companyName": "Marks & Spencer",
       "configuredUrl": "https://corporate.marksandspencer.com/investors/our-performance-updates/results-reports-webcasts-presentations",
       "resolvedUrl": "https://corporate.marksandspencer.com/investors/our-performance-updates/results-reports-webcasts-presentations",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 8,
       "seenIds": [
@@ -49,20 +49,19 @@
       "companyName": "Centrica",
       "configuredUrl": "https://www.centrica.com/media-centre/news/",
       "resolvedUrl": "https://www.centrica.com/media-centre/news/",
-      "lastSuccessAt": "2026-11-03T08:11:47.930541+00:00",
-      "lastError": "https://www.centrica.com/media-centre/news/: 403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
+      "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
         "cna-98f0285da052747d",
         "cna-ab963465cb783046"
-      ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      ]
     },
     "LSEG": {
       "companyName": "London Stock Exchange Group",
       "configuredUrl": "https://www.lseg.com/en/investor-relations/financial-results",
       "resolvedUrl": "https://www.lseg.com/en/investor-relations/financial-results",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 187,
       "seenIds": [
@@ -265,14 +264,14 @@
       "seenIds": [
         "ulvr-d86aac89cdb0cb96"
       ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "IHG": {
       "companyName": "InterContinental Hotels Group",
       "configuredUrl": "https://www.ihgplc.com/investors/results-reports-and-presentations",
       "resolvedUrl": "https://www.ihgplc.com/investors/results-reports-and-presentations",
-      "lastSuccessAt": "2026-11-03T08:14:32.666036+00:00",
-      "lastError": "https://www.ihgplc.com/investors/results-reports-and-presentations: 403 Client Error: Forbidden for url: https://www.ihgplc.com/investors/results-reports-and-presentations",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
+      "lastError": null,
       "matchedLinkCount": 15,
       "seenIds": [
         "ihg-0ac1ff70b7d270f3",
@@ -293,14 +292,13 @@
         "ihg-cd431fef2ce1bb90",
         "ihg-dd5322792f036612",
         "ihg-f69290fade2776e0"
-      ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      ]
     },
     "RIO": {
       "companyName": "Rio Tinto",
       "configuredUrl": "https://www.riotinto.com/en/news/releases",
       "resolvedUrl": "https://www.riotinto.com/en/news/releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -311,7 +309,7 @@
       "companyName": "HSBC",
       "configuredUrl": "https://www.hsbc.com/investors/results-and-announcements",
       "resolvedUrl": "https://www.hsbc.com/investors/results-and-announcements",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 18,
       "seenIds": [
@@ -340,14 +338,14 @@
       "seenIds": [],
       "companyName": "Melrose Industries",
       "configuredUrl": "https://www.melroseplc.net/investors/results-reports-and-presentations/",
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": "https://www.melroseplc.net/investors/results-reports-and-presentations/: 403 Client Error: Forbidden for url: https://www.melroseplc.net/investors/results-reports-and-presentations/"
     },
     "CTEC": {
       "companyName": "Convatec",
       "configuredUrl": "https://www.convatecgroup.com/investors/results-centre/",
       "resolvedUrl": "https://www.convatecgroup.com/investors/results-centre/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 5,
       "seenIds": [
@@ -393,13 +391,13 @@
         "ccep-eb7c63d03cd6b612",
         "ccep-f4562033c2d2741d"
       ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "AAL": {
       "companyName": "Anglo American",
       "configuredUrl": "https://www.angloamerican.com/media/press-releases",
       "resolvedUrl": "https://www.angloamerican.com/media/press-releases/2026",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -411,7 +409,7 @@
       "seenIds": [],
       "companyName": "BP",
       "configuredUrl": "https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html",
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": "https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html: 403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
     },
     "CCC": {
@@ -427,20 +425,20 @@
         "ccc-8cd5f85742ce0ecc",
         "ccc-d060f6e74f52a9c5"
       ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "IMI": {
       "seenIds": [],
       "companyName": "IMI",
       "configuredUrl": "https://www.imiplc.com/news-insights/",
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": "https://www.imiplc.com/news-insights/: 403 Client Error: Forbidden for url: https://www.imiplc.com/news-insights/"
     },
     "RTO": {
       "companyName": "Rentokil Initial",
       "configuredUrl": "https://www.rentokil-initial.com/investors/results-centre/results-2026.aspx",
       "resolvedUrl": "https://www.rentokil-initial.com/investors/results-centre/results-2026.aspx",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -449,7 +447,7 @@
       "companyName": "Kingfisher",
       "configuredUrl": "https://www.kingfisher.com/media/news",
       "resolvedUrl": "https://www.kingfisher.com/media/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -461,7 +459,7 @@
       "companyName": "Antofagasta",
       "configuredUrl": "https://www.antofagasta.co.uk/investors/news/",
       "resolvedUrl": "https://www.antofagasta.co.uk/investors/news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 22,
       "seenIds": [
@@ -493,7 +491,7 @@
       "companyName": "NatWest Group",
       "configuredUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases.html",
       "resolvedUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases.html",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -504,14 +502,14 @@
       "seenIds": [],
       "companyName": "AstraZeneca",
       "configuredUrl": "https://www.astrazeneca.com/media-centre/press-releases.html",
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": "https://www.astrazeneca.com/media-centre/press-releases.html: 403 Client Error: Forbidden for url: https://www.astrazeneca.com/media-centre/press-releases.html"
     },
     "BARC": {
       "companyName": "Barclays",
       "configuredUrl": "https://home.barclays/news/press-releases/",
       "resolvedUrl": "https://home.barclays/news/press-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -524,13 +522,13 @@
       "lastError": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations: HTTPSConnectionPool(host='origin.tescoplc.com', port=443): Max retries exceeded with url: /investors/reports-results-and-presentations/results-and-presentations (Caused by ConnectTimeoutError(<urllib3.",
       "matchedLinkCount": 0,
       "seenIds": [],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "BA": {
       "companyName": "BAE Systems",
       "configuredUrl": "https://www.baesystems.com/en/media-centre/news-releases",
       "resolvedUrl": "https://www.baesystems.com/en/media-centre/news-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -545,23 +543,22 @@
       "seenIds": [
         "ng-949e13f5cd1fc43a"
       ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "III": {
       "companyName": "3i",
       "configuredUrl": "https://www.3i.com/media/news/",
       "resolvedUrl": "https://www.3i.com/media/news/",
-      "lastSuccessAt": "2026-11-03T08:11:47.930541+00:00",
-      "lastError": "https://www.3i.com/media/news/: 403 Client Error: Forbidden for url: https://www.3i.com/media/news/",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
+      "lastError": null,
       "matchedLinkCount": 0,
-      "seenIds": [],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "seenIds": []
     },
     "ABF": {
       "companyName": "Associated British Foods",
       "configuredUrl": "https://www.abf.co.uk/media/news",
       "resolvedUrl": "https://www.abf.co.uk/media/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -570,14 +567,15 @@
       "companyName": "Aviva",
       "configuredUrl": "https://www.aviva.com/newsroom/news-releases/",
       "resolvedUrl": "https://www.aviva.com/newsroom/news-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 3,
       "seenIds": [
         "av-160f3b878354c553",
         "av-363805d2d2bf0c22",
         "av-96dc9d1be62e0884",
         "av-9fab025602d919c3",
+        "av-d66d4f629a017872",
         "av-eb5fe0593dabe652"
       ]
     },
@@ -585,7 +583,7 @@
       "companyName": "Babcock International",
       "configuredUrl": "https://www.babcockinternational.com/news/",
       "resolvedUrl": "https://www.babcockinternational.com/news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -596,7 +594,7 @@
       "companyName": "Barratt Redrow",
       "configuredUrl": "https://www.barrattredrow.co.uk/news",
       "resolvedUrl": "https://www.barrattredrow.co.uk/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -605,7 +603,7 @@
       "companyName": "British American Tobacco",
       "configuredUrl": "https://www.bat.com/media/press-releases",
       "resolvedUrl": "https://www.bat.com/media/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -686,15 +684,18 @@
     "BLND": {
       "companyName": "British Land",
       "configuredUrl": "https://www.britishland.com/investors/press-releases/",
-      "resolvedUrl": "https://www.britishland.com/investors/press-releases/",
-      "lastSuccessAt": "2026-10-19T14:28:37.001102+00:00",
-      "lastError": "https://www.britishland.com/investors/press-releases/: 404 Client Error: Not Found for url: https://www.britishland.com/investors/press-releases/",
-      "matchedLinkCount": 13,
+      "resolvedUrl": "https://www.britishland.com/news/press-releases/",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
+      "lastError": null,
+      "matchedLinkCount": 6,
       "seenIds": [
         "blnd-14ede1fd21094041",
         "blnd-269dd20a91ece73a",
         "blnd-2b6185dbfbb68225",
+        "blnd-3a90886698687e3c",
+        "blnd-403cd13657ee470c",
         "blnd-5d1b8fce160630fa",
+        "blnd-6a741730f6a46cf4",
         "blnd-747dcf6d3fcf3578",
         "blnd-7675aa9a72bdc8f5",
         "blnd-78840ddd8dd1fb38",
@@ -702,16 +703,18 @@
         "blnd-7a34e4e48e3b058c",
         "blnd-8285b9545e36282a",
         "blnd-8cbf94ed3b237b02",
+        "blnd-8d8f006fe3bcd850",
         "blnd-9742e42087ecd6fe",
-        "blnd-e8f1d4da23fdcbb5"
-      ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+        "blnd-e5f6aab76c35084f",
+        "blnd-e8f1d4da23fdcbb5",
+        "blnd-edf9bbdeb61a9110"
+      ]
     },
     "BT.A": {
       "companyName": "BT Group",
       "configuredUrl": "https://newsroom.bt.com/",
       "resolvedUrl": "https://newsroom.bt.com/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -725,7 +728,7 @@
       "companyName": "Bunzl",
       "configuredUrl": "https://www.bunzl.com/newsroom/",
       "resolvedUrl": "https://www.bunzl.com/newsroom/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 5,
       "seenIds": [
@@ -741,7 +744,7 @@
       "companyName": "Burberry Group",
       "configuredUrl": "https://www.burberryplc.com/investors/results-reports-presentations",
       "resolvedUrl": "https://www.burberryplc.com/investors/results-reports-presentations",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -750,7 +753,7 @@
       "companyName": "Coca-Cola HBC",
       "configuredUrl": "https://www.coca-colahellenic.com/en/media/news/corporate_news",
       "resolvedUrl": "https://www.coca-colahellenic.com/en/media/news/corporate_news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -759,7 +762,7 @@
       "companyName": "Compass Group",
       "configuredUrl": "https://www.compass-group.com/en/media/news.html",
       "resolvedUrl": "https://www.compass-group.com/en/media/news.html",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -772,7 +775,7 @@
       "companyName": "Croda International",
       "configuredUrl": "https://www.croda.com/en-gb/media-hub/news",
       "resolvedUrl": "https://www.croda.com/en-gb/media-hub/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -784,7 +787,7 @@
       "companyName": "Diageo",
       "configuredUrl": "https://www.diageo.com/en/news-and-media/press-releases",
       "resolvedUrl": "https://www.diageo.com/en/news-and-media/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -797,7 +800,7 @@
       "companyName": "Experian",
       "configuredUrl": "https://www.experianplc.com/newsroom/press-releases",
       "resolvedUrl": "https://www.experianplc.com/newsroom/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -810,7 +813,7 @@
       "companyName": "Glencore",
       "configuredUrl": "https://www.glencore.com/media-and-insights/news",
       "resolvedUrl": "https://www.glencore.com/media-and-insights/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -821,7 +824,7 @@
       "companyName": "GSK",
       "configuredUrl": "https://www.gsk.com/en-gb/media/press-releases/",
       "resolvedUrl": "https://www.gsk.com/en-gb/media/press-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -830,7 +833,7 @@
       "companyName": "Haleon",
       "configuredUrl": "https://www.haleon.com/news/press-releases",
       "resolvedUrl": "https://www.haleon.com/news/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -842,7 +845,7 @@
       "companyName": "International Airlines Group",
       "configuredUrl": "https://www.iairgroup.com/press-releases/",
       "resolvedUrl": "https://www.iairgroup.com/media-centre/press-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -851,7 +854,7 @@
       "companyName": "Lloyds Banking Group",
       "configuredUrl": "https://www.lloydsbankinggroup.com/media/press-releases.html",
       "resolvedUrl": "https://www.lloydsbankinggroup.com/media/press-releases.html",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -862,7 +865,7 @@
       "companyName": "RELX",
       "configuredUrl": "https://www.relx.com/media/press-releases",
       "resolvedUrl": "https://www.relx.com/media/press-releases/year-2026",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -874,9 +877,9 @@
       "companyName": "Rolls-Royce Holdings",
       "configuredUrl": "https://www.rolls-royce.com/media/press-releases.aspx",
       "resolvedUrl": "https://www.rolls-royce.com/media/press-releases.aspx",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 44,
+      "matchedLinkCount": 45,
       "seenIds": [
         "rr-016a0bae02f7861b",
         "rr-0f2841c2075baf3b",
@@ -911,6 +914,7 @@
         "rr-a35a1cad96a058df",
         "rr-bc4367542c33edfd",
         "rr-bc7a5ec22d07fbd6",
+        "rr-bd2e93a4d4e198c6",
         "rr-c248e66fe80947b0",
         "rr-c38735bdbbfb7de8",
         "rr-c5002b7278ea5206",
@@ -928,9 +932,9 @@
       "companyName": "Vodafone Group",
       "configuredUrl": "https://www.vodafone.com/news/newsroom",
       "resolvedUrl": "https://www.vodafone.com/news/newsroom",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 0,
       "seenIds": [
         "vod-663da015af56e9a1"
       ]
@@ -939,7 +943,7 @@
       "companyName": "Aberdeen Group",
       "configuredUrl": "https://www.aberdeenplc.com/en-gb/news/all-news",
       "resolvedUrl": "https://www.aberdeenplc.com/en-gb/news/all-news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -954,13 +958,13 @@
       "seenIds": [
         "adm-40e527b65f114947"
       ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "AAF": {
       "companyName": "Airtel Africa",
       "configuredUrl": "https://www.airtel.africa/results-and-presentations",
       "resolvedUrl": "https://www.airtel.africa/results-and-presentations",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -969,7 +973,7 @@
       "companyName": "Alliance Witan",
       "configuredUrl": "https://www.alliancewitan.com/news-insights-hub",
       "resolvedUrl": "https://www.alliancewitan.com/news-insights-hub",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -980,7 +984,7 @@
       "companyName": "Auto Trader",
       "configuredUrl": "https://plc.autotrader.co.uk/news-views/company-news/",
       "resolvedUrl": "https://plc.autotrader.co.uk/news-views/company-news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -991,10 +995,11 @@
       "companyName": "DCC",
       "configuredUrl": "https://www.dcc.ie/investors/results-data-and-presentations",
       "resolvedUrl": "https://www.dccenergy.com/investors/results-data-and-presentations",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 6,
       "seenIds": [
+        "dcc-030eeb6794328063",
         "dcc-081fbfca7061b7e2",
         "dcc-9bd97c050841a549",
         "dcc-a2e2880af8372096",
@@ -1006,7 +1011,7 @@
       "companyName": "Diploma",
       "configuredUrl": "https://www.diplomaplc.com/investors/results-reports-and-presentations/",
       "resolvedUrl": "https://www.diplomaplc.com/investors/results-reports-and-presentations/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 50,
       "seenIds": [
@@ -1066,7 +1071,7 @@
       "companyName": "Endeavour Mining",
       "configuredUrl": "https://www.endeavourmining.com/investors/results-and-reporting/",
       "resolvedUrl": "https://www.endeavourmining.com/investors/results-and-reporting/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1075,7 +1080,7 @@
       "companyName": "F&C Investment Trust",
       "configuredUrl": "https://www.fandc.com/",
       "resolvedUrl": "https://www.fandc.com/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -1086,7 +1091,7 @@
       "companyName": "Fresnillo",
       "configuredUrl": "https://www.fresnilloplc.com/investors/reports-and-presentations/results/",
       "resolvedUrl": "https://www.fresnilloplc.com/investors/reports-and-presentations/results/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1095,7 +1100,7 @@
       "companyName": "Games Workshop",
       "configuredUrl": "https://investor.games-workshop.com/category/trading-statements",
       "resolvedUrl": "https://investor.games-workshop.com/category/trading-statements",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -1106,7 +1111,7 @@
       "companyName": "Halma",
       "configuredUrl": "https://www.halma.com/news",
       "resolvedUrl": "https://www.halma.com/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -1119,7 +1124,7 @@
       "companyName": "Hiscox",
       "configuredUrl": "https://www.hiscoxgroup.com/news",
       "resolvedUrl": "https://www.hiscoxgroup.com/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -1133,7 +1138,7 @@
       "companyName": "Howdens Joinery",
       "configuredUrl": "https://www.howdenjoinerygroupplc.com/media-centre/",
       "resolvedUrl": "https://www.howdenjoinerygroupplc.com/media-centre/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 7,
       "seenIds": [
@@ -1150,21 +1155,23 @@
       "companyName": "ICG",
       "configuredUrl": "https://www.icgam.com/news-insights/",
       "resolvedUrl": "https://www.icgam.com/news-insights-analysis/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 2,
       "seenIds": [
         "icg-0bd97f25f4a421f8",
-        "icg-cb1f6c60997d55cf"
+        "icg-4ab51361dea21ed0",
+        "icg-cb1f6c60997d55cf",
+        "icg-e09d9f396045d761"
       ]
     },
     "IGG": {
       "companyName": "IG Group",
       "configuredUrl": "https://www.iggroup.com/investor-relations/press-releases",
       "resolvedUrl": "https://www.iggroup.com/investor-relations/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 3,
       "seenIds": [
         "igg-0aaa0f2dea6e1315",
         "igg-19a83138f11bb79b",
@@ -1178,7 +1185,7 @@
       "companyName": "Imperial Brands",
       "configuredUrl": "https://www.imperialbrandsplc.com/news",
       "resolvedUrl": "https://www.imperialbrandsplc.com/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1191,13 +1198,13 @@
       "lastError": "https://www.informa.com/investors/results-presentations/: 403 Client Error: Forbidden for url: https://www.informa.com/investors/results-presentations/",
       "matchedLinkCount": 0,
       "seenIds": [],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "ITRK": {
       "companyName": "Intertek",
       "configuredUrl": "https://www.intertek.com/news/",
       "resolvedUrl": "https://www.intertek.com/news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1206,14 +1213,14 @@
       "seenIds": [],
       "companyName": "Investec",
       "configuredUrl": "https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html",
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": "https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html: 403 Client Error: Forbidden for url: https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html"
     },
     "JD": {
       "companyName": "JD Sports",
       "configuredUrl": "https://www.jdplc.com/investor-relations/regulatory-news/default.aspx",
       "resolvedUrl": "https://www.jdplc.com/media/regulatory-news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 9,
       "seenIds": [
@@ -1232,7 +1239,7 @@
       "companyName": "Lion Finance Group",
       "configuredUrl": "https://lionfinancegroup.uk/news/",
       "resolvedUrl": "https://lionfinancegroup.uk/news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1241,7 +1248,7 @@
       "companyName": "Landsec",
       "configuredUrl": "https://landsec.com/investors/results-reports-and-presentations",
       "resolvedUrl": "https://www.landsec.com/investors/results-reports-and-presentations",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1250,23 +1257,24 @@
       "companyName": "Legal & General",
       "configuredUrl": "https://group.legalandgeneral.com/newsroom/press-releases/",
       "resolvedUrl": "https://group.legalandgeneral.com/newsroom/press-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 6,
       "seenIds": [
         "lgen-291f83d45bc55d14",
         "lgen-3116283c9ece0fe5",
         "lgen-6d998713b52c074e",
         "lgen-7b95f92ad8761b98",
         "lgen-7e8006eb54e0be18",
-        "lgen-b87283f4fdf81faa"
+        "lgen-b87283f4fdf81faa",
+        "lgen-de01d091e6c8e77f"
       ]
     },
     "LMP": {
       "companyName": "LondonMetric Property",
       "configuredUrl": "https://www.londonmetric.com/investors/reports-and-presentations",
       "resolvedUrl": "https://www.londonmetric.com/investors/reports-and-presentations",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1275,7 +1283,7 @@
       "companyName": "M&G",
       "configuredUrl": "https://www.mandg.com/news-and-media/press-releases",
       "resolvedUrl": "https://group.mandg.com/news-and-insights/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -1287,7 +1295,7 @@
       "companyName": "Metlen",
       "configuredUrl": "https://www.metlengroup.com/news/",
       "resolvedUrl": "https://www.metlen.com/media/corporate-news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 4,
       "seenIds": [
@@ -1296,6 +1304,7 @@
         "mtln-35693e50baac80a5",
         "mtln-3ca96e853b6cb394",
         "mtln-5c022b33032d7eb4",
+        "mtln-615739d92d7f1d33",
         "mtln-7bc3af2fc8d8ea41",
         "mtln-867b164170b5efa2",
         "mtln-93057c5d3c52a7ba",
@@ -1314,7 +1323,7 @@
       "companyName": "Pearson",
       "configuredUrl": "https://plc.pearson.com/en-GB/news-and-insights",
       "resolvedUrl": "https://plc.pearson.com/en-GB/news-and-insights",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 9,
       "seenIds": [
@@ -1337,13 +1346,13 @@
       "lastError": "https://pershingsquareholdings.com/: 403 Client Error: Forbidden for url: https://pershingsquareholdings.com/",
       "matchedLinkCount": 0,
       "seenIds": [],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "PCT": {
       "companyName": "Polar Capital Technology Trust",
       "configuredUrl": "https://www.polarcapitaltechnologytrust.co.uk/News-Views/Stock-Exchange-Announcements/",
       "resolvedUrl": "https://www.polarcapitaltechnologytrust.co.uk/News-Views/Stock-Exchange-Announcements/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1352,7 +1361,7 @@
       "companyName": "Prudential",
       "configuredUrl": "https://www.prudentialplc.com/en/news-and-insights/all-news/",
       "resolvedUrl": "https://www.prudentialplc.com/en/newsroom/company-news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 54,
       "seenIds": [
@@ -1416,7 +1425,7 @@
       "companyName": "Reckitt",
       "configuredUrl": "https://www.reckitt.com/newsroom/",
       "resolvedUrl": "https://www.reckitt.com/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -1429,14 +1438,14 @@
       "seenIds": [],
       "companyName": "Sage",
       "configuredUrl": "https://www.sage.com/en-gb/company/digital-newsroom/",
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": "https://www.sage.com/en-gb/company/digital-newsroom/: 403 Client Error: Forbidden for url: https://www.sage.com/en-gb/company/digital-newsroom/"
     },
     "SBRY": {
       "companyName": "Sainsbury's",
       "configuredUrl": "https://corporate.sainsburys.co.uk/news/",
       "resolvedUrl": "https://corporate.sainsburys.co.uk/news/press-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -1447,7 +1456,7 @@
       "companyName": "Scottish Mortgage",
       "configuredUrl": "https://www.scottishmortgage.com/en/uk/individual-investors/insights",
       "resolvedUrl": "https://www.scottishmortgage.com/en/uk/individual-investors/insights",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1456,7 +1465,7 @@
       "companyName": "SEGRO",
       "configuredUrl": "https://www.segro.com/media/news",
       "resolvedUrl": "https://www.segro.com/media/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 12,
       "seenIds": [
@@ -1482,7 +1491,7 @@
       "companyName": "Severn Trent",
       "configuredUrl": "https://www.severntrent.com/media/news-releases/",
       "resolvedUrl": "https://www.severntrent.com/media/news-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -1502,13 +1511,13 @@
         "smin-f2d63cc60cbef1e6",
         "smin-ffac425e4bd87278"
       ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "lastAttemptAt": "2026-11-16T16:52:40.161318+00:00"
     },
     "SN": {
       "companyName": "Smith & Nephew",
       "configuredUrl": "https://www.smith-nephew.com/en/news",
       "resolvedUrl": "https://www.smith-nephew.com/en/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1517,7 +1526,7 @@
       "companyName": "Spirax Group",
       "configuredUrl": "https://www.spiraxgroup.com/en/news-and-media/news",
       "resolvedUrl": "https://www.spiraxgroup.com/en/news-and-media/news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
@@ -1529,7 +1538,7 @@
       "companyName": "SSE",
       "configuredUrl": "https://www.sse.com/news-and-views/",
       "resolvedUrl": "https://www.sse.com/news-and-views/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": [
@@ -1541,7 +1550,7 @@
       "companyName": "Standard Chartered",
       "configuredUrl": "https://www.sc.com/en/media/press-releases/",
       "resolvedUrl": "https://www.sc.com/en/media/press-releases/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 4,
       "seenIds": [
@@ -1558,7 +1567,7 @@
       "companyName": "Standard Life",
       "configuredUrl": "https://www.standardlifeplc.com/news-and-views/press-releases",
       "resolvedUrl": "https://www.standardlifeplc.com/news-and-views/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 43,
       "seenIds": [
@@ -1618,7 +1627,7 @@
       "companyName": "St. James's Place",
       "configuredUrl": "https://www.sjp.co.uk/shareholders/corporate-news",
       "resolvedUrl": "https://www.sjp.co.uk/shareholders/corporate-news",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 8,
       "seenIds": [
@@ -1636,20 +1645,19 @@
       "companyName": "Tritax Big Box",
       "configuredUrl": "https://www.tritaxbigbox.co.uk/news/",
       "resolvedUrl": "https://www.tritaxbigbox.co.uk/news/",
-      "lastSuccessAt": "2026-11-03T08:11:47.930541+00:00",
-      "lastError": "https://www.tritaxbigbox.co.uk/news/: 403 Client Error: Forbidden for url: https://www.tritaxbigbox.co.uk/news/",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
+      "lastError": null,
       "matchedLinkCount": 2,
       "seenIds": [
         "bbox-3d5dda2f4c00d6a0",
         "bbox-4e55711124cb3fad"
-      ],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      ]
     },
     "UU": {
       "companyName": "United Utilities",
       "configuredUrl": "https://www.unitedutilities.com/corporate/investors/financial-news/",
       "resolvedUrl": "https://www.unitedutilities.com/corporate/investors/financial-news/latest-financial-news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 6,
       "seenIds": [
@@ -1665,7 +1673,7 @@
       "companyName": "Weir Group",
       "configuredUrl": "https://www.global.weir/newsroom/global-news/",
       "resolvedUrl": "https://www.global.weir/newsroom/global-news/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1674,7 +1682,7 @@
       "companyName": "Whitbread",
       "configuredUrl": "https://www.whitbread.co.uk/media/press-releases/",
       "resolvedUrl": "https://www.whitbread.co.uk/media/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 0,
       "seenIds": []
@@ -1683,17 +1691,16 @@
       "companyName": "EasyJet",
       "configuredUrl": "https://corporate.easyjet.com/investors/reports-and-presentations/2012/",
       "resolvedUrl": "https://corporate.easyjet.com/investors/reports-and-presentations/2012/",
-      "lastSuccessAt": "2026-11-03T08:11:47.930541+00:00",
-      "lastError": "https://corporate.easyjet.com/investors/reports-and-presentations/2012/: 403 Client Error: Forbidden for url: https://corporate.easyjet.com/investors/reports-and-presentations/2012/",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
+      "lastError": null,
       "matchedLinkCount": 0,
-      "seenIds": [],
-      "lastAttemptAt": "2026-11-09T17:18:23.187039+00:00"
+      "seenIds": []
     },
     "ITH": {
       "companyName": "Ithaca Energy",
       "configuredUrl": "https://www.ithacaenergy.com/media/press-releases",
       "resolvedUrl": "https://www.ithacaenergy.com/media/press-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 38,
       "seenIds": [
@@ -1741,7 +1748,7 @@
       "companyName": "Balfour Beatty",
       "configuredUrl": "https://www.balfourbeatty.com/media-centre/rns/",
       "resolvedUrl": "https://www.balfourbeatty.com/media-centre/rns/",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 1,
       "seenIds": [
@@ -1752,7 +1759,7 @@
       "companyName": "WPP",
       "configuredUrl": "https://www.wpp.com/en/investors/financial-releases",
       "resolvedUrl": "https://www.wpp.com/en/investors/financial-releases",
-      "lastSuccessAt": "2026-11-09T17:18:23.187039+00:00",
+      "lastSuccessAt": "2026-11-16T16:52:40.161318+00:00",
       "lastError": null,
       "matchedLinkCount": 7,
       "seenIds": [

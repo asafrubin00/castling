@@ -1,22 +1,21 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-09T17:18:23.187039+00:00",
+    "generatedAt": "2026-11-16T16:52:40.161318+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 46,
-    "reachableSourceCount": 79,
-    "unavailableSourceCount": 21,
+    "activeSourceCount": 49,
+    "reachableSourceCount": 85,
+    "unavailableSourceCount": 15,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 19,
-      "not-found": 1,
+      "access-blocked": 14,
       "timeout": 1
     },
-    "newCandidateCount": 2,
-    "pendingCandidateCount": 81,
+    "newCandidateCount": 13,
+    "pendingCandidateCount": 94,
     "pendingCandidateCountBySignal": {
-      "earnings": 63,
-      "succession": 19
+      "earnings": 74,
+      "succession": 21
     },
     "validation": {
       "status": "pass",
@@ -53,9 +52,12 @@
     },
     {
       "ticker": "CNA",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.centrica.com/media-centre/news/: 403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "LSEG",
@@ -74,9 +76,12 @@
     },
     {
       "ticker": "IHG",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.ihgplc.com/investors/results-reports-and-presentations: 403 Client Error: Forbidden for url: https://www.ihgplc.com/investors/results-reports-and-presentations"
+      "status": "active",
+      "matchedLinkCount": 15,
+      "matchedLinkCountBySignal": {
+        "earnings": 15,
+        "succession": 0
+      }
     },
     {
       "ticker": "RIO",
@@ -218,9 +223,12 @@
     },
     {
       "ticker": "III",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.3i.com/media/news/: 403 Client Error: Forbidden for url: https://www.3i.com/media/news/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "ABF",
@@ -234,9 +242,9 @@
     {
       "ticker": "AV",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 2,
         "succession": 1
       }
     },
@@ -278,9 +286,12 @@
     },
     {
       "ticker": "BLND",
-      "status": "unavailable",
-      "failureCategory": "not-found",
-      "error": "https://www.britishland.com/investors/press-releases/: 404 Client Error: Not Found for url: https://www.britishland.com/investors/press-releases/"
+      "status": "active",
+      "matchedLinkCount": 6,
+      "matchedLinkCountBySignal": {
+        "earnings": 5,
+        "succession": 1
+      }
     },
     {
       "ticker": "BT.A",
@@ -347,9 +358,12 @@
     },
     {
       "ticker": "EZJ",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://corporate.easyjet.com/investors/reports-and-presentations/2012/: 403 Client Error: Forbidden for url: https://corporate.easyjet.com/investors/reports-and-presentations/2012/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "EXPN",
@@ -417,18 +431,18 @@
     {
       "ticker": "RR",
       "status": "active",
-      "matchedLinkCount": 44,
+      "matchedLinkCount": 45,
       "matchedLinkCountBySignal": {
-        "earnings": 36,
+        "earnings": 37,
         "succession": 8
       }
     },
     {
       "ticker": "VOD",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -477,9 +491,9 @@
     {
       "ticker": "DCC",
       "status": "active",
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 6,
       "matchedLinkCountBySignal": {
-        "earnings": 5,
+        "earnings": 6,
         "succession": 0
       }
     },
@@ -558,18 +572,18 @@
     {
       "ticker": "ICG",
       "status": "active",
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 2,
         "succession": 0
       }
     },
     {
       "ticker": "IGG",
       "status": "active",
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
-        "earnings": 5,
+        "earnings": 3,
         "succession": 0
       }
     },
@@ -633,10 +647,10 @@
     {
       "ticker": "LGEN",
       "status": "active",
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 6,
       "matchedLinkCountBySignal": {
         "earnings": 0,
-        "succession": 5
+        "succession": 6
       }
     },
     {
@@ -830,9 +844,12 @@
     },
     {
       "ticker": "BBOX",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.tritaxbigbox.co.uk/news/: 403 Client Error: Forbidden for url: https://www.tritaxbigbox.co.uk/news/"
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
     },
     {
       "ticker": "UU",
