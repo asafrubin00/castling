@@ -2,6 +2,11 @@ name: Collect US governance filing candidates
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/us-filing-review.yml"
+      - "scripts/collect_us_filings.py"
   schedule:
     - cron: "30 12 * * 1-5"
 
@@ -14,7 +19,7 @@ concurrency:
 
 jobs:
   collect:
-    if: github.event_name == 'workflow_dispatch' || vars.US_FILING_SCHEDULE_ENABLED == 'true'
+    if: github.event_name != 'schedule' || vars.US_FILING_SCHEDULE_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
