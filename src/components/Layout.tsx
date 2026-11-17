@@ -9,12 +9,12 @@ export function Layout({ generatedAt }: LayoutProps) {
     <div className="site-shell">
       <header className="site-header">
         <div className="site-header__inner">
-          <Link className="brand brand--ghost" to="/" aria-label="Overview">
+          <Link className="brand brand--ghost" to="/radar" aria-label="Radar">
             <span className="brand__title">Proxy Wars</span>
           </Link>
           <nav className="site-nav" aria-label="Primary">
             <NavLink to="/radar">Radar</NavLink>
-            <NavLink to="/">Overview</NavLink>
+            <NavLink to="/overview">Overview</NavLink>
           </nav>
         </div>
       </header>

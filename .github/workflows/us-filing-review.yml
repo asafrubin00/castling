@@ -1,0 +1,35 @@
+name: Collect US governance filing candidates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 12 * * 1-5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: us-filing-review
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: github.event_name == 'workflow_dispatch' || vars.US_FILING_SCHEDULE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Collect pilot filings
+        run: python scripts/collect_us_filings.py
+      - name: Save candidate list
+        uses: actions/upload-artifact@v4
+        with:
+          name: us-filing-review
+          path: data/raw/us/filing-review.json
+          if-no-files-found: error
+          retention-days: 14

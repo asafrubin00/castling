@@ -117,8 +117,9 @@ function App() {
       <Suspense fallback={<LoadingState />}>
         <Routes>
           <Route element={<Layout generatedAt={radarData.metadata.generatedAt} />}>
-            <Route index element={<HomePage data={data} radarData={radarData} />} />
+            <Route index element={<Navigate replace to="/radar" />} />
             <Route path="/radar" element={<LeadershipRadarPage data={radarData} marketData={marketData} profilesData={profilesData} />} />
+            <Route path="/overview" element={<HomePage data={data} radarData={radarData} />} />
             <Route path="/proxy-voting" element={<DashboardPage data={data} />} />
             <Route path="/dashboard" element={<Navigate replace to="/radar" />} />
             <Route path="/resolution/:id" element={<ResolutionPage data={data} />} />

@@ -1,0 +1,21 @@
+{
+  "scope": "One manually verified issuer sample",
+  "issuer": {"ticker": "AAPL", "cik": "0000320193", "name": "Apple Inc."},
+  "leadership": {
+    "effectiveDate": "2026-09-01",
+    "announcementDate": "2026-04-20",
+    "ceo": "John Ternus",
+    "executiveChair": "Tim Cook",
+    "leadIndependentDirector": "Art Levinson",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015711/ef20071035_8k.htm"
+  },
+  "meeting": {
+    "date": "2026-02-24",
+    "resultsUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126006577/ef20060722_8k.htm",
+    "proxyUrl": "https://www.sec.gov/Archives/edgar/data/320193/000130817926000008/aapl_courtesy-pdf.pdf",
+    "sampleVotes": [
+      {"proposal": 3, "title": "Advisory vote on executive compensation", "boardRecommendation": "for", "for": 8304055118, "against": 781645634, "abstained": 50707052, "brokerNonVotes": 2889260668},
+      {"proposal": 5, "title": "China Entanglement Audit", "boardRecommendation": "against", "for": 129158181, "against": 8939194258, "abstained": 68055365, "brokerNonVotes": 2889260668}
+    ]
+  }
+}
