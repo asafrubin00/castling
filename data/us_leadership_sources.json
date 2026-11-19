@@ -1,0 +1,85 @@
+{
+  "reviewPolicyDays": 30,
+  "companies": [
+    {
+      "ticker": "AAPL", "cik": "0000320193", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://www.apple.com/leadership/"],
+      "roles": {
+        "ceo": {"name": "John Ternus", "title": "Chief Executive Officer", "startDate": "2026-09-01", "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015711/ef20071035_8k.htm", "note": "Effective appointment date is separate from the April announcement date."},
+        "chair": {"name": "Tim Cook", "title": "Executive Chair", "startDate": "2026-09-01", "sourceUrl": "https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/", "note": "Art Levinson is the lead independent director. This record measures Cook's Chair tenure."}
+      }
+    },
+    {
+      "ticker": "MSFT", "cik": "0000789019", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://news.microsoft.com/source/exec/satya-nadella/"],
+      "roles": {
+        "ceo": {"name": "Satya Nadella", "title": "Chief Executive Officer", "startDate": "2014-02-04", "sourceUrl": "https://blogs.microsoft.com/blog/2014/02/04/introducing-microsofts-new-ceo-satya-nadella/"},
+        "chair": {"name": "Satya Nadella", "title": "Chair", "startDate": "2021-06-16", "sourceUrl": "https://news.microsoft.com/source/2021/06/16/microsoft-board-of-directors-announces-role-changes-and-quarterly-dividend/", "note": "Combined CEO and Chair roles have different start dates."}
+      }
+    },
+    {
+      "ticker": "NVDA", "cik": "0001045810", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://investor.nvidia.com/governance/management-team/default.aspx", "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"],
+      "roles": {
+        "ceo": {"name": "Colette M. Kress", "title": "Interim Chief Executive Officer", "startDate": "2026-11-11", "interim": true, "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm", "note": "Permanent CEO search underway. The filing gives 11 November as the effective date, preceding the 12 November announcement."},
+        "chair": {"name": "Harvey C. Jones", "title": "Chair", "startDate": "2026-11-11", "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm", "note": "Chair appointment follows long-standing board membership. Board tenure is not used as Chair tenure."}
+      }
+    },
+    {
+      "ticker": "AMD", "cik": "0000002488", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://www.amd.com/en/corporate/leadership/lisa-su.html"],
+      "roles": {
+        "ceo": {"name": "Lisa Su", "title": "Chief Executive Officer", "startDate": "2014-10-08", "sourceUrl": "https://ir.amd.com/news-events/press-releases/detail/568/amd-appoints-dr-lisa-su-as-president-and-chief-executive-officer"},
+        "chair": {"name": "Lisa Su", "title": "Chair", "startDate": "2022-02-14", "sourceUrl": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-22-000031/amdboardappointmentspressr.htm"}
+      }
+    },
+    {
+      "ticker": "GOOGL", "cik": "0001652044", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/goog-20260424.htm", "https://abc.xyz/investor/board-and-governance/default.aspx"],
+      "roles": {
+        "ceo": {"name": "Sundar Pichai", "title": "Chief Executive Officer", "startDate": "2019-12-03", "sourceUrl": "https://abc.xyz/investor/news/news-details/2019/Alphabet-management-change-12-03-2019/default.aspx", "note": "Alphabet CEO tenure. Earlier service as Google CEO is excluded."},
+        "chair": {"name": "John L. Hennessy", "title": "Chair", "startDate": "2018-01", "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/goog-20260424.htm", "note": "Source specifies the month. Earlier lead independent director service is excluded."}
+      }
+    },
+    {
+      "ticker": "AMZN", "cik": "0001018724", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://ir.aboutamazon.com/officers-and-directors/default.aspx"],
+      "roles": {
+        "ceo": {"name": "Andy Jassy", "title": "Chief Executive Officer", "startDate": "2021-07-05", "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872421000016/amzn-20210628.htm", "note": "Amazon CEO tenure. Earlier AWS leadership is excluded."},
+        "chair": {"name": "Jeffrey P. Bezos", "title": "Executive Chair", "startDate": "1994", "sourceUrl": "https://ir.aboutamazon.com/files/doc_financials/annual/2018-Annual-Report.pdf", "note": "Continuous board-chair service dates to founding in 1994. The executive-chair title changed in 2021 without restarting Chair tenure. Stock history begins at the 1997 listing."}
+      }
+    },
+    {
+      "ticker": "TSLA", "cik": "0001318605", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://ir.tesla.com/corporate/elon-musk", "https://ir.tesla.com/corporate/robyn-m-denholm"],
+      "roles": {
+        "ceo": {"name": "Elon Musk", "title": "Chief Executive Officer", "startDate": "2008-10", "sourceUrl": "https://ir.tesla.com/corporate/elon-musk", "note": "Source specifies the month. Stock history begins at the 2010 listing."},
+        "chair": {"name": "Robyn M. Denholm", "title": "Independent Chair", "startDate": "2018-11-07", "sourceUrl": "https://ir.tesla.com/_flysystem/s3/sec/000156459018028241/tsla-8k_20181107-gen_0.pdf"}
+      }
+    },
+    {
+      "ticker": "LLY", "cik": "0000059478", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://www.lilly.com/about/leadership/david-ricks"],
+      "roles": {
+        "ceo": {"name": "David A. Ricks", "title": "Chief Executive Officer", "startDate": "2017-01-01", "sourceUrl": "https://investor.lilly.com/news-releases/news-release-details/john-c-lechleiter-retire-lilly-ceo-board-elects-david-ricks"},
+        "chair": {"name": "David A. Ricks", "title": "Chair", "startDate": "2017-06-01", "sourceUrl": "https://investor.lilly.com/news-releases/news-release-details/john-c-lechleiter-retire-lilly-ceo-board-elects-david-ricks"}
+      }
+    },
+    {
+      "ticker": "V", "cik": "0001403161", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://investor.visa.com/corporate-governance/management-team/default.aspx", "https://investor.visa.com/investor-relations/corporate-governance/board-of-directors/"],
+      "roles": {
+        "ceo": {"name": "Ryan McInerney", "title": "Chief Executive Officer", "startDate": "2023-02-01", "sourceUrl": "https://investor.visa.com/news/news-details/2022/Visa-Announces-Leadership-Transition/default.aspx"},
+        "chair": {"name": "John F. Lundgren", "title": "Independent Chair", "startDate": "2024-01-23", "sourceUrl": "https://investor.visa.com/files/doc_downloads/2023/12/Visa-2024-DEF-Proxy-PDF-For-IR-Site.pdf"}
+      }
+    },
+    {
+      "ticker": "WMT", "cik": "0000104169", "reviewedAt": "2026-11-19",
+      "currentSourceUrls": ["https://stock.walmart.com/sec-filings/all-sec-filings/content/0001193125-26-173673/wmt-20260423.htm", "https://corporate.walmart.com/about/board-of-directors/gregory-penner", "https://www.sec.gov/Archives/edgar/data/104169/000010416926000165/wmt-20261113.htm"],
+      "roles": {
+        "ceo": {"name": "John Furner", "title": "Chief Executive Officer", "startDate": "2026-02-01", "sourceUrl": "https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-26-000024/wmt-20251113.htm", "note": "The November 2026 Item 5.02 concerns Joseph Creed's director appointment. It does not replace the CEO or Chair."},
+        "chair": {"name": "Gregory B. Penner", "title": "Non-Executive Chair", "startDate": "2015-06-05", "sourceUrl": "https://corporate.walmart.com/news/2015/06/05/election-of-greg-penner-as-chairman-walmart-board-of-directors"}
+      }
+    }
+  ]
+}

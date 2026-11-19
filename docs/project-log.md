@@ -1,5 +1,13 @@
 # Project log
 
+## US leadership verification, 19 November 2026
+
+- Published the first 10 reviewed CEO/Chair pairs with separate effective dates, current-role sources and evidence-review dates. The remaining 490 research issuers retain pending status.
+- SEC evidence takes precedence for effective dates. NVIDIA's 11 November appointment dates precede its public announcement by one day. Its interim CEO status is retained. A recent Walmart director appointment does not imply a CEO change.
+- Preserved month/year-only appointment precision, continuous Amazon Chair tenure and pre-listing market gaps. Added US tenure charts with an S&P 500 price benchmark and peer comparison.
+- US map values are tenure years. US pressure scores remain uncalibrated and unpublished. Daily filing collection never advances a human review date.
+- Added fail-closed identity/date/source checks, new-filing review flags, 30-day evidence expiry and independent overdue-discovery checks. Weekday workflow now rebuilds reviewed leadership and US prices.
+
 ## Assumptions
 
 - V1 should privilege credibility and governance relevance over full FTSE 100 completeness.

@@ -91,3 +91,5 @@ docusaurus
 .serverless/
 .vercel
 data/raw/
+__pycache__/
+*.pyc

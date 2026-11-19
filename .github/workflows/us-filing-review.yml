@@ -7,6 +7,10 @@ on:
     paths:
       - ".github/workflows/us-filing-review.yml"
       - "scripts/collect_us_filings.py"
+      - "scripts/build_us_leadership.py"
+      - "scripts/build_us_market_performance.py"
+      - "data/us_leadership_sources.json"
+      - "scripts/test_us_leadership.py"
   schedule:
     - cron: "30 12 * * 1-5"
 
@@ -30,17 +34,33 @@ jobs:
         with:
           python-version: "3.12"
       - name: Collect filings for 500 research issuers
+        id: discovery
         run: python scripts/collect_us_filings.py --holdings-research --coverage-output public/data/us-filing-coverage.json
-      - name: Publish filing discovery coverage
+      - name: Validate leadership publication rules
+        run: python -m unittest discover -s scripts -p 'test_us_*.py'
+      - name: Publish reviewed leadership and review flags
+        id: leadership
+        run: python scripts/build_us_leadership.py
+      - name: Refresh reviewed-company market series
+        id: market
+        continue-on-error: true
+        run: python scripts/build_us_market_performance.py
+      - name: Publish US research data
+        if: always() && steps.discovery.outcome == 'success' && steps.leadership.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/us-filing-coverage.json
+          git add public/data/us-filing-coverage.json public/data/us-leadership.json public/data/us-market-performance.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Refresh US filing coverage"
-          # This job only commits its generated catalog. Prefer that fresh catalog on rebase.
+          git commit -m "Refresh US leadership evidence and market series"
+          # Only generated US outputs are staged. Preserve their fresh versions on rebase.
           git pull --rebase --strategy-option=theirs origin main
           git push
+      - name: Report market refresh failure
+        if: always() && steps.market.outcome == 'failure'
+        run: |
+          echo "::error::US market refresh failed. The last good price dataset was retained with its original download date. Filing and leadership updates were published independently."
+          exit 1
       - name: Save candidate list
         uses: actions/upload-artifact@v4
         with:

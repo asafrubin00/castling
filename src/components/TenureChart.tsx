@@ -88,7 +88,7 @@ export function TenureChart({ market, tickers, role, metric, window, compare }: 
             {tickers.map((ticker, index) => (
               <Line key={ticker} type="linear" name={ticker} dataKey={ticker} stroke={colours[index]} strokeWidth={2} dot={false} isAnimationActive={false} />
             ))}
-            {showBenchmark && <Line type="linear" name="FTSE 100 price index" dataKey="benchmark" stroke="#a4b0bb" strokeDasharray="5 5" dot={false} isAnimationActive={false} />}
+            {showBenchmark && <Line type="linear" name={market.benchmark.name} dataKey="benchmark" stroke="#a4b0bb" strokeDasharray="5 5" dot={false} isAnimationActive={false} />}
           </LineChart>
         </ResponsiveContainer>
       </div>

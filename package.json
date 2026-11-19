@@ -12,6 +12,8 @@
     "data:profiles:validate": "python3 scripts/validate_leadership_profiles.py",
     "data:monitor": "python3 scripts/monitor_issuer_announcements.py",
     "data:monitor:baseline": "python3 scripts/monitor_issuer_announcements.py --baseline",
+    "data:us": "python3 scripts/build_us_leadership.py && python3 scripts/build_us_market_performance.py",
+    "test:us": "python3 -m unittest discover -s scripts -p 'test_us_*.py'",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

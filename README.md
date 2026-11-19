@@ -1,11 +1,11 @@
 # Proxy Wars
 
-Proxy Wars is a focused FTSE 100 governance research portfolio project built around one integrated Governance Radar:
+Proxy Wars is a governance research portfolio project with a UK dashboard and a growing source-verified US leadership workspace.
 
 - **Governance Radar**: the main source-backed FTSE 100 research surface, with integrated leadership-pressure and significant-voting lenses alongside profit-warning evidence, active succession processes, and tenure-period market performance.
 - **Vote Explorer**: the supporting resolution-level workspace for verified significant shareholder dissent against management.
 
-The Radar is the primary product. Vote Explorer remains available from the overview and company evidence rail for specialist cross-company and resolution-level analysis; it is not presented as a competing top-level module. The product remains intentionally transparent about scope: leadership evidence covers the current 100-company roster, externally managed issuers without a company CEO are marked not applicable, and voting evidence covers significant dissent rather than general AGM voting books.
+DashBoard is the primary product, with a UK/US market switch. Proxy Voting has a direct navigation link for specialist resolution-level analysis. UK leadership evidence covers the 100-company roster, with externally managed issuers marked not applicable where appropriate. US coverage is published incrementally with explicit verification counts. Voting evidence covers significant dissent rather than general AGM voting books.
 
 Original site design, analytical frameworks, scoring methodology, governance taxonomy, visualisations, and written analysis are © 2026 Asaf Rubin. Public-source data and third-party materials remain the property of their respective owners. See the in-product Terms of Use for details.
 
@@ -16,6 +16,10 @@ Original site design, analytical frameworks, scoring methodology, governance tax
 ![Integrated Governance Radar](docs/screenshots/leadership-radar.png)
 
 ![Governance Radar voting lens](docs/screenshots/governance-voting-lens.png)
+
+![Verified US leadership cohort](docs/screenshots/us-leadership.png)
+
+![US Chair tenure performance](docs/screenshots/us-tenure.png)
 
 ## Current coverage
 
@@ -45,6 +49,16 @@ The score is a research-prioritisation device, not a prediction that an individu
 - Output: `public/data/tracker-data.json`.
 
 The IA Public Register stopped adding new cases after its October 2025 policy change. It remains useful as a historical base; configured direct issuer sources now extend the ingestion path beyond that date without publishing routine sub-threshold resolutions.
+
+### US Leadership
+
+- Research roster contains 500 distinct SEC issuers from S&P 500 ETF holdings, consolidating duplicate share classes. This is not an official licensed constituent feed.
+- First verified batch contains 10 companies and 20 CEO/Chair records, reviewed on 19 November 2026. Apple, Microsoft, NVIDIA, AMD, Alphabet, Amazon, Tesla, Lilly, Visa and Walmart have linked appointment and current-role evidence.
+- Tenure, share-price and dividend-adjusted charts are available for reviewed roles with sufficient history. NVIDIA's new interim CEO/Chair tenures do not yet have two monthly observations. Amazon and Tesla disclose pre-listing gaps.
+- US tiles display **years in role**. US pressure scores remain unpublished pending jurisdiction-specific methodology and calibration.
+- The other 490 companies remain awaiting review. Filing collection alone does not verify role holders.
+- Weekday discovery flags newer officer/director and proxy filings. Reviews expire after 30 days, without silently renewing the review date. The UI also detects overdue discovery independently of a new build.
+- Sources, date-precision treatment, publication rules and commands are documented in [US evidence methodology](docs/us-leadership-methodology.md).
 
 ## Stack
 
@@ -91,6 +105,10 @@ npm run build
 The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It re-fetches every configured AGM source, refreshes calculations, the constituent roster, and all market series, then checks official issuer pages for new earnings- and succession-related links. A separate weekday workflow in `.github/workflows/roster-watch.yml` checks the constituent roster before the full refresh. When evidence onboarding is required, it records the gap in `data/roster_readiness.json` and opens one GitHub issue; the main site remains available with the entrant clearly marked unrated. New AGM URLs and parser formats still require editorial onboarding, and announcement-monitor matches enter a typed review queue that never alters the radar automatically.
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
+
+The US workflow in `.github/workflows/us-filing-review.yml` runs weekdays at 12:30 UTC when `US_FILING_SCHEDULE_ENABLED=true`. It collects SEC candidates, validates reviewed appointments, flags rechecks and refreshes US market series. These changes are committed for the Git-connected deployment. Evidence review remains editorial. A market-download failure preserves the last good price dataset and its actual timestamp while allowing successful evidence updates to publish.
+
+`npm run data:us` rebuilds US leadership and prices using the saved filing catalog. `npm run test:us` runs offline publication-rule regressions. `npm run data` remains the UK pipeline.
 
 ## Project structure
 
@@ -158,4 +176,5 @@ The current build is checked with:
 npm run data:radar
 npm run lint
 npm run build
+npm run test:us
 ```
