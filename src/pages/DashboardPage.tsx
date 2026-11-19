@@ -6,7 +6,8 @@ import {
   CartesianGrid,
   Cell,
   Line,
-  LineChart,
+  ComposedChart,
+  LabelList,
   Pie,
   PieChart,
   ResponsiveContainer,
@@ -16,7 +17,7 @@ import {
 } from 'recharts'
 import { FilterBar } from '../components/FilterBar'
 import { LegalLine } from '../components/LegalLine'
-import { InfoHint } from '../components/InfoHint'
+import { RadarDialog } from '../components/RadarDialog'
 import { StatCard } from '../components/StatCard'
 import {
   filterResolutions,
@@ -49,6 +50,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
   const [filters, setFilters] = useState<Filters>(defaultFilters)
   const [activePanel, setActivePanel] = useState<ActivePanel>('top')
   const [showTable, setShowTable] = useState(false)
+  const [showMethod, setShowMethod] = useState(false)
   const options = useMemo(() => getFilterOptions(data.resolutions), [data.resolutions])
   const filtered = useMemo(
     () => filterResolutions(data.resolutions, filters),
@@ -62,9 +64,6 @@ export function DashboardPage({ data }: DashboardPageProps) {
     () => getCompanyPatterns(filtered).slice(0, 8),
     [filtered],
   )
-  const quickSelectors = ['All', ...options.categories
-    .filter((option) => option !== 'All categories')
-    .slice(0, 5)]
 
   function updateFilter(name: keyof Filters, value: string) {
     setFilters((current) => ({ ...current, [name]: value }))
@@ -80,8 +79,18 @@ export function DashboardPage({ data }: DashboardPageProps) {
 
   return (
     <div className="page-flow">
-      <section className="workspace-screen workspace-screen--dashboard">
-        <div className="workspace-dashboard">
+      <section className="workspace-screen workspace-screen--dashboard proxy-screen">
+        <div className="workspace-dashboard proxy-workspace">
+          <header className="radar-title">
+            <div><p>Shareholder voting · UK evidence</p><h1>Proxy Voting</h1>
+              <p className="workspace-guidance">Explore significant opposition to management. Filter the charts or open a resolution for its voting results and sources.</p>
+            </div>
+            <div className="proxy-actions">
+              <button className="radar-action" type="button" onClick={() => setShowMethod(true)}>Coverage & method</button>
+              <button className="radar-action" type="button" onClick={() => setShowTable(true)}>View records</button>
+              <button className="radar-action" type="button" onClick={() => setFilters(defaultFilters)}>Reset filters</button>
+            </div>
+          </header>
           <div className="workspace-dashboard__controls">
             <FilterBar
               filters={filters}
@@ -123,58 +132,26 @@ export function DashboardPage({ data }: DashboardPageProps) {
             </button>
           </div>
 
-          <div className="workspace-dashboard__selectors">
-            {quickSelectors.map((item) => (
-              <button
-                key={item}
-                className={
-                  (item === 'All' && filters.category === 'All categories') ||
-                  filters.category === item
-                    ? 'is-active'
-                    : ''
-                }
-                onClick={() =>
-                  setFilters((current) => ({
-                    ...current,
-                    category:
-                      item === 'All'
-                        ? 'All categories'
-                        : current.category === item
-                          ? 'All categories'
-                          : item,
-                  }))
-                }
-                type="button"
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-
           <div className="workspace-dashboard__kpis">
             <StatCard
               compact
-              label="Filtered resolutions"
+              label="Resolutions"
               value={String(metrics.resolutions)}
-              note="Current view after applying the dashboard filters."
             />
             <StatCard
               compact
-              label="Companies represented"
+              label="Companies"
               value={String(metrics.companies)}
-              note="Distinct FTSE 100 issuers in the filtered set."
             />
             <StatCard
               compact
-              label="Average management dissent"
+              label="Average dissent"
               value={formatShortPercent(metrics.averageAgainst)}
-              note="A quick read on how forceful dissent is in this slice."
             />
             <StatCard
               compact
               label="Dissent above 50%"
               value={String(metrics.severeVotes)}
-              note="Cases where opposition moved into an especially acute zone."
             />
           </div>
 
@@ -246,9 +223,12 @@ export function DashboardPage({ data }: DashboardPageProps) {
                       />
                       <Bar
                         dataKey="managementDissentPct"
-                        fill="#f0be2a"
-                        radius={[0, 8, 8, 0]}
-                      />
+                        fill="#c6ad71"
+                        radius={[0, 2, 2, 0]}
+                        isAnimationActive={false}
+                      >
+                        <LabelList dataKey="managementDissentPct" position="right" formatter={(value) => formatTooltipPercent(value)} fill="#cbd6df" fontSize={11} />
+                      </Bar>
                     </BarChart>
                   </ResponsiveContainer>
                 ) : null}
@@ -306,7 +286,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
 
                 {activePanel === 'trend' ? (
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart
+                    <ComposedChart
                       data={timeline}
                       margin={{ left: 10, right: 14, top: 12, bottom: 6 }}
                     >
@@ -365,7 +345,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         strokeWidth={2.6}
                         dot={{ r: 3, fill: '#f0be2a' }}
                       />
-                    </LineChart>
+                    </ComposedChart>
                   </ResponsiveContainer>
                 ) : null}
 
@@ -398,74 +378,35 @@ export function DashboardPage({ data }: DashboardPageProps) {
               </div>
             </article>
 
-            <aside className="workspace-rail">
-              <section className="workspace-rail__panel workspace-rail__panel--info-list">
-                <p className="workspace-rail__eyebrow">Analysis rail</p>
-                <div className="workspace-rail__info-item">
-                  <span>About</span>
-                  <InfoHint
-                    label="About"
-                    content={`${data.metadata.focusStatement} ${data.metadata.coverageStatement}`}
-                  />
-                </div>
-                <div className="workspace-rail__info-item">
-                  <span>Current read-through</span>
-                  <InfoHint
-                    label="Current read-through"
-                    content={`${metrics.resolutions} significant dissent resolutions in the current filtered view. ${metrics.companies} FTSE 100 issuers represented after current filters. ${formatShortPercent(metrics.averageAgainst)} average opposition across the filtered set.`}
-                  />
-                </div>
-                <div className="workspace-rail__info-item">
-                  <span>Method snapshot</span>
-                  <InfoHint
-                    label="Method snapshot"
-                    content={data.metadata.methodology.included.slice(0, 2).join(' ')}
-                  />
-                </div>
-                <div className="workspace-rail__info-item">
-                  <span>Coverage note</span>
-                  <InfoHint
-                    label="Coverage note"
-                    content={data.metadata.coverageStatement}
-                  />
-                </div>
-              </section>
-
-              <section className="workspace-rail__panel workspace-rail__panel--actions">
-                <button
-                  className="action-button action-button--primary"
-                  onClick={() => setShowTable(true)}
-                  type="button"
-                >
-                  Open detailed dissent records
-                </button>
-                <button
-                  className="action-button"
-                  onClick={() => setFilters(defaultFilters)}
-                  type="button"
-                >
-                  Reset filters
-                </button>
-              </section>
-            </aside>
           </div>
 
           <div className="workspace-micro-note">
-            <span>{data.metadata.sourceName}</span>
+            <span>Results through {data.metadata.coveragePeriod.endDate ? formatDate(data.metadata.coveragePeriod.endDate) : '—'} · Refreshed {formatDate(data.metadata.generatedAt)}</span>
             <LegalLine />
-            <span>{data.metadata.validation.status.toUpperCase()} validation</span>
+            <span>{data.metadata.sourceName}</span>
           </div>
         </div>
 
+        {showMethod && <RadarDialog title="Proxy voting coverage" onClose={() => setShowMethod(false)}>
+          <header className="radar-drawer-heading"><h2>Coverage & method</h2></header>
+          <div className="radar-method">
+            <p>{data.metadata.coverageStatement}</p>
+            <p>Results covered from {data.metadata.coveragePeriod.startDate ? formatDate(data.metadata.coveragePeriod.startDate) : '—'} to {data.metadata.coveragePeriod.endDate ? formatDate(data.metadata.coveragePeriod.endDate) : '—'}.</p>
+            <p>Source refresh completed {formatDate(data.metadata.generatedAt)}. Configured voting sources are checked each weekday. Additional meetings and new source formats require onboarding.</p>
+            {data.metadata.methodology.included.map((item) => <p key={item}>{item}</p>)}
+            {data.metadata.limitations.map((item) => <p key={item}>{item}</p>)}
+            <a href={data.metadata.sourceUrl} target="_blank" rel="noreferrer">{data.metadata.sourceName}</a>
+          </div>
+        </RadarDialog>}
         {showTable ? (
-          <div className="modal-shell" role="dialog" aria-modal="true">
+          <RadarDialog title="Detailed dissent records" className="radar-dialog--records" onClose={() => setShowTable(false)}>
             <div className="modal-panel">
               <div className="modal-panel__header">
                 <div>
                   <p className="eyebrow">Resolution table</p>
                   <h2>Detailed dissent records</h2>
                   <p className="panel__intro">
-                    Showing {filtered.length} of {data.resolutions.length} total v1 records.
+                    Showing {filtered.length} of {data.resolutions.length} captured resolutions.
                   </p>
                 </div>
                 <button
@@ -505,7 +446,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                 </table>
               </div>
             </div>
-          </div>
+          </RadarDialog>
         ) : null}
       </section>
     </div>

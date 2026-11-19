@@ -1780,7 +1780,7 @@ def write_outputs(
             "sourceName": "IA Public Register + official issuer announcements",
             "sourceUrl": SOURCE_URL,
             "generatedAt": generated_at,
-            "refreshMode": "weekly-automated-refresh-with-editorial-source-onboarding",
+            "refreshMode": "weekday-automated-refresh-with-editorial-source-onboarding",
             "focusStatement": "This app tracks significant shareholder dissent, not general AGM voting coverage.",
             "coverageStatement": (
                 "Phase 2 combines the Investment Association Public Register with parsed issuer announcement pages "

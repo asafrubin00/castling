@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { USCoveragePage } from './USCoveragePage'
 import { Link } from 'react-router-dom'
 import { LegalLine } from '../components/LegalLine'
 import { RadarDialog } from '../components/RadarDialog'
@@ -41,6 +42,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
   profilesData: LeadershipProfilesData
 }) {
   const [role, setRole] = useState<Role>('ceo')
+  const [market, setMarket] = useState<'uk' | 'us'>('uk')
   const [lens, setLens] = useState<Lens>('integrated')
   const [sector, setSector] = useState('')
   const [band, setBand] = useState('')
@@ -74,12 +76,18 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
   const methodology = data.metadata.scoreDefinition
   const pendingCount = data.metadata.rosterReadiness?.pendingEntrants.length ?? 0
 
+  if (market === 'us') return <USCoveragePage onUK={() => setMarket('uk')} />
+
   return (
     <section className="workspace-screen workspace-screen--radar radar-screen" id="workspace">
       <div className="radar-workspace radar-workspace--map">
         <header className="radar-title">
-          <div><p>FTSE 100</p><h1>Governance Radar</h1></div>
-          <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>ⓘ Method</button>
+          <div><p>Company leadership & shareholder voting</p><h1>DashBoard</h1><p className="workspace-guidance">Select a company to explore its leadership, tenure returns and governance evidence.</p></div>
+          <div className="market-switch" aria-label="Market">
+            <button type="button" aria-pressed="true">UK · FTSE 100</button>
+            <button type="button" aria-pressed="false" onClick={() => setMarket('us')}>US · S&P 500</button>
+            <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Method</button>
+          </div>
         </header>
         <div className="radar-controls">
           <fieldset className="segmented-control"><legend>Signal</legend>
