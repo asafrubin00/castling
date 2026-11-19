@@ -47,6 +47,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
   const [query, setQuery] = useState('')
   const [selectedTicker, setSelectedTicker] = useState<string | null>(null)
   const [methodOpen, setMethodOpen] = useState(false)
+  const [freshnessOpen, setFreshnessOpen] = useState(false)
   const [view, setView] = useState<'performance' | 'evidence' | 'compare'>('performance')
   const [metric, setMetric] = useState<'adjusted' | 'price'>('adjusted')
   const [window, setWindow] = useState<'tenure' | 'calendar'>('tenure')
@@ -126,10 +127,26 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
           </div>
         </section>
         <footer className="radar-footer radar-footer--map">
-          <span>Leadership evidence · {dateLabel.format(new Date(data.metadata.asOfDate))}{pendingCount > 0 ? ' · ' + pendingCount + ' pending verification' : ''}</span>
+          <button type="button" onClick={() => setFreshnessOpen(true)}>
+            Leadership review cutoff · {dateLabel.format(new Date(data.metadata.asOfDate))}
+            {' · Data built ' + dateLabel.format(new Date(data.metadata.generatedAt))}
+            {pendingCount > 0 ? ' · ' + pendingCount + ' pending verification' : ''}
+          </button>
           <LegalLine />
         </footer>
       </div>
+      {freshnessOpen && (
+        <RadarDialog title="Data freshness" onClose={() => setFreshnessOpen(false)}>
+          <header className="radar-drawer-heading"><h2>Data freshness</h2></header>
+          <div className="radar-method">
+            <p>Leadership review cutoff · {dateLabel.format(new Date(data.metadata.asOfDate))}. This is the cohort-wide evidence and score calculation date. Individual records may have subsequent verified corrections.</p>
+            <p>Radar dataset built · {dateLabel.format(new Date(data.metadata.generatedAt))}.</p>
+            <p>Market series built · {dateLabel.format(new Date(marketData.metadata.generatedAt))}.</p>
+            <p>The weekly refresh fetches configured voting sources and market observations. Announcement monitoring sends potential CEO and Chair changes to a review queue. Verified updates require a source review before publication.</p>
+            <p>CEO and Chair records are awaiting a cohort-wide review beyond the displayed cutoff.</p>
+          </div>
+        </RadarDialog>
+      )}
       {methodOpen && (
         <RadarDialog title="Radar methodology" onClose={() => setMethodOpen(false)}>
           <header className="radar-drawer-heading"><p>Method · v{data.metadata.methodologyVersion}</p><h2>Reading the Radar</h2></header>
@@ -159,6 +176,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
           {view === 'evidence' ? (
             <div className="radar-evidence">
               <section><h3>Leadership</h3>
+                <p>{selectedRole.verifiedAt ? 'Role verified ' + dateLabel.format(new Date(selectedRole.verifiedAt)) : 'Cohort review cutoff ' + dateLabel.format(new Date(data.metadata.asOfDate))}</p>
                 {selectedRole.sourceUrl && <a href={selectedRole.sourceUrl} target="_blank" rel="noreferrer">Official leadership source</a>}
                 {profile && <details><summary>{profile.name} · profile</summary>
                   {profile.portraitPath && <img src={profile.portraitPath} alt={profile.name} />}

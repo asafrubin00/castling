@@ -117,6 +117,7 @@ export type LeadershipRole = {
   sourceUrl?: string
   sourceLabel?: string
   datePrecision?: 'day' | 'month' | 'year'
+  verifiedAt?: string
   tenureYears?: number
   score: number | null
   band: 'Lower' | 'Watch' | 'Elevated' | 'Acute' | 'Unrated' | 'Not applicable'

@@ -45,7 +45,7 @@ def main() -> None:
             if radar_role.get("notApplicable") or not radar_role.get("rated"):
                 roles.pop(role_key, None)
                 continue
-            if role_key in roles:
+            if role_key in roles and roles[role_key].get("name") == radar_role.get("name"):
                 continue
             roles[role_key] = {
                 "name": radar_role["name"],

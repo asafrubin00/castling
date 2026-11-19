@@ -281,10 +281,11 @@
       "trackerAliases": ["BP P.L.C."],
       "roles": {
         "ceo": {
-          "name": "Murray Auchincloss",
-          "roleStartDate": "2024-01-17",
-          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/murray-auchincloss-appointed-bp-chief-executive-officer.pdf",
+          "name": "Meg O'Neill",
+          "roleStartDate": "2026-04-01",
+          "sourceUrl": "https://www.bp.com/en-GB/about-us/our-organization/global-leadership-team/meg-oneill",
           "sourceLabel": "BP Chief Executive appointment announcement",
+          "verifiedAt": "2026-11-19",
           "datePrecision": "day"
         },
         "chair": {

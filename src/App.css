@@ -1103,6 +1103,17 @@
 }
 
 /* Leadership radar */
+.us-coverage { height: 100svh; display: flex; flex-direction: column; gap: 12px; color: #edf2f6; }
+.us-coverage h1 { font-size: 1.7rem; margin: 0; }
+.us-coverage p { font-size: .85rem; color: #b7c3ce; }
+.us-coverage__columns { display: grid; grid-template-columns: 1fr 1fr; min-height: 0; flex: 1; gap: 20px; }
+.us-coverage__list, .us-coverage__filings { overflow: auto; min-height: 0; background: #151c22; padding: 14px; }
+.us-coverage__list button { width: 100%; text-align: left; display: grid; gap: 4px; padding: 12px; background: transparent; color: #edf2f6; border: 0; border-bottom: 1px solid #35414a; cursor: pointer; }
+.us-coverage__list button[aria-pressed="true"] { background: #303c47; }
+.us-coverage__list span { color: #b7c3ce; font-size: .75rem; }
+.us-coverage__filings h2 { font-size: 1rem; }
+.us-coverage__filings a { display: block; color: #eed17d; padding: 12px 0; font-size: .85rem; }
+@media (max-width: 600px) { .us-coverage__columns { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; } }
 .workspace-screen.radar-screen {
   padding-inline: 0;
   background: radial-gradient(ellipse at 10% 0%, #232b33, #101418 65%);

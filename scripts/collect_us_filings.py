@@ -3,7 +3,7 @@
 
 import argparse
 import csv
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from io import StringIO
 import json
 import os
@@ -122,6 +122,7 @@ def main():
     roster_options = parser.add_mutually_exclusive_group()
     roster_options.add_argument("--roster", type=Path, help="Approved 500-issuer CSV with ticker,cik columns")
     roster_options.add_argument("--holdings-research", action="store_true", help="Use ETF holdings for an internal 500-issuer research run")
+    parser.add_argument("--coverage-output", type=Path, help="Write public SEC filing coverage with review status")
     parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
     contact = os.environ.get("SEC_CONTACT_EMAIL", "").strip()
@@ -142,6 +143,8 @@ def main():
                 "ticker": ticker, "cik": cik, "companyName": submission["name"],
                 "filings": filing_candidates(submission, cutoff),
             })
+            if len(issuers) % 50 == 0:
+                print(f"Fetched filing metadata for {len(issuers)}/{len(roster)} issuers.", flush=True)
     except (HTTPError, URLError, TimeoutError, OSError, ValueError, KeyError) as error:
         print(f"US filing collection stopped. Prior review data preserved. {error}", file=sys.stderr)
         return 1
@@ -154,6 +157,17 @@ def main():
         "issuers": issuers,
     }, indent=2) + "\n", encoding="utf-8")
     temporary.replace(args.output)
+    if args.coverage_output:
+        args.coverage_output.parent.mkdir(parents=True, exist_ok=True)
+        coverage = {
+            "generatedAt": datetime.now(timezone.utc).isoformat(),
+            "filedSince": cutoff.isoformat(),
+            "universe": "500-issuer research cohort derived from fund holdings and SEC issuer IDs",
+            "issuers": issuers,
+        }
+        coverage_path = args.coverage_output.with_suffix(".tmp")
+        coverage_path.write_text(json.dumps(coverage, indent=2) + "\n", encoding="utf-8")
+        coverage_path.replace(args.coverage_output)
     print(f"Collected {sum(len(issuer['filings']) for issuer in issuers)} review candidates across {len(issuers)} issuers.")
     return 0
 
