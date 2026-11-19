@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-11-19T06:48:11.353416+00:00",
+  "updatedAt": "2026-11-19T16:48:56.123149+00:00",
   "candidates": [
+    {
+      "id": "hlma-2f0f19abaf357af3",
+      "ticker": "HLMA",
+      "companyName": "Halma",
+      "title": "Half Year Results 2026/27",
+      "url": "https://www.halma.com/news/press-releases/2026/half-year-results-2026-27",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T16:48:56.123149+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "jd-598dd2b2344d96da",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "title": "Q3 2026/27 TRADING STATEMENT",
+      "url": "https://www.jdplc.com/q3-2026-27-trading-statement",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T16:48:56.123149+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "ctec-dbe4424b098b0b77",
       "ticker": "CTEC",

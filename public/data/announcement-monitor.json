@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-19T06:48:11.353416+00:00",
+    "generatedAt": "2026-11-19T16:48:56.123149+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
@@ -12,10 +12,10 @@
       "not-found": 1,
       "timeout": 1
     },
-    "newCandidateCount": 8,
-    "pendingCandidateCount": 102,
+    "newCandidateCount": 2,
+    "pendingCandidateCount": 104,
     "pendingCandidateCountBySignal": {
-      "earnings": 81,
+      "earnings": 83,
       "succession": 22
     },
     "validation": {
@@ -251,10 +251,10 @@
     },
     {
       "ticker": "BAB",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -546,9 +546,9 @@
     {
       "ticker": "HLMA",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 2,
         "succession": 1
       }
     },
@@ -621,9 +621,9 @@
     {
       "ticker": "JD",
       "status": "active",
-      "matchedLinkCount": 9,
+      "matchedLinkCount": 10,
       "matchedLinkCountBySignal": {
-        "earnings": 6,
+        "earnings": 7,
         "succession": 3
       }
     },
@@ -776,11 +776,11 @@
     },
     {
       "ticker": "SVT",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
         "earnings": 0,
-        "succession": 1
+        "succession": 0
       }
     },
     {
