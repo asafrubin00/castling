@@ -1,6 +1,110 @@
 {
-  "updatedAt": "2026-11-16T16:52:40.161318+00:00",
+  "updatedAt": "2026-11-19T06:48:11.353416+00:00",
   "candidates": [
+    {
+      "id": "ctec-dbe4424b098b0b77",
+      "ticker": "CTEC",
+      "companyName": "Convatec",
+      "title": "View Online",
+      "url": "https://www.convatecgroup.com/media/press-releases/2026/trading-update-for-the-ten-months-ended-31-october-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-08e000b189a129a7",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "Half Year Results 2026/27 Corporate 18.11.2026 1 min read",
+      "url": "https://www.britishland.com/news/half-year-results-2027",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "expn-25b4deca76a9b39a",
+      "ticker": "EXPN",
+      "companyName": "Experian",
+      "title": "Half-year results FY27",
+      "url": "https://www.experianplc.com/newsroom/press-releases/2026/half-year-results-fy27",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "dplm-6d186dc9074a4b96",
+      "ticker": "DPLM",
+      "companyName": "Diploma",
+      "title": "View our Full Year 2026 Results",
+      "url": "https://www.diplomaplc.com/investors/latest-results",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "dplm-bbe5bc77989aae34",
+      "ticker": "DPLM",
+      "companyName": "Diploma",
+      "title": "View transcript : Full Year Results 2026",
+      "url": "https://www.diplomaplc.com/media/111i1rdr/diploma-plc-fy26-results-presentation-transcript.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "dplm-b4b59d02ebfab647",
+      "ticker": "DPLM",
+      "companyName": "Diploma",
+      "title": "View document : Full Year Results 2026",
+      "url": "https://www.diplomaplc.com/media/hxjdvy0f/diploma-plc-fy26-results-release.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "dplm-02fbea2c25855838",
+      "ticker": "DPLM",
+      "companyName": "Diploma",
+      "title": "View presentation : Full Year Results 2026",
+      "url": "https://www.diplomaplc.com/media/px1p0m0o/diploma-fy26-slides.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "lgen-b93cb6e24ab8f225",
+      "ticker": "LGEN",
+      "companyName": "Legal & General",
+      "title": "Press release Nearly 8 million pension savers unaware their retirement savings are invested Millions of employees are \u2018hidden investors\u2019, as new research from L&G reveals nearly 8 million (46%) DC pension savers do not realise that a typica",
+      "url": "https://group.legalandgeneral.com/newsroom/press-releases/2026/11/nearly-8-million-pension-savers-unaware-their-retirement-savings-are-invested",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-11-19T06:48:11.353416+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "av-d66d4f629a017872",
       "ticker": "AV",
