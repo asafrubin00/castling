@@ -62,7 +62,7 @@ jobs:
           echo "::error::US market refresh failed. The last good price dataset was retained with its original download date. Filing and leadership updates were published independently."
           exit 1
       - name: Save candidate list
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: us-filing-review
           path: data/raw/us/filing-review.json
