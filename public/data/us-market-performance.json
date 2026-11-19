@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-19T07:25:24.405391+00:00",
+    "generatedAt": "2026-11-19T07:38:05.924276+00:00",
     "companyCount": 10,
     "sourceName": "Yahoo Finance public chart endpoint",
     "sourceUrl": "https://finance.yahoo.com/",
@@ -2813,7 +2813,7 @@
         {
           "date": "2014-03-01",
           "close": 40.99,
-          "adjustedClose": 34.0479,
+          "adjustedClose": 34.0478,
           "priceReturnPct": 8.32,
           "dividendAdjustedReturnPct": 9.14
         },
@@ -2841,14 +2841,14 @@
         {
           "date": "2014-07-01",
           "close": 43.16,
-          "adjustedClose": 36.1033,
+          "adjustedClose": 36.1032,
           "priceReturnPct": 14.06,
           "dividendAdjustedReturnPct": 15.73
         },
         {
           "date": "2014-08-01",
           "close": 45.43,
-          "adjustedClose": 38.2394,
+          "adjustedClose": 38.2395,
           "priceReturnPct": 20.06,
           "dividendAdjustedReturnPct": 22.57
         },
@@ -2890,7 +2890,7 @@
         {
           "date": "2015-02-01",
           "close": 43.85,
-          "adjustedClose": 37.4066,
+          "adjustedClose": 37.4067,
           "priceReturnPct": 15.88,
           "dividendAdjustedReturnPct": 19.9
         },
@@ -2911,7 +2911,7 @@
         {
           "date": "2015-05-01",
           "close": 46.86,
-          "adjustedClose": 40.2342,
+          "adjustedClose": 40.2341,
           "priceReturnPct": 23.84,
           "dividendAdjustedReturnPct": 28.97
         },
@@ -3170,7 +3170,7 @@
         {
           "date": "2018-06-01",
           "close": 98.61,
-          "adjustedClose": 90.9382,
+          "adjustedClose": 90.9381,
           "priceReturnPct": 160.6,
           "dividendAdjustedReturnPct": 191.49
         },
@@ -3226,7 +3226,7 @@
         {
           "date": "2019-02-01",
           "close": 112.03,
-          "adjustedClose": 104.6046,
+          "adjustedClose": 104.6045,
           "priceReturnPct": 196.06,
           "dividendAdjustedReturnPct": 235.3
         },
@@ -3275,35 +3275,35 @@
         {
           "date": "2019-09-01",
           "close": 139.03,
-          "adjustedClose": 130.7293,
+          "adjustedClose": 130.7294,
           "priceReturnPct": 267.42,
           "dividendAdjustedReturnPct": 319.04
         },
         {
           "date": "2019-10-01",
           "close": 143.37,
-          "adjustedClose": 134.8102,
+          "adjustedClose": 134.8103,
           "priceReturnPct": 278.88,
           "dividendAdjustedReturnPct": 332.12
         },
         {
           "date": "2019-11-01",
           "close": 151.38,
-          "adjustedClose": 142.8264,
+          "adjustedClose": 142.8263,
           "priceReturnPct": 300.05,
-          "dividendAdjustedReturnPct": 357.82
+          "dividendAdjustedReturnPct": 357.81
         },
         {
           "date": "2019-12-01",
           "close": 157.7,
-          "adjustedClose": 148.7892,
+          "adjustedClose": 148.7893,
           "priceReturnPct": 316.75,
           "dividendAdjustedReturnPct": 376.93
         },
         {
           "date": "2020-01-01",
           "close": 170.23,
-          "adjustedClose": 160.6113,
+          "adjustedClose": 160.6112,
           "priceReturnPct": 349.87,
           "dividendAdjustedReturnPct": 414.82
         },
@@ -3366,14 +3366,14 @@
         {
           "date": "2020-10-01",
           "close": 202.47,
-          "adjustedClose": 192.5491,
+          "adjustedClose": 192.5492,
           "priceReturnPct": 435.07,
           "dividendAdjustedReturnPct": 517.2
         },
         {
           "date": "2020-11-01",
           "close": 214.07,
-          "adjustedClose": 204.1138,
+          "adjustedClose": 204.1137,
           "priceReturnPct": 465.72,
           "dividendAdjustedReturnPct": 554.27
         },
@@ -3408,7 +3408,7 @@
         {
           "date": "2021-04-01",
           "close": 252.18,
-          "adjustedClose": 241.0051,
+          "adjustedClose": 241.005,
           "priceReturnPct": 566.44,
           "dividendAdjustedReturnPct": 672.52
         },
@@ -3429,7 +3429,7 @@
         {
           "date": "2021-07-01",
           "close": 284.91,
-          "adjustedClose": 272.9135,
+          "adjustedClose": 272.9134,
           "priceReturnPct": 652.93,
           "dividendAdjustedReturnPct": 774.8
         },
@@ -3443,7 +3443,7 @@
         {
           "date": "2021-09-01",
           "close": 281.92,
-          "adjustedClose": 270.5663,
+          "adjustedClose": 270.5664,
           "priceReturnPct": 645.03,
           "dividendAdjustedReturnPct": 767.27
         },
@@ -3464,7 +3464,7 @@
         {
           "date": "2021-12-01",
           "close": 336.32,
-          "adjustedClose": 323.3659,
+          "adjustedClose": 323.366,
           "priceReturnPct": 788.79,
           "dividendAdjustedReturnPct": 936.52
         },
@@ -3478,14 +3478,14 @@
         {
           "date": "2022-02-01",
           "close": 298.79,
-          "adjustedClose": 287.8756,
+          "adjustedClose": 287.8755,
           "priceReturnPct": 689.61,
-          "dividendAdjustedReturnPct": 822.76
+          "dividendAdjustedReturnPct": 822.75
         },
         {
           "date": "2022-03-01",
           "close": 308.31,
-          "adjustedClose": 297.0479,
+          "adjustedClose": 297.0478,
           "priceReturnPct": 714.77,
           "dividendAdjustedReturnPct": 852.16
         },
@@ -3513,7 +3513,7 @@
         {
           "date": "2022-07-01",
           "close": 280.74,
-          "adjustedClose": 271.1149,
+          "adjustedClose": 271.1148,
           "priceReturnPct": 641.91,
           "dividendAdjustedReturnPct": 769.03
         },
@@ -3569,7 +3569,7 @@
         {
           "date": "2023-03-01",
           "close": 288.3,
-          "adjustedClose": 280.4937,
+          "adjustedClose": 280.4938,
           "priceReturnPct": 661.89,
           "dividendAdjustedReturnPct": 799.09
         },
@@ -3604,7 +3604,7 @@
         {
           "date": "2023-08-01",
           "close": 327.76,
-          "adjustedClose": 320.259,
+          "adjustedClose": 320.2591,
           "priceReturnPct": 766.17,
           "dividendAdjustedReturnPct": 926.56
         },
@@ -3618,7 +3618,7 @@
         {
           "date": "2023-10-01",
           "close": 338.11,
-          "adjustedClose": 330.3722,
+          "adjustedClose": 330.3721,
           "priceReturnPct": 793.53,
           "dividendAdjustedReturnPct": 958.97
         },
@@ -3639,7 +3639,7 @@
         {
           "date": "2024-01-01",
           "close": 397.58,
-          "adjustedClose": 389.2696,
+          "adjustedClose": 389.2697,
           "priceReturnPct": 950.69,
           "dividendAdjustedReturnPct": 1147.76
         },
@@ -3674,7 +3674,7 @@
         {
           "date": "2024-06-01",
           "close": 446.95,
-          "adjustedClose": 439.2077,
+          "adjustedClose": 439.2078,
           "priceReturnPct": 1081.16,
           "dividendAdjustedReturnPct": 1307.83
         },
@@ -3702,14 +3702,14 @@
         {
           "date": "2024-10-01",
           "close": 406.35,
-          "adjustedClose": 400.0307,
+          "adjustedClose": 400.0308,
           "priceReturnPct": 973.86,
           "dividendAdjustedReturnPct": 1182.26
         },
         {
           "date": "2024-11-01",
           "close": 423.46,
-          "adjustedClose": 417.7091,
+          "adjustedClose": 417.709,
           "priceReturnPct": 1019.08,
           "dividendAdjustedReturnPct": 1238.92
         },
@@ -3730,9 +3730,9 @@
         {
           "date": "2025-02-01",
           "close": 396.99,
-          "adjustedClose": 392.3838,
+          "adjustedClose": 392.3837,
           "priceReturnPct": 949.13,
-          "dividendAdjustedReturnPct": 1157.75
+          "dividendAdjustedReturnPct": 1157.74
         },
         {
           "date": "2025-03-01",
@@ -3758,14 +3758,14 @@
         {
           "date": "2025-06-01",
           "close": 497.41,
-          "adjustedClose": 492.5412,
+          "adjustedClose": 492.5411,
           "priceReturnPct": 1214.51,
           "dividendAdjustedReturnPct": 1478.79
         },
         {
           "date": "2025-07-01",
           "close": 533.5,
-          "adjustedClose": 528.2779,
+          "adjustedClose": 528.278,
           "priceReturnPct": 1309.88,
           "dividendAdjustedReturnPct": 1593.34
         },
@@ -6629,7 +6629,7 @@
         {
           "date": "2020-09-01",
           "close": 73.28,
-          "adjustedClose": 72.5893,
+          "adjustedClose": 72.5892,
           "priceReturnPct": 23.97,
           "dividendAdjustedReturnPct": 23.97
         },
@@ -6699,7 +6699,7 @@
         {
           "date": "2021-07-01",
           "close": 134.7265,
-          "adjustedClose": 133.4565,
+          "adjustedClose": 133.4566,
           "priceReturnPct": 127.92,
           "dividendAdjustedReturnPct": 127.92
         },
@@ -6713,7 +6713,7 @@
         {
           "date": "2021-09-01",
           "close": 133.676,
-          "adjustedClose": 132.4159,
+          "adjustedClose": 132.416,
           "priceReturnPct": 126.14,
           "dividendAdjustedReturnPct": 126.14
         },
@@ -6741,7 +6741,7 @@
         {
           "date": "2022-01-01",
           "close": 135.3035,
-          "adjustedClose": 134.0282,
+          "adjustedClose": 134.0281,
           "priceReturnPct": 128.9,
           "dividendAdjustedReturnPct": 128.9
         },
@@ -6755,7 +6755,7 @@
         {
           "date": "2022-03-01",
           "close": 139.0675,
-          "adjustedClose": 137.7567,
+          "adjustedClose": 137.7566,
           "priceReturnPct": 135.27,
           "dividendAdjustedReturnPct": 135.27
         },
@@ -6804,7 +6804,7 @@
         {
           "date": "2022-10-01",
           "close": 94.51,
-          "adjustedClose": 93.6192,
+          "adjustedClose": 93.6191,
           "priceReturnPct": 59.89,
           "dividendAdjustedReturnPct": 59.89
         },
@@ -6895,7 +6895,7 @@
         {
           "date": "2023-11-01",
           "close": 132.53,
-          "adjustedClose": 131.2808,
+          "adjustedClose": 131.2807,
           "priceReturnPct": 124.21,
           "dividendAdjustedReturnPct": 124.21
         },
@@ -6916,7 +6916,7 @@
         {
           "date": "2024-02-01",
           "close": 138.46,
-          "adjustedClose": 137.1549,
+          "adjustedClose": 137.1548,
           "priceReturnPct": 134.24,
           "dividendAdjustedReturnPct": 134.24
         },
@@ -6993,7 +6993,7 @@
         {
           "date": "2025-01-01",
           "close": 204.02,
-          "adjustedClose": 202.8295,
+          "adjustedClose": 202.8296,
           "priceReturnPct": 245.15,
           "dividendAdjustedReturnPct": 246.4
         },
@@ -7207,7 +7207,7 @@
         {
           "date": "2017-05-01",
           "close": 79.57,
-          "adjustedClose": 69.3097,
+          "adjustedClose": 69.3096,
           "priceReturnPct": 8.18,
           "dividendAdjustedReturnPct": 9.62
         },
@@ -7242,7 +7242,7 @@
         {
           "date": "2017-10-01",
           "close": 81.94,
-          "adjustedClose": 71.8293,
+          "adjustedClose": 71.8292,
           "priceReturnPct": 11.41,
           "dividendAdjustedReturnPct": 13.6
         },
@@ -7333,7 +7333,7 @@
         {
           "date": "2018-11-01",
           "close": 118.64,
-          "adjustedClose": 107.2876,
+          "adjustedClose": 107.2877,
           "priceReturnPct": 61.31,
           "dividendAdjustedReturnPct": 69.68
         },
@@ -7389,14 +7389,14 @@
         {
           "date": "2019-07-01",
           "close": 108.95,
-          "adjustedClose": 99.6146,
+          "adjustedClose": 99.6145,
           "priceReturnPct": 48.13,
           "dividendAdjustedReturnPct": 57.54
         },
         {
           "date": "2019-08-01",
           "close": 112.97,
-          "adjustedClose": 103.8692,
+          "adjustedClose": 103.8691,
           "priceReturnPct": 53.6,
           "dividendAdjustedReturnPct": 64.27
         },
@@ -7417,14 +7417,14 @@
         {
           "date": "2019-11-01",
           "close": 117.35,
-          "adjustedClose": 108.5169,
+          "adjustedClose": 108.5168,
           "priceReturnPct": 59.55,
           "dividendAdjustedReturnPct": 71.62
         },
         {
           "date": "2019-12-01",
           "close": 131.43,
-          "adjustedClose": 121.537,
+          "adjustedClose": 121.5371,
           "priceReturnPct": 78.69,
           "dividendAdjustedReturnPct": 92.22
         },
@@ -7452,14 +7452,14 @@
         {
           "date": "2020-04-01",
           "close": 154.64,
-          "adjustedClose": 143.7412,
+          "adjustedClose": 143.7411,
           "priceReturnPct": 110.25,
           "dividendAdjustedReturnPct": 127.33
         },
         {
           "date": "2020-05-01",
           "close": 152.95,
-          "adjustedClose": 142.8395,
+          "adjustedClose": 142.8396,
           "priceReturnPct": 107.95,
           "dividendAdjustedReturnPct": 125.91
         },
@@ -7515,7 +7515,7 @@
         {
           "date": "2021-01-01",
           "close": 207.97,
-          "adjustedClose": 196.1721,
+          "adjustedClose": 196.1722,
           "priceReturnPct": 182.76,
           "dividendAdjustedReturnPct": 210.25
         },
@@ -7543,7 +7543,7 @@
         {
           "date": "2021-05-01",
           "close": 199.74,
-          "adjustedClose": 190.0319,
+          "adjustedClose": 190.032,
           "priceReturnPct": 171.57,
           "dividendAdjustedReturnPct": 200.54
         },
@@ -7564,7 +7564,7 @@
         {
           "date": "2021-08-01",
           "close": 258.29,
-          "adjustedClose": 246.5297,
+          "adjustedClose": 246.5296,
           "priceReturnPct": 251.18,
           "dividendAdjustedReturnPct": 289.9
         },
@@ -7606,21 +7606,21 @@
         {
           "date": "2022-02-01",
           "close": 249.95,
-          "adjustedClose": 240.3432,
+          "adjustedClose": 240.3431,
           "priceReturnPct": 239.84,
           "dividendAdjustedReturnPct": 280.11
         },
         {
           "date": "2022-03-01",
           "close": 286.37,
-          "adjustedClose": 275.3634,
+          "adjustedClose": 275.3633,
           "priceReturnPct": 289.35,
           "dividendAdjustedReturnPct": 335.5
         },
         {
           "date": "2022-04-01",
           "close": 292.13,
-          "adjustedClose": 280.9019,
+          "adjustedClose": 280.902,
           "priceReturnPct": 297.19,
           "dividendAdjustedReturnPct": 344.26
         },
@@ -7634,7 +7634,7 @@
         {
           "date": "2022-06-01",
           "close": 324.23,
-          "adjustedClose": 312.8187,
+          "adjustedClose": 312.8188,
           "priceReturnPct": 340.83,
           "dividendAdjustedReturnPct": 394.74
         },
@@ -7676,7 +7676,7 @@
         {
           "date": "2022-12-01",
           "close": 365.84,
-          "adjustedClose": 355.1045,
+          "adjustedClose": 355.1044,
           "priceReturnPct": 397.4,
           "dividendAdjustedReturnPct": 461.61
         },
@@ -7718,7 +7718,7 @@
         {
           "date": "2023-06-01",
           "close": 468.98,
-          "adjustedClose": 457.8785,
+          "adjustedClose": 457.8784,
           "priceReturnPct": 537.63,
           "dividendAdjustedReturnPct": 624.15
         },
@@ -7732,42 +7732,42 @@
         {
           "date": "2023-08-01",
           "close": 554.2,
-          "adjustedClose": 542.241,
+          "adjustedClose": 542.2409,
           "priceReturnPct": 653.5,
           "dividendAdjustedReturnPct": 757.58
         },
         {
           "date": "2023-09-01",
           "close": 537.13,
-          "adjustedClose": 525.5394,
+          "adjustedClose": 525.5395,
           "priceReturnPct": 630.29,
           "dividendAdjustedReturnPct": 731.16
         },
         {
           "date": "2023-10-01",
           "close": 553.93,
-          "adjustedClose": 541.9768,
+          "adjustedClose": 541.9769,
           "priceReturnPct": 653.13,
           "dividendAdjustedReturnPct": 757.16
         },
         {
           "date": "2023-11-01",
           "close": 591.04,
-          "adjustedClose": 579.3546,
+          "adjustedClose": 579.3544,
           "priceReturnPct": 703.59,
           "dividendAdjustedReturnPct": 816.27
         },
         {
           "date": "2023-12-01",
           "close": 582.92,
-          "adjustedClose": 571.395,
+          "adjustedClose": 571.3951,
           "priceReturnPct": 692.55,
           "dividendAdjustedReturnPct": 803.69
         },
         {
           "date": "2024-01-01",
           "close": 645.61,
-          "adjustedClose": 632.8458,
+          "adjustedClose": 632.8457,
           "priceReturnPct": 777.78,
           "dividendAdjustedReturnPct": 900.87
         },
@@ -7788,7 +7788,7 @@
         {
           "date": "2024-04-01",
           "close": 781.1,
-          "adjustedClose": 766.9989,
+          "adjustedClose": 766.9988,
           "priceReturnPct": 962.0,
           "dividendAdjustedReturnPct": 1113.04
         },
@@ -7809,7 +7809,7 @@
         {
           "date": "2024-07-01",
           "close": 804.27,
-          "adjustedClose": 791.0969,
+          "adjustedClose": 791.0967,
           "priceReturnPct": 993.5,
           "dividendAdjustedReturnPct": 1151.15
         },
@@ -7823,7 +7823,7 @@
         {
           "date": "2024-09-01",
           "close": 885.94,
-          "adjustedClose": 872.6469,
+          "adjustedClose": 872.6467,
           "priceReturnPct": 1104.54,
           "dividendAdjustedReturnPct": 1280.13
         },
@@ -7837,7 +7837,7 @@
         {
           "date": "2024-11-01",
           "close": 795.35,
-          "adjustedClose": 784.7136,
+          "adjustedClose": 784.7134,
           "priceReturnPct": 981.37,
           "dividendAdjustedReturnPct": 1141.06
         },
@@ -7858,7 +7858,7 @@
         {
           "date": "2025-02-01",
           "close": 920.63,
-          "adjustedClose": 909.8836,
+          "adjustedClose": 909.8835,
           "priceReturnPct": 1151.71,
           "dividendAdjustedReturnPct": 1339.02
         },
@@ -7872,21 +7872,21 @@
         {
           "date": "2025-04-01",
           "close": 898.95,
-          "adjustedClose": 888.4567,
+          "adjustedClose": 888.4566,
           "priceReturnPct": 1122.23,
           "dividendAdjustedReturnPct": 1305.13
         },
         {
           "date": "2025-05-01",
           "close": 737.67,
-          "adjustedClose": 730.5536,
+          "adjustedClose": 730.5537,
           "priceReturnPct": 902.95,
           "dividendAdjustedReturnPct": 1055.4
         },
         {
           "date": "2025-06-01",
           "close": 779.53,
-          "adjustedClose": 772.0099,
+          "adjustedClose": 772.0098,
           "priceReturnPct": 959.86,
           "dividendAdjustedReturnPct": 1120.97
         },
@@ -7935,7 +7935,7 @@
         {
           "date": "2026-01-01",
           "close": 1037.15,
-          "adjustedClose": 1030.9122,
+          "adjustedClose": 1030.9124,
           "priceReturnPct": 1310.13,
           "dividendAdjustedReturnPct": 1530.43
         },
@@ -10502,7 +10502,7 @@
         {
           "date": "2023-04-01",
           "close": 232.73,
-          "adjustedClose": 226.1951,
+          "adjustedClose": 226.195,
           "priceReturnPct": 1.09,
           "dividendAdjustedReturnPct": 1.29
         },
@@ -10565,7 +10565,7 @@
         {
           "date": "2024-01-01",
           "close": 273.26,
-          "adjustedClose": 267.1728,
+          "adjustedClose": 267.1727,
           "priceReturnPct": 18.7,
           "dividendAdjustedReturnPct": 19.64
         },
@@ -10607,7 +10607,7 @@
         {
           "date": "2024-07-01",
           "close": 265.67,
-          "adjustedClose": 260.7177,
+          "adjustedClose": 260.7178,
           "priceReturnPct": 15.4,
           "dividendAdjustedReturnPct": 16.75
         },
@@ -10628,14 +10628,14 @@
         {
           "date": "2024-10-01",
           "close": 289.85,
-          "adjustedClose": 285.0174,
+          "adjustedClose": 285.0175,
           "priceReturnPct": 25.91,
           "dividendAdjustedReturnPct": 27.63
         },
         {
           "date": "2024-11-01",
           "close": 315.08,
-          "adjustedClose": 310.4159,
+          "adjustedClose": 310.4158,
           "priceReturnPct": 36.87,
           "dividendAdjustedReturnPct": 39.01
         },
@@ -10761,7 +10761,7 @@
         {
           "date": "2026-05-01",
           "close": 326.36,
-          "adjustedClose": 325.153,
+          "adjustedClose": 325.1529,
           "priceReturnPct": 41.77,
           "dividendAdjustedReturnPct": 45.61
         },
@@ -10775,7 +10775,7 @@
         {
           "date": "2026-07-01",
           "close": 366.13,
-          "adjustedClose": 364.7759,
+          "adjustedClose": 364.7758,
           "priceReturnPct": 59.04,
           "dividendAdjustedReturnPct": 63.35
         },
@@ -10891,7 +10891,7 @@
         {
           "date": "2016-02-01",
           "close": 22.1133,
-          "adjustedClose": 18.314,
+          "adjustedClose": 18.3141,
           "priceReturnPct": -10.68,
           "dividendAdjustedReturnPct": -9.31
         },
@@ -11080,7 +11080,7 @@
         {
           "date": "2018-05-01",
           "close": 27.5133,
-          "adjustedClose": 24.35,
+          "adjustedClose": 24.3499,
           "priceReturnPct": 11.13,
           "dividendAdjustedReturnPct": 20.57
         },
@@ -11213,7 +11213,7 @@
         {
           "date": "2019-12-01",
           "close": 39.6133,
-          "adjustedClose": 36.1729,
+          "adjustedClose": 36.1728,
           "priceReturnPct": 60.01,
           "dividendAdjustedReturnPct": 79.12
         },
@@ -11248,7 +11248,7 @@
         {
           "date": "2020-05-01",
           "close": 41.3533,
-          "adjustedClose": 38.0956,
+          "adjustedClose": 38.0957,
           "priceReturnPct": 67.04,
           "dividendAdjustedReturnPct": 88.64
         },
@@ -11367,7 +11367,7 @@
         {
           "date": "2021-10-01",
           "close": 49.8067,
-          "adjustedClose": 46.787,
+          "adjustedClose": 46.7871,
           "priceReturnPct": 101.18,
           "dividendAdjustedReturnPct": 131.68
         },
@@ -11458,7 +11458,7 @@
         {
           "date": "2022-11-01",
           "close": 50.8067,
-          "adjustedClose": 48.4891,
+          "adjustedClose": 48.489,
           "priceReturnPct": 105.22,
           "dividendAdjustedReturnPct": 140.1
         },
@@ -11570,7 +11570,7 @@
         {
           "date": "2024-03-01",
           "close": 60.17,
-          "adjustedClose": 58.7203,
+          "adjustedClose": 58.7202,
           "priceReturnPct": 143.05,
           "dividendAdjustedReturnPct": 190.77
         },
@@ -11605,7 +11605,7 @@
         {
           "date": "2024-08-01",
           "close": 77.23,
-          "adjustedClose": 75.8457,
+          "adjustedClose": 75.8456,
           "priceReturnPct": 211.96,
           "dividendAdjustedReturnPct": 275.57
         },
