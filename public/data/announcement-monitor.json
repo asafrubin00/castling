@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-19T16:48:56.123149+00:00",
+    "generatedAt": "2026-11-20T16:23:13.754718+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
@@ -12,11 +12,11 @@
       "not-found": 1,
       "timeout": 1
     },
-    "newCandidateCount": 2,
-    "pendingCandidateCount": 104,
+    "newCandidateCount": 1,
+    "pendingCandidateCount": 105,
     "pendingCandidateCountBySignal": {
       "earnings": 83,
-      "succession": 22
+      "succession": 23
     },
     "validation": {
       "status": "pass",
@@ -828,10 +828,10 @@
     {
       "ticker": "SDLF",
       "status": "active",
-      "matchedLinkCount": 43,
+      "matchedLinkCount": 44,
       "matchedLinkCountBySignal": {
         "earnings": 7,
-        "succession": 36
+        "succession": 37
       }
     },
     {
