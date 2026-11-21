@@ -25,16 +25,16 @@ export function Layout({ generatedAt, data, radarData, error }: LayoutProps) {
     <div className={`site-shell ${isLanding ? 'site-shell--landing' : ''}`}>
       <header className="site-header">
         <div className="site-header__inner">
-          <div className="site-header__actions">
+          {/* Branding slot: intentionally blank until the product name is settled. */}
+          <div className="site-header__brand" aria-hidden="true" />
           {!isLanding && <nav className="site-nav" aria-label="Primary">
             <NavLink to="/heatmap" className={({ isActive }) => isActive || pathname === '/us-research' ? 'active' : ''}>Heatmap</NavLink>
             <NavLink to="/turnover">Turnover Trends</NavLink>
             <NavLink to="/proxy-voting">Proxy Voting</NavLink>
           </nav>}
-          <button type="button" className={`site-about-button ${isLanding ? 'site-about-button--label' : ''}`} aria-label="About this project" aria-haspopup="dialog" onClick={() => setAbout(true)} title="About">
-            {isLanding ? 'About' : <span aria-hidden="true">i</span>}
+          <button type="button" className="site-about-button" aria-label="About this project" aria-haspopup="dialog" onClick={() => setAbout(true)}>
+            About
           </button>
-          </div>
         </div>
       </header>
 

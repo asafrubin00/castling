@@ -6,7 +6,7 @@ export function TermsPage() {
     <div className="page-flow">
       <section className="terms-screen">
         <div className="terms-panel">
-          <Link className="terms-panel__back" to="/radar">← Back to Radar</Link>
+          <Link className="terms-panel__back" to="/heatmap">← Heatmap</Link>
           <p className="terms-panel__eyebrow">Legal</p>
           <h1>Terms of Use</h1>
 

@@ -1,47 +1,105 @@
+/*
+  Design tokens. The look follows RubiCo Desk: flat ink navy, warm ivory text, a single
+  brass accent, hairline rules, Cormorant Garamond for titles and figures, Inter for
+  everything you read or operate. Compact by default: 12–13px body, 11px labels,
+  28–30px controls, 4px corners.
+*/
 :root {
-  --canvas: #102335;
-  --canvas-light: #173245;
-  --workspace-background: radial-gradient(ellipse at top left, var(--canvas-light), var(--canvas) 75%);
-  --surface: #0b1924;
-  --surface-controls: #142c3d;
-  --ink: #edf2f4;
-  --muted: #afbec9;
-  --accent: #c7ad78;
-  --accent-bright: #e3cfaa;
-  --line: #8295a329;
-  --line-strong: #8295a35c;
-  --panel-radius: 6px;
-  --control-radius: 4px;
-  --font-ui: "Avenir Next", "IBM Plex Sans", "Segoe UI", sans-serif;
-  --font-editorial: "Iowan Old Style", Georgia, serif;
-  --chart-gold: #c7ad78;
-  --chart-blue: #89a9bb;
-  --chart-slate: #607d90;
-  --chart-steel: #476273;
-  --chart-copper: #b28b76;
+  color-scheme: dark;
+
+  /* Surfaces */
+  --paper: #0d1520;
+  --surface: #111a26;
+  --surface-2: #162130;
+  --surface-hover: #1a2636;
+
+  /* Text */
+  --ink: #e9e2d0;
+  --ink-2: #c5bfae;
+  --muted: #958f80;
+  --faint: #6f6a5f;
+
+  /* Rules */
+  --rule: #1f2a3a;
+  --rule-strong: #2e3b4f;
+
+  /* Accent */
+  --accent: #b39a62;
+  --accent-bright: #cdb27a;
+  --accent-soft: #4a3d22;
+  --link: #9db8d6;
+
+  /* Signals: used sparingly, mixed into the surface for fills */
+  --hot: #c25b52;
+  --warm: #d07f45;
+  --brass: #c9b06a;
+  --cool: #6f93b0;
+
+  /* Charts */
+  --chart-gold: #b39a62;
+  --chart-blue: #7f9fbd;
+  --chart-slate: #5f7389;
+  --chart-steel: #4a5f75;
+  --chart-copper: #b07f62;
+  --chart-olive: #8c8a62;
+  --chart-grid: #1f2a3a;
+  --chart-axis: #958f80;
+
+  /* Type */
+  --font-ui: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-md: 13px;
+  --text-lg: 15px;
+
+  /* Shape and rhythm */
+  --radius: 4px;
+  --radius-lg: 6px;
+  --control-h: 30px;
+  --header-h: 56px;
+  --gutter: clamp(16px, 2.2vw, 32px);
+
+  /* Legacy aliases kept so older selectors resolve to the new palette */
+  --canvas: var(--paper);
+  --muted-legacy: var(--muted);
+  --line: var(--rule);
+  --line-strong: var(--rule-strong);
+  --panel-radius: var(--radius-lg);
+  --control-radius: var(--radius);
+  --font-editorial: var(--font-serif);
+
   color: var(--ink);
-  background: var(--canvas);
+  background: var(--paper);
   font-family: var(--font-ui);
-  line-height: 1.6;
+  font-size: var(--text-md);
+  line-height: 1.5;
   font-weight: 400;
+  font-feature-settings: 'cv11', 'ss01';
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  background: var(--paper);
 }
 
 body {
   margin: 0;
-  letter-spacing: 0.002em;
   overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
 }
 
 a {
@@ -52,35 +110,39 @@ h1,
 h2,
 h3 {
   margin: 0;
-  color: #f2f6fa;
-  font-family: var(--font-editorial);
-  line-height: 1.05;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+  font-variant-numeric: lining-nums;
 }
 
-h1 {
-  font-size: clamp(2.35rem, 4vw, 3.9rem);
-  letter-spacing: -0.04em;
-}
-
-h2 {
-  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-  letter-spacing: -0.03em;
-}
-
-h3 {
-  font-size: 0.96rem;
-  letter-spacing: -0.01em;
-}
+h1 { font-size: 28px; }
+h2 { font-size: 21px; }
+h3 { font-size: 17px; }
 
 p {
   margin: 0;
 }
 
 button,
-select {
+select,
+input {
   font: inherit;
+  color: inherit;
 }
 
 #root {
   min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

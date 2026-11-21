@@ -25,8 +25,8 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
   return (
     <div className="page-stack">
       <div className="back-link-row">
-        <Link className="back-link" to="/dashboard">
-          Back to dashboard
+        <Link className="back-link" to="/proxy-voting">
+          ← Proxy Voting
         </Link>
       </div>
 

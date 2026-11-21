@@ -80,29 +80,30 @@ export function USCoveragePage({ onUK }: { onUK?: () => void }) {
   const activePeer = peers.some((issuer) => issuer.ticker === peer) ? peer : ''
   const chooseRole = (next: Role) => { setRole(next); setPeer('') }
   return (
-    <section className="workspace-screen radar-screen" id="workspace">
-      <div className="radar-workspace radar-workspace--map us-map-workspace">
-        <header className="radar-title">
-          <div><p>Company leadership & shareholder voting</p><h1>Heatmap</h1>
-            <p className="workspace-guidance">US leadership research in progress · S&P 100 first. Select a company for evidence and tenure performance.</p></div>
-          <div className="market-switch" aria-label="Market">
-            {onUK ? <button type="button" onClick={onUK}>UK · FTSE 100</button> : <Link to="/heatmap">UK · FTSE 100</Link>}
-            <button type="button" aria-pressed="true">US · S&P 100</button>
-            <button type="button" onClick={() => setMethodOpen(true)}>Coverage & method</button>
+    <section className="ws radar-screen" id="workspace">
+      <div className="ws__inner ws__inner--map">
+        <h1 className="sr-only">Heatmap · US S&P 100 research cohort</h1>
+        <div className="ws-toolbar">
+          <div className="ws-toolbar__group">
+            <fieldset className="segmented-control"><legend className="sr-only">Role</legend>
+              <button type="button" aria-pressed={role === 'ceo'} className={role === 'ceo' ? 'is-active' : ''} onClick={() => chooseRole('ceo')}>CEO</button>
+              <button type="button" aria-pressed={role === 'chair'} className={role === 'chair' ? 'is-active' : ''} onClick={() => chooseRole('chair')}>Chair</button>
+            </fieldset>
+            <label className="radar-select radar-select--search"><span className="sr-only">Find company</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search name or ticker" /></label>
+            <div className="us-coverage-control"><span><b>{verified.length}</b> / {data?.metadata.universeCount ?? '—'} {role === 'ceo' ? 'CEOs' : 'Chairs'} verified</span>
+              <button className="radar-action" type="button" aria-pressed={verifiedOnly} onClick={() => setVerifiedOnly(!verifiedOnly)}>{verifiedOnly ? 'Show all companies' : 'Verified only'}</button></div>
           </div>
-        </header>
-        {error && <p role="alert">{error}</p>}
-        <div className="radar-controls us-map-controls">
-          <fieldset className="segmented-control"><legend>Role</legend>
-            <button type="button" className={role === 'ceo' ? 'is-active' : ''} onClick={() => chooseRole('ceo')}>CEO</button>
-            <button type="button" className={role === 'chair' ? 'is-active' : ''} onClick={() => chooseRole('chair')}>Chair</button>
-          </fieldset>
-          <label className="radar-select"><span>Find company</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search name or ticker" /></label>
-          <div className="us-coverage-control"><span>{verified.length} / {data?.metadata.universeCount ?? '—'} {role === 'ceo' ? 'CEOs' : 'Chairs'} verified</span>
-            <button className="radar-action" type="button" aria-pressed={verifiedOnly} onClick={() => setVerifiedOnly(!verifiedOnly)}>{verifiedOnly ? 'Show all companies' : 'Verified only'}</button></div>
+          <div className="ws-toolbar__group ws-toolbar__actions">
+            <fieldset className="segmented-control"><legend className="sr-only">Market</legend>
+              {onUK ? <button type="button" aria-pressed="false" onClick={onUK}>UK · FTSE 100</button> : <Link to="/heatmap">UK · FTSE 100</Link>}
+              <button type="button" aria-pressed="true" className="is-active">US · S&P 100</button>
+            </fieldset>
+            <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Coverage & method</button>
+          </div>
         </div>
-        <section className="radar-map-panel radar-map-panel--wide">
-          <div className="radar-map-meta"><span>{issuers.length} companies shown</span><span>Tenure in years · ~ approximate · * interim · — awaiting verification</span></div>
+        {error && <p role="alert">{error}</p>}
+        <section className="radar-map-panel">
+          <div className="radar-map-meta"><p><span><b>{issuers.length}</b> companies shown</span><span className="radar-map-meta__hint">Research in progress · coloured tiles are source-verified; grey tiles are pending or due a recheck</span></p><span>Tenure in years · ~ approximate · * interim · — awaiting verification</span></div>
           <div className={`radar-grid radar-grid--us ${issuers.length <= 50 ? 'radar-grid--us-subset' : ''}`} aria-label="US company map">
             {issuers.map((issuer) => {
               const checked = issuer.roles[role]
@@ -116,7 +117,7 @@ export function USCoveragePage({ onUK }: { onUK?: () => void }) {
             {!issuers.length && <p className="radar-empty">{data ? 'No companies match this view.' : 'Loading US companies…'}</p>}
           </div>
         </section>
-        <footer className="radar-footer radar-footer--map"><span>{data ? 'Filings refreshed ' + dates.format(new Date(data.metadata.filingsGeneratedAt)) : 'Fetching source coverage'}{discoveryOverdue && data ? ' · Refresh overdue' : ''}</span><LegalLine /></footer>
+        <footer className="ws-footer"><span>{data ? 'Filings refreshed ' + dates.format(new Date(data.metadata.filingsGeneratedAt)) : 'Fetching source coverage'}{discoveryOverdue && data ? ' · Refresh overdue' : ''}</span><LegalLine /></footer>
       </div>
       {methodOpen && <RadarDialog title="US coverage" onClose={() => setMethodOpen(false)}>
         <header className="radar-drawer-heading"><h2>US coverage</h2></header>
@@ -132,9 +133,9 @@ export function USCoveragePage({ onUK }: { onUK?: () => void }) {
       </RadarDialog>}
       {selected && <RadarDialog title={selected.companyName} className="radar-dialog--drawer" onClose={() => setSelected(null)}>
         <header className="radar-drawer-heading"><p>{selected.ticker} · US leadership</p><h2>{selected.companyName}</h2></header>
-        <fieldset className="segmented-control"><legend>Role</legend>
-          <button type="button" className={role === 'ceo' ? 'is-active' : ''} onClick={() => chooseRole('ceo')}>CEO</button>
-          <button type="button" className={role === 'chair' ? 'is-active' : ''} onClick={() => chooseRole('chair')}>Chair</button>
+        <fieldset className="segmented-control"><legend className="sr-only">Role</legend>
+          <button type="button" aria-pressed={role === 'ceo'} className={role === 'ceo' ? 'is-active' : ''} onClick={() => chooseRole('ceo')}>CEO</button>
+          <button type="button" aria-pressed={role === 'chair'} className={role === 'chair' ? 'is-active' : ''} onClick={() => chooseRole('chair')}>Chair</button>
         </fieldset>
         {evidence ? <>
           <section className="us-leadership-record">

@@ -9,9 +9,9 @@ export function LandingPage() {
     <div className="landing-page__shade" aria-hidden="true" />
     <h1 className="sr-only">Leadership and governance research</h1>
     <nav className="landing-page__entries" aria-label="Explore the research">
-      <Link to="/heatmap"><span>Heatmap</span><span aria-hidden="true">↗</span></Link>
-      <Link to="/turnover"><span>Turnover Trends</span><span aria-hidden="true">↗</span></Link>
-      <Link to="/proxy-voting"><span>Proxy Voting</span><span aria-hidden="true">↗</span></Link>
+      <Link to="/heatmap"><span>Heatmap<small>Company leadership signals and tenure returns</small></span><span aria-hidden="true">↗</span></Link>
+      <Link to="/turnover"><span>Turnover Trends<small>CEO succession across markets and industries</small></span><span aria-hidden="true">↗</span></Link>
+      <Link to="/proxy-voting"><span>Proxy Voting<small>Significant shareholder dissent in the UK</small></span><span aria-hidden="true">↗</span></Link>
     </nav>
   </section>
 }

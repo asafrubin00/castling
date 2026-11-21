@@ -79,34 +79,36 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
   if (market === 'us') return <USCoveragePage onUK={() => setMarket('uk')} />
 
   return (
-    <section className="workspace-screen workspace-screen--radar radar-screen" id="workspace">
-      <div className="radar-workspace radar-workspace--map">
-        <header className="radar-title">
-          <div><p>Company leadership & shareholder voting</p><h1>Heatmap</h1><p className="workspace-guidance">Select a company to explore its leadership, tenure returns and governance evidence.</p></div>
-          <div className="market-switch" aria-label="Market">
-            <button type="button" aria-pressed="true">UK · FTSE 100</button>
-            <button type="button" aria-pressed="false" onClick={() => setMarket('us')}>US · S&P 100</button>
+    <section className="ws radar-screen" id="workspace">
+      <div className="ws__inner ws__inner--map">
+        <h1 className="sr-only">Heatmap · UK FTSE 100</h1>
+        <div className="ws-toolbar">
+          <div className="ws-toolbar__group">
+            <fieldset className="segmented-control"><legend className="sr-only">Signal</legend>
+              <button type="button" aria-pressed={lens === 'integrated'} className={lens === 'integrated' ? 'is-active' : ''} onClick={() => { setLens('integrated'); setBand('') }}>Leadership</button>
+              <button type="button" aria-pressed={lens === 'voting'} className={lens === 'voting' ? 'is-active' : ''} onClick={() => { setLens('voting'); setBand('') }}>Voting</button>
+            </fieldset>
+            <fieldset className="segmented-control"><legend className="sr-only">Role</legend>
+              <button type="button" aria-pressed={role === 'ceo'} className={role === 'ceo' ? 'is-active' : ''} onClick={() => setRole('ceo')}>CEO</button>
+              <button type="button" aria-pressed={role === 'chair'} className={role === 'chair' ? 'is-active' : ''} onClick={() => setRole('chair')}>Chair</button>
+            </fieldset>
+            <label className="radar-select radar-select--search"><span className="sr-only">Company</span><input type="search" placeholder="Search name or ticker" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
+            <label className="radar-select"><span className="sr-only">Sector</span><select value={sector} onChange={(event) => setSector(event.target.value)}><option value="">All sectors</option>{sectors.map((item) => <option key={item}>{item}</option>)}</select></label>
+            <label className="radar-select"><span className="sr-only">{lens === 'voting' ? 'Voting signal' : 'Pressure band'}</span><select value={band} onChange={(event) => setBand(event.target.value)}><option value="">{lens === 'voting' ? 'All voting signals' : 'All pressure bands'}</option>{bands.map((item) => <option key={item}>{item}</option>)}</select></label>
+            {(query || sector || band) && <button className="radar-action radar-action--quiet" type="button" onClick={() => { setQuery(''); setSector(''); setBand('') }}>Clear</button>}
+          </div>
+          <div className="ws-toolbar__group ws-toolbar__actions">
+            <fieldset className="segmented-control"><legend className="sr-only">Market</legend>
+              <button type="button" aria-pressed="true" className="is-active">UK · FTSE 100</button>
+              <button type="button" aria-pressed="false" onClick={() => setMarket('us')}>US · S&P 100</button>
+            </fieldset>
             <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Method</button>
           </div>
-        </header>
-        <div className="radar-controls">
-          <fieldset className="segmented-control"><legend>Signal</legend>
-            <button type="button" aria-pressed={lens === 'integrated'} className={lens === 'integrated' ? 'is-active' : ''} onClick={() => { setLens('integrated'); setBand('') }}>Leadership</button>
-            <button type="button" aria-pressed={lens === 'voting'} className={lens === 'voting' ? 'is-active' : ''} onClick={() => { setLens('voting'); setBand('') }}>Voting</button>
-          </fieldset>
-          <fieldset className="segmented-control"><legend>Role</legend>
-            <button type="button" aria-pressed={role === 'ceo'} className={role === 'ceo' ? 'is-active' : ''} onClick={() => setRole('ceo')}>CEO</button>
-            <button type="button" aria-pressed={role === 'chair'} className={role === 'chair' ? 'is-active' : ''} onClick={() => setRole('chair')}>Chair</button>
-          </fieldset>
-          <label className="radar-select"><span>Company</span><input type="search" placeholder="Search name or ticker" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
-          <label className="radar-select"><span>Sector</span><select value={sector} onChange={(event) => setSector(event.target.value)}><option value="">All sectors</option>{sectors.map((item) => <option key={item}>{item}</option>)}</select></label>
-          <label className="radar-select"><span>{lens === 'voting' ? 'Voting signal' : 'Pressure band'}</span><select value={band} onChange={(event) => setBand(event.target.value)}><option value="">All bands</option>{bands.map((item) => <option key={item}>{item}</option>)}</select></label>
         </div>
-        <section className="radar-map-panel radar-map-panel--wide" aria-label={lens === 'voting' ? 'Voting heatmap' : 'Leadership heatmap'}>
+        <section className="radar-map-panel" aria-label={lens === 'voting' ? 'Voting heatmap' : 'Leadership heatmap'}>
           <div className="radar-map-meta">
-            <span aria-live="polite">{visible.length} of {data.metadata.constituentCount} companies</span>
-            <div className="radar-legend" aria-label="Heatmap legend">{bands.map((item) => <span key={item}><i className={bandClass(item, lens)} />{item}</span>)}</div>
-            {(query || sector || band) && <button className="radar-action" type="button" onClick={() => { setQuery(''); setSector(''); setBand('') }}>Clear filters</button>}
+            <p><span aria-live="polite"><b>{visible.length}</b> of {data.metadata.constituentCount} companies</span><span className="radar-map-meta__hint">Select a company for tenure performance and evidence</span></p>
+            <div className="radar-legend" aria-label="Heatmap legend">{bands.map((item) => <span key={item}><i className={bandClass(item, lens)} />{item}</span>)}{lens === 'integrated' && <span><i className="radar-legend__dot" />Additional evidence</span>}</div>
           </div>
           <div className="radar-grid">
             {visible.map((company) => {
@@ -134,7 +136,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
             {!visible.length && <p className="radar-empty">No companies match these filters.</p>}
           </div>
         </section>
-        <footer className="radar-footer radar-footer--map">
+        <footer className="ws-footer">
           <button type="button" onClick={() => setFreshnessOpen(true)}>
             Leadership review cutoff · {dateLabel.format(new Date(data.metadata.asOfDate))}
             {' · Data built ' + dateLabel.format(new Date(data.metadata.generatedAt))}

@@ -29,7 +29,7 @@ import {
   getTopDissent,
 } from '../lib/analytics'
 import { formatDate, formatShortPercent } from '../lib/format'
-import { chartColours as palette, chartTooltipStyle } from '../lib/chartTheme'
+import { chartAxisStyle, chartColours as palette, chartTooltipStyle } from '../lib/chartTheme'
 import type { Filters, TrackerData } from '../types'
 
 type DashboardPageProps = {
@@ -78,80 +78,40 @@ export function DashboardPage({ data }: DashboardPageProps) {
 
   return (
     <div className="page-flow">
-      <section className="workspace-screen workspace-screen--dashboard proxy-screen">
-        <div className="workspace-dashboard proxy-workspace">
-          <header className="radar-title">
-            <div><p>Shareholder voting · UK evidence</p><h1>Proxy Voting</h1>
-              <p className="workspace-guidance">Explore significant opposition to management. Filter the charts or open a resolution for its voting results and sources.</p>
+      <section className="ws proxy-screen">
+        <div className="ws__inner ws__inner--proxy">
+          <h1 className="sr-only">Proxy Voting · UK evidence</h1>
+          <div className="ws-toolbar">
+            <div className="ws-toolbar__group">
+              <FilterBar
+                filters={filters}
+                options={options}
+                onChange={updateFilter}
+                onReset={() => setFilters(defaultFilters)}
+                showReset={false}
+              />
+              {(filters.company !== defaultFilters.company || filters.year !== defaultFilters.year || filters.sector !== defaultFilters.sector || filters.category !== defaultFilters.category) && (
+                <button className="radar-action radar-action--quiet" type="button" onClick={() => setFilters(defaultFilters)}>Clear</button>
+              )}
             </div>
-            <div className="proxy-actions">
-              <button className="radar-action" type="button" onClick={() => setShowMethod(true)}>Coverage & method</button>
+            <div className="ws-toolbar__group ws-toolbar__actions">
               <button className="radar-action" type="button" onClick={() => setShowTable(true)}>View records</button>
-              <button className="radar-action" type="button" onClick={() => setFilters(defaultFilters)}>Reset filters</button>
+              <button className="radar-action" type="button" onClick={() => setShowMethod(true)}>Coverage & method</button>
             </div>
-          </header>
-          <div className="workspace-dashboard__controls">
-            <FilterBar
-              filters={filters}
-              options={options}
-              onChange={updateFilter}
-              onReset={() => setFilters(defaultFilters)}
-              showReset={false}
-            />
           </div>
 
-          <div className="workspace-dashboard__tabs">
-            <button
-              className={activePanel === 'top' ? 'is-active' : ''}
-              onClick={() => setActivePanel('top')}
-              type="button"
-            >
-              Top dissenting votes
-            </button>
-            <button
-              className={activePanel === 'category' ? 'is-active' : ''}
-              onClick={() => setActivePanel('category')}
-              type="button"
-            >
-              Dissent by category
-            </button>
-            <button
-              className={activePanel === 'trend' ? 'is-active' : ''}
-              onClick={() => setActivePanel('trend')}
-              type="button"
-            >
-              Trend over time
-            </button>
-            <button
-              className={activePanel === 'patterns' ? 'is-active' : ''}
-              onClick={() => setActivePanel('patterns')}
-              type="button"
-            >
-              Company patterns
-            </button>
+          <div className="ws-tabs" role="group" aria-label="Proxy voting analysis">
+            {([['top', 'Top dissenting votes'], ['category', 'Dissent by category'], ['trend', 'Trend over time'], ['patterns', 'Company patterns']] as const).map(([key, label]) => (
+              <button key={key} type="button" aria-pressed={activePanel === key} className={activePanel === key ? 'is-active' : ''} onClick={() => setActivePanel(key)}>{label}</button>
+            ))}
+            <span className="ws-tabs__hint">Significant opposition to management (20%+). Open a resolution in <button type="button" onClick={() => setShowTable(true)}>View records</button> for results and sources.</span>
           </div>
 
-          <div className="workspace-dashboard__kpis">
-            <StatCard
-              compact
-              label="Resolutions"
-              value={String(metrics.resolutions)}
-            />
-            <StatCard
-              compact
-              label="Companies"
-              value={String(metrics.companies)}
-            />
-            <StatCard
-              compact
-              label="Average dissent"
-              value={formatShortPercent(metrics.averageAgainst)}
-            />
-            <StatCard
-              compact
-              label="Dissent above 50%"
-              value={String(metrics.severeVotes)}
-            />
+          <div className="ws-kpis">
+            <StatCard compact label="Resolutions" value={String(metrics.resolutions)} />
+            <StatCard compact label="Companies" value={String(metrics.companies)} />
+            <StatCard compact label="Average dissent" value={formatShortPercent(metrics.averageAgainst)} />
+            <StatCard compact label="Dissent above 50%" value={String(metrics.severeVotes)} />
           </div>
 
           <div className="workspace-dashboard__main-row">
@@ -189,7 +149,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                     >
                       <CartesianGrid
                         strokeDasharray="2 5"
-                        stroke="rgba(255,255,255,0.08)"
+                        stroke="var(--chart-grid)"
                         horizontal
                         vertical={false}
                       />
@@ -197,15 +157,15 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         type="number"
                         domain={[0, 100]}
                         tickFormatter={(value) => `${value}%`}
-                        tick={{ fill: '#93a7b8', fontSize: 10 }}
+                        tick={chartAxisStyle}
                         axisLine={false}
                         tickLine={false}
                       />
                       <YAxis
                         type="category"
                         dataKey="companyName"
-                        width={132}
-                        tick={{ fill: '#f1f5f8', fontSize: 10 }}
+                        width={172}
+                        tick={{ fill: 'var(--ink-2)', fontSize: 10 }}
                         axisLine={false}
                         tickLine={false}
                       />
@@ -213,15 +173,16 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         formatter={(value) => [formatTooltipPercent(value), 'Opposition to management']}
                         labelFormatter={(label) => formatTooltipLabel(label, 'Company')}
                         contentStyle={chartTooltipStyle}
-                        cursor={{ fill: 'rgba(255,255,255,0.03)' }}
+                        cursor={{ fill: 'rgba(233,226,208,0.04)' }}
                       />
                       <Bar
                         dataKey="managementDissentPct"
                         fill={palette[0]}
                         radius={[0, 2, 2, 0]}
+                        maxBarSize={14}
                         isAnimationActive={false}
                       >
-                        <LabelList dataKey="managementDissentPct" position="right" formatter={(value) => formatTooltipPercent(value)} fill="#cbd6df" fontSize={11} />
+                        <LabelList dataKey="managementDissentPct" position="right" formatter={(value) => formatTooltipPercent(value)} fill="var(--ink-2)" fontSize={11} />
                       </Bar>
                     </BarChart>
                   </ResponsiveContainer>
@@ -237,9 +198,11 @@ export function DashboardPage({ data }: DashboardPageProps) {
                           nameKey="category"
                           cx="50%"
                           cy="50%"
-                          outerRadius={96}
-                          innerRadius={54}
-                          paddingAngle={3}
+                          outerRadius={118}
+                          innerRadius={84}
+                          paddingAngle={1}
+                          stroke="none"
+                          isAnimationActive={false}
                         >
                           {categories.map((entry, index) => (
                             <Cell
@@ -281,18 +244,18 @@ export function DashboardPage({ data }: DashboardPageProps) {
                     >
                       <CartesianGrid
                         strokeDasharray="2 5"
-                        stroke="rgba(255,255,255,0.08)"
+                        stroke="var(--chart-grid)"
                         vertical={false}
                       />
                       <XAxis
                         dataKey="label"
-                        tick={{ fill: '#93a7b8', fontSize: 10 }}
+                        tick={chartAxisStyle}
                         axisLine={false}
                         tickLine={false}
                       />
                       <YAxis
                         yAxisId="left"
-                        tick={{ fill: '#93a7b8', fontSize: 10 }}
+                        tick={chartAxisStyle}
                         axisLine={false}
                         tickLine={false}
                       />
@@ -300,7 +263,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         yAxisId="right"
                         orientation="right"
                         tickFormatter={(value) => `${value}%`}
-                        tick={{ fill: '#93a7b8', fontSize: 10 }}
+                        tick={chartAxisStyle}
                         axisLine={false}
                         tickLine={false}
                       />
@@ -319,15 +282,18 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         yAxisId="left"
                         dataKey="resolutions"
                         fill={palette[3]}
-                        radius={[8, 8, 0, 0]}
+                        radius={[2, 2, 0, 0]}
+                        maxBarSize={28}
+                        isAnimationActive={false}
                       />
                       <Line
                         yAxisId="right"
                         type="monotone"
                         dataKey="avgAgainst"
                         stroke={palette[0]}
-                        strokeWidth={2.6}
-                        dot={{ r: 3, fill: palette[0] }}
+                        strokeWidth={1.75}
+                        dot={{ r: 2.5, fill: palette[0], strokeWidth: 0 }}
+                        isAnimationActive={false}
                       />
                     </ComposedChart>
                   </ResponsiveContainer>
@@ -364,11 +330,11 @@ export function DashboardPage({ data }: DashboardPageProps) {
 
           </div>
 
-          <div className="workspace-micro-note">
+          <footer className="ws-footer">
             <span>Results through {data.metadata.coveragePeriod.endDate ? formatDate(data.metadata.coveragePeriod.endDate) : '—'} · Refreshed {formatDate(data.metadata.generatedAt)}</span>
             <LegalLine />
             <span>{data.metadata.sourceName}</span>
-          </div>
+          </footer>
         </div>
 
         {showMethod && <RadarDialog title="Proxy voting coverage" onClose={() => setShowMethod(false)}>

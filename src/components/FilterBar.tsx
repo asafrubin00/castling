@@ -27,8 +27,8 @@ function SelectField({
   onChange: (name: keyof Filters, value: string) => void
 }) {
   return (
-    <label className="filter-field">
-      <span>{label}</span>
+    <label className="radar-select">
+      <span className="sr-only">{label}</span>
       <select value={value} onChange={(event) => onChange(id, event.target.value)}>
         {options.map((option) => (
           <option key={option} value={option}>
@@ -48,8 +48,7 @@ export function FilterBar({
   showReset = true,
 }: FilterBarProps) {
   return (
-    <section className="filter-bar filter-bar--dashboard">
-      <div className="filter-grid">
+    <>
         <SelectField
           id="company"
           label="Company"
@@ -78,12 +77,11 @@ export function FilterBar({
           options={options.categories}
           onChange={onChange}
         />
-      </div>
       {showReset ? (
-        <button className="ghost-button" onClick={onReset} type="button">
+        <button className="radar-action radar-action--quiet" onClick={onReset} type="button">
           Reset filters
         </button>
       ) : null}
-    </section>
+    </>
   )
 }

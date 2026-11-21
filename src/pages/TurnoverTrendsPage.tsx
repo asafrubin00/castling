@@ -3,7 +3,7 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart,
 import { LegalLine } from '../components/LegalLine'
 import { RadarDialog } from '../components/RadarDialog'
 import { TurnoverMarketMap } from '../components/TurnoverMarketMap'
-import { chartColours, chartTooltipStyle as tooltipStyle, chartAxisStyle as axis } from '../lib/chartTheme'
+import { chartColours, chartTooltipStyle as tooltipStyle, chartAxisStyle as axis, chartLegendStyle } from '../lib/chartTheme'
 import { comparisonRows, displaySegment, latestComposition, periodKey, periodLabel, previousQuarter, selectedSeries, trendRows, type Filters, type Scope, type TurnoverData } from '../lib/turnover'
 import './TurnoverTrendsPage.css'
 
@@ -78,23 +78,24 @@ export function TurnoverTrendsPage() {
   }
   const periodText = latest ? periodLabel(latest) : 'No reported quarter'
 
-  return <section className="workspace-screen turnover-screen">
-    <div className="turnover-workspace">
-      <header className="turnover-masthead">
-        <div><p>Leadership in perspective</p><h1>Turnover Trends</h1><span>Explore CEO succession across markets and industries.</span></div>
-        <div className="turnover-header-actions"><a className="radar-action turnover-original-link" href="https://ceo-turnover-index.vercel.app/" target="_blank" rel="noreferrer">Original CEO Turnover Index <span aria-hidden="true">↗</span></a>
-        <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Coverage & method <span aria-hidden="true">ⓘ</span></button>
-        </div>
-      </header>
+  return <section className="ws turnover-screen">
+    <div className="ws__inner ws__inner--turnover">
+      <h1 className="sr-only">Turnover Trends</h1>
       {error ? <p role="alert">{error}</p> : !data ? <p role="status">Loading the quarterly turnover snapshot…</p> : <>
-        <div className="turnover-controls">
-          <fieldset className="segmented-control"><legend>Explore by</legend><button type="button" className={filters.scope === 'index' ? 'is-active' : ''} onClick={() => chooseScope('index')}>Index</button><button type="button" className={filters.scope === 'industry' ? 'is-active' : ''} onClick={() => chooseScope('industry')}>Industry</button></fieldset>
-          <label className="radar-select"><span>{filters.scope === 'index' ? 'Market / index' : 'Industry'}</span><select aria-label={filters.scope === 'index' ? 'Market / index' : 'Industry'} value={filters.segment} onChange={(e) => { setFilters({ ...filters, segment: e.target.value }); if (peer === e.target.value) setPeer('') }}>{segments.map((s) => <option key={s} value={s}>{displaySegment(s)}</option>)}</select></label>
-          <label className="radar-select"><span>Year</span><select aria-label="Year" value={filters.year} onChange={(e) => setFilters({ ...filters, year: e.target.value })}><option value="all">All years</option>{years.map((y) => <option key={y}>{y}</option>)}</select></label>
-          <label className="radar-select"><span>Quarter</span><select aria-label="Quarter" value={filters.quarter} onChange={(e) => setFilters({ ...filters, quarter: e.target.value })}><option value="all">All quarters</option>{[1, 2, 3, 4].map((q) => <option key={q} value={q}>Q{q}</option>)}</select></label>
-          <button className="radar-action" type="button" onClick={() => { setFilters(initialFilters); setPeer(''); setView('turnover') }}>Reset</button>
+        <div className="ws-toolbar">
+          <div className="ws-toolbar__group">
+            <fieldset className="segmented-control"><legend className="sr-only">Explore by</legend><button type="button" aria-pressed={filters.scope === 'index'} className={filters.scope === 'index' ? 'is-active' : ''} onClick={() => chooseScope('index')}>Index</button><button type="button" aria-pressed={filters.scope === 'industry'} className={filters.scope === 'industry' ? 'is-active' : ''} onClick={() => chooseScope('industry')}>Industry</button></fieldset>
+            <label className="radar-select radar-select--wide"><span className="sr-only">{filters.scope === 'index' ? 'Market / index' : 'Industry'}</span><select aria-label={filters.scope === 'index' ? 'Market / index' : 'Industry'} value={filters.segment} onChange={(e) => { setFilters({ ...filters, segment: e.target.value }); if (peer === e.target.value) setPeer('') }}>{segments.map((s) => <option key={s} value={s}>{displaySegment(s)}</option>)}</select></label>
+            <label className="radar-select"><span className="sr-only">Year</span><select aria-label="Year" value={filters.year} onChange={(e) => setFilters({ ...filters, year: e.target.value })}><option value="all">All years</option>{years.map((y) => <option key={y}>{y}</option>)}</select></label>
+            <label className="radar-select"><span className="sr-only">Quarter</span><select aria-label="Quarter" value={filters.quarter} onChange={(e) => setFilters({ ...filters, quarter: e.target.value })}><option value="all">All quarters</option>{[1, 2, 3, 4].map((q) => <option key={q} value={q}>Q{q}</option>)}</select></label>
+            <button className="radar-action radar-action--quiet" type="button" onClick={() => { setFilters(initialFilters); setPeer(''); setView('turnover') }}>Reset</button>
+          </div>
+          <div className="ws-toolbar__group ws-toolbar__actions">
+            <a className="radar-action" href="https://ceo-turnover-index.vercel.app/" target="_blank" rel="noreferrer">Original CEO Turnover Index <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
+            <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Coverage & method</button>
+          </div>
         </div>
-        <div className="turnover-tabs" role="tablist" aria-label="Turnover analysis">
+        <div className="ws-tabs" role="tablist" aria-label="Turnover analysis">
           {views.map(([key, label]) => <button type="button" role="tab" id={`turnover-tab-${key}`} aria-controls="turnover-panel" aria-selected={view === key} tabIndex={view === key ? 0 : -1} key={key} onClick={() => chooseView(key)} onKeyDown={(event) => {
             if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) {
               event.preventDefault()
@@ -105,7 +106,7 @@ export function TurnoverTrendsPage() {
           }}>{label}</button>)}
         </div>
         <div className="turnover-summary" aria-live="polite"><strong>{selectedLabel} <span>· {periodText}</span></strong><span>{latest ? `${count(latest.outgoing_count)} departures among ${count(latest.company_count)} companies in the latest visible quarter.` : 'No observations match these filters. Try another year or quarter.'}</span></div>
-        <div className="turnover-kpis">
+        <div className="ws-kpis ws-kpis--notes">
           <div><span>Departure rate</span><strong>{pct(latest?.outgoing_pct)}</strong><small>{delta == null ? 'No previous-quarter comparison' : `${delta >= 0 ? '+' : ''}${delta.toFixed(1)} pp vs previous calendar quarter`}</small></div>
           <div><span>Incoming CEOs</span><strong>{count(latest?.incoming_count)}</strong><small>{pct(latest?.incoming_pct)} appointment rate</small></div>
           <div><span>Outgoing tenure</span><strong>{latest && latest.outgoing_count !== 0 && latest.avg_outgoing_tenure_years != null ? `${latest.avg_outgoing_tenure_years.toFixed(1)} yrs` : '—'}</strong><small>{latest?.outgoing_count === 0 ? 'No departures in this quarter' : 'Published quarterly average'}</small></div>
@@ -121,21 +122,21 @@ export function TurnoverTrendsPage() {
                 : <div className="turnover-chart">
                   <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     {view === 'turnover' ? <LineChart data={trend} margin={{ top: 12, right: 18, bottom: 0, left: 0 }}>
-                      <CartesianGrid stroke="#263743" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis domain={[0, rateCeiling]} tickCount={6} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} width={46} />
-                      <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)}%`} contentStyle={tooltipStyle} /><Legend />
-                      <Line type="linear" name={peer ? selectedLabel : 'Departures'} dataKey="departures" stroke={chartColours[0]} strokeWidth={2} dot={trend.length === 1} isAnimationActive={false} />
-                      <Line type="linear" name={peer ? displaySegment(peer) : 'Appointments'} dataKey={peer ? 'peer' : 'appointments'} stroke={chartColours[1]} strokeWidth={1.7} dot={trend.length === 1} isAnimationActive={false} />
+                      <CartesianGrid stroke="var(--chart-grid)" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis domain={[0, rateCeiling]} tickCount={6} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} width={46} />
+                      <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)}%`} contentStyle={tooltipStyle} /><Legend iconType="plainline" iconSize={14} wrapperStyle={chartLegendStyle} />
+                      <Line type="linear" name={peer ? selectedLabel : 'Departures'} dataKey="departures" stroke={chartColours[0]} strokeWidth={1.75} dot={trend.length === 1} isAnimationActive={false} />
+                      <Line type="linear" name={peer ? displaySegment(peer) : 'Appointments'} dataKey={peer ? 'peer' : 'appointments'} stroke={chartColours[1]} strokeWidth={1.5} dot={trend.length === 1} isAnimationActive={false} />
                     </LineChart> : view === 'tenure' ? <AreaChart data={tenure} margin={{ top: 12, right: 18, bottom: 0, left: 0 }}>
                       <defs><linearGradient id="turnover-tenure-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={chartColours[0]} stopOpacity={.18} /><stop offset="100%" stopColor={chartColours[0]} stopOpacity={0} /></linearGradient></defs>
-                      <CartesianGrid stroke="#263743" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis tickFormatter={(v) => `${v}y`} tick={axis} axisLine={false} tickLine={false} width={46} />
+                      <CartesianGrid stroke="var(--chart-grid)" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis tickFormatter={(v) => `${v}y`} tick={axis} axisLine={false} tickLine={false} width={46} />
                       <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)} years`} contentStyle={tooltipStyle} /><Area type="linear" dataKey="tenure" name="Average outgoing tenure" stroke={chartColours[0]} strokeWidth={2} fill="url(#turnover-tenure-fill)" dot={tenure.length === 1} isAnimationActive={false} />
                     </AreaChart> : view === 'segments' ? <BarChart data={comparisons.map((r) => ({ ...r, label: displaySegment(r.segment) }))} layout="vertical" margin={{ top: 6, right: 20, bottom: 0, left: 0 }}>
-                      <CartesianGrid stroke="#263743" horizontal={false} /><XAxis type="number" tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} /><YAxis dataKey="label" type="category" interval={0} width={142} tick={axis} axisLine={false} tickLine={false} />
-                      <Tooltip contentStyle={tooltipStyle} labelFormatter={(_, payload) => { const row = payload[0]?.payload; return row ? `${row.label} · ${periodLabel(row)}` : '' }} formatter={(v) => `${Number(v).toFixed(1)}%`} /><Bar dataKey="outgoing_pct" name="Departure rate" fill={chartColours[0]} maxBarSize={22} radius={[0, 3, 3, 0]} isAnimationActive={false} />
+                      <CartesianGrid stroke="var(--chart-grid)" horizontal={false} /><XAxis type="number" tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} /><YAxis dataKey="label" type="category" interval={0} width={142} tick={axis} axisLine={false} tickLine={false} />
+                      <Tooltip contentStyle={tooltipStyle} labelFormatter={(_, payload) => { const row = payload[0]?.payload; return row ? `${row.label} · ${periodLabel(row)}` : '' }} formatter={(v) => `${Number(v).toFixed(1)}%`} /><Bar dataKey="outgoing_pct" name="Departure rate" fill={chartColours[0]} maxBarSize={14} radius={[0, 2, 2, 0]} isAnimationActive={false} />
                     </BarChart> : <BarChart data={composition} layout="vertical" margin={{ top: 20, right: 20, bottom: 12, left: 0 }}>
-                      <CartesianGrid stroke="#263743" horizontal={false} /><XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} /><YAxis type="category" dataKey="name" width={116} tick={axis} axisLine={false} tickLine={false} />
-                      <Tooltip contentStyle={tooltipStyle} formatter={(v, name, item) => [`${Number(v).toFixed(1)}% · ${count(item.payload.counts[String(name)])} CEOs`, String(name)]} /><Legend />
-                      {categories.map((category, i) => <Bar key={category} dataKey={category} name={category} stackId="composition" fill={chartColours[i]} maxBarSize={60} isAnimationActive={false} />)}
+                      <CartesianGrid stroke="var(--chart-grid)" horizontal={false} /><XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} /><YAxis type="category" dataKey="name" width={116} tick={axis} axisLine={false} tickLine={false} />
+                      <Tooltip contentStyle={tooltipStyle} formatter={(v, name, item) => [`${Number(v).toFixed(1)}% · ${count(item.payload.counts[String(name)])} CEOs`, String(name)]} /><Legend iconType="square" iconSize={9} wrapperStyle={chartLegendStyle} />
+                      {categories.map((category, i) => <Bar key={category} dataKey={category} name={category} stackId="composition" fill={chartColours[i]} maxBarSize={36} isAnimationActive={false} />)}
                     </BarChart>}
                   </ResponsiveContainer>
                 </div>}
@@ -151,7 +152,7 @@ export function TurnoverTrendsPage() {
             <section className="turnover-source-note"><p className="turnover-eyebrow">Source & coverage</p><p>Russell Reynolds Associates<br />Global CEO Turnover Index</p><span>Imported snapshot · through {data.metadata.lastPeriod}</span><button type="button" onClick={() => setMethodOpen(true)}>Methodology & limitations <span aria-hidden="true">↗</span></button></section>
           </aside>
         </div>
-        <footer className="turnover-footer"><span>{data.metadata.firstPeriod} – {data.metadata.lastPeriod} · {data.metadata.indexCount} indices · {data.metadata.industryCount} industries · Quarterly snapshot</span><LegalLine /></footer>
+        <footer className="ws-footer"><span>{data.metadata.firstPeriod} – {data.metadata.lastPeriod} · {data.metadata.indexCount} indices · {data.metadata.industryCount} industries · Quarterly snapshot</span><LegalLine /></footer>
       </>}
     </div>
     {methodOpen && <RadarDialog title="Turnover coverage and methodology" onClose={() => setMethodOpen(false)}><header className="radar-drawer-heading"><p>Turnover Trends</p><h2>Coverage & methodology</h2></header><div className="radar-method">
