@@ -83,10 +83,10 @@ export function USCoveragePage({ onUK }: { onUK?: () => void }) {
     <section className="workspace-screen radar-screen" id="workspace">
       <div className="radar-workspace radar-workspace--map us-map-workspace">
         <header className="radar-title">
-          <div><p>Company leadership & shareholder voting</p><h1>DashBoard</h1>
+          <div><p>Company leadership & shareholder voting</p><h1>Heatmap</h1>
             <p className="workspace-guidance">US leadership research in progress · S&P 100 first. Select a company for evidence and tenure performance.</p></div>
           <div className="market-switch" aria-label="Market">
-            {onUK ? <button type="button" onClick={onUK}>UK · FTSE 100</button> : <Link to="/radar">UK · FTSE 100</Link>}
+            {onUK ? <button type="button" onClick={onUK}>UK · FTSE 100</button> : <Link to="/heatmap">UK · FTSE 100</Link>}
             <button type="button" aria-pressed="true">US · S&P 100</button>
             <button type="button" onClick={() => setMethodOpen(true)}>Coverage & method</button>
           </div>

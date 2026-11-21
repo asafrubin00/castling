@@ -38,4 +38,4 @@ npm run build
 
 The source CSVs live under `data/turnover`, generated JSON under `public/data`, and the existing project's chess image and world GeoJSON under `public/turnover`. The React view uses the app's existing Recharts dependency. No new package or backend is required.
 
-The compact chess masthead appears within the analytics viewport. It does not introduce a landing graphic or a scroll-to-enter interaction. Brand name, favicon, company dashboard and proxy-voting calculations remain unchanged.
+Navigation update, 21 November 2026. The original chess photograph now fills the landing page, with direct Heatmap, Turnover Trends and Proxy Voting entrances. There is no scroll-to-enter step. The turnover workspace no longer repeats the image and links to the original CEO Turnover Index in a new tab. The old Overview wording is reused in a shared About dialog. Brand name, favicon, analytical data and proxy-voting calculations remain unchanged.

@@ -11,6 +11,10 @@ on:
       - "src/lib/turnover.ts"
       - "src/pages/TurnoverTrendsPage*"
       - "src/components/TurnoverMarketMap.tsx"
+      - "src/components/Layout.tsx"
+      - "src/App.tsx"
+      - "src/pages/LandingPage*"
+      - "src/pages/HomePage.tsx"
       - "package*.json"
       - ".github/workflows/verify-turnover.yml"
 

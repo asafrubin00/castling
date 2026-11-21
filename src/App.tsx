@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
+import { LandingPage } from './pages/LandingPage'
 import type { LeadershipProfilesData, LeadershipRadarData, MarketPerformanceData, TrackerData } from './types'
 import './App.css'
 const TurnoverTrendsPage = lazy(async () => {
@@ -10,11 +11,6 @@ const TurnoverTrendsPage = lazy(async () => {
 const USCoveragePage = lazy(async () => {
   const module = await import('./pages/USCoveragePage')
   return { default: module.USCoveragePage }
-})
-
-const HomePage = lazy(async () => {
-  const module = await import('./pages/HomePage')
-  return { default: module.HomePage }
 })
 
 const DashboardPage = lazy(async () => {
@@ -112,27 +108,23 @@ function App() {
     }
   }, [])
 
-  if (error) {
-    return <ErrorState message={error} />
-  }
-
-  if (!data || !radarData || !marketData || !profilesData) {
-    return <LoadingState />
-  }
+  const analytics = data && radarData && marketData && profilesData ? { data, radarData, marketData, profilesData } : null
+  const dataState = error ? <ErrorState message={error} /> : <LoadingState />
 
   return (
     <BrowserRouter>
       <Suspense fallback={<LoadingState />}>
         <Routes>
-          <Route element={<Layout generatedAt={radarData.metadata.generatedAt} />}>
-            <Route index element={<Navigate replace to="/radar" />} />
-            <Route path="/radar" element={<LeadershipRadarPage data={radarData} marketData={marketData} profilesData={profilesData} />} />
+          <Route element={<Layout generatedAt={radarData?.metadata.generatedAt ?? ''} data={data} radarData={radarData} error={error} />}>
+            <Route index element={<LandingPage />} />
+            <Route path="/heatmap" element={analytics ? <LeadershipRadarPage data={analytics.radarData} marketData={analytics.marketData} profilesData={analytics.profilesData} /> : dataState} />
+            <Route path="/radar" element={<Navigate replace to="/heatmap" />} />
             <Route path="/turnover" element={<TurnoverTrendsPage />} />
-            <Route path="/overview" element={<HomePage data={data} radarData={radarData} />} />
+            <Route path="/overview" element={<Navigate replace to="/?about=1" />} />
             <Route path="/us-research" element={<USCoveragePage />} />
-            <Route path="/proxy-voting" element={<DashboardPage data={data} />} />
-            <Route path="/dashboard" element={<Navigate replace to="/radar" />} />
-            <Route path="/resolution/:id" element={<ResolutionPage data={data} />} />
+            <Route path="/proxy-voting" element={data ? <DashboardPage data={data} /> : dataState} />
+            <Route path="/dashboard" element={<Navigate replace to="/heatmap" />} />
+            <Route path="/resolution/:id" element={data ? <ResolutionPage data={data} /> : dataState} />
             <Route path="/terms" element={<TermsPage />} />
           </Route>
         </Routes>

@@ -1,12 +1,11 @@
 .turnover-screen { padding-inline: 24px; }
 .turnover-workspace { width: min(1540px, 100%); height: calc(100svh - 106px); margin-inline: auto; display: grid; grid-template-rows: 86px auto auto auto auto minmax(0, 1fr) auto; gap: 10px; }
 .turnover-masthead { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: #0a1721; overflow: hidden; border-bottom: 1px solid #c7b17d44; }
-.turnover-masthead img { position: absolute; right: 0; top: 0; width: 47%; height: 100%; object-fit: contain; object-position: 50% 50%; opacity: .8; mask-image: linear-gradient(90deg, transparent, black 46%); pointer-events: none; }
-.turnover-masthead > div, .turnover-masthead > button { position: relative; z-index: 1; }
+.turnover-header-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.turnover-original-link { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
 .turnover-masthead p, .turnover-eyebrow { margin: 0 0 5px; color: #bbaa81; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; }
 .turnover-masthead h1 { font-family: Georgia, serif; font-weight: 400; font-size: 1.7rem; margin: 0 0 3px; letter-spacing: -.025em; }
 .turnover-masthead > div > span { color: #acbdc8; font-size: .77rem; }
-.turnover-masthead > button { background: #0a1721dd !important; }
 .turnover-controls { display: grid; grid-template-columns: auto minmax(180px, 1.6fr) minmax(120px, .8fr) minmax(120px, .8fr) auto; align-items: end; gap: 16px; padding: 10px 14px; background: #142c3d; border: 1px solid #ffffff0b; border-radius: 5px; }
 .turnover-controls .radar-action { height: 35px; }
 .turnover-controls .radar-select select, .turnover-chart-heading .radar-select select { height: 35px; min-height: 35px; border-radius: 4px; font-size: .77rem; background: #0b1924; }
@@ -84,7 +83,6 @@
 @media (max-width: 600px) {
   .turnover-screen { padding-inline: 16px; }
   .turnover-masthead { padding: 14px; gap: 12px; flex-wrap: wrap; }
-  .turnover-masthead img { width: 60%; }
   .turnover-masthead > div > span { font-size: .7rem; }
   .turnover-controls { grid-template-columns: 1fr 1fr; }
   .turnover-tabs { gap: 14px; flex-wrap: wrap; }

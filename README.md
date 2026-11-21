@@ -6,13 +6,15 @@ Proxy Wars is a governance research portfolio project with a UK dashboard and a 
 - **Vote Explorer**: the supporting resolution-level workspace for verified significant shareholder dissent against management.
 - **Turnover Trends**: global CEO turnover, tenure, gender and appointment-pathway analysis imported from the existing CEO Turnover Index, within the same navigation and visual system.
 
-DashBoard is the primary product, with a UK/US market switch. Proxy Voting has a direct navigation link for specialist resolution-level analysis. UK leadership evidence covers the 100-company roster, with externally managed issuers marked not applicable where appropriate. US coverage is published incrementally with explicit verification counts. Voting evidence covers significant dissent rather than general AGM voting books.
+The site opens on a full-screen chess landing page, with three entrances: Heatmap, Turnover Trends and Proxy Voting. Inside, the same three tabs provide navigation. About is available from the landing page or the small information button in each workspace; it reuses the previous Overview content in a 75%-viewport dialog. Heatmap retains the UK/US market switch. UK leadership evidence covers the 100-company roster, with externally managed issuers marked not applicable where appropriate. US coverage is published incrementally with explicit verification counts. Voting evidence covers significant dissent rather than general AGM voting books.
 
 Original site design, analytical frameworks, scoring methodology, governance taxonomy, visualisations, and written analysis are © 2026 Asaf Rubin. Public-source data and third-party materials remain the property of their respective owners. See the in-product Terms of Use for details.
 
 ## Preview
 
-![Proxy Wars module overview](docs/screenshots/overview.png)
+![Chess landing page](docs/screenshots/landing.png)
+
+![Shared About window](docs/screenshots/about.png)
 
 ![Integrated Governance Radar](docs/screenshots/leadership-radar.png)
 
@@ -69,6 +71,8 @@ The IA Public Register stopped adding new cases after its October 2025 policy ch
 ### Turnover Trends
 
 The `/turnover` view imports the existing CEO Turnover Index CSV snapshot, covering 2019 Q1 through 2026 Q3. It includes 13 index series and five industry series, alongside the supplied Global series. Six views cover turnover, markets, segment comparisons, outgoing tenure, gender and internal/external appointments.
+
+The turnover workspace links to the original standalone site in a new browser tab. The chess image now belongs to the landing screen rather than its chart header. Existing `/radar` and `/dashboard` links redirect to `/heatmap`; `/overview` opens the shared About window from the landing page.
 
 This is a quarterly snapshot with its own coverage label. It is separate from the company dashboard's FTSE 100/S&P 100 universe and its weekday source-monitoring schedule. AI analysis is disabled, so filtering and charting incur no model/API usage. Original Russell Reynolds Associates attribution, source-project revision and CSV fingerprints are preserved. See [integration methodology](docs/turnover-integration.md).
 

@@ -82,9 +82,10 @@ export function TurnoverTrendsPage() {
   return <section className="workspace-screen turnover-screen">
     <div className="turnover-workspace">
       <header className="turnover-masthead">
-        <img src="/turnover/chess-banner.jpg" alt="" aria-hidden="true" />
         <div><p>Leadership in perspective</p><h1>Turnover Trends</h1><span>Explore CEO succession across markets and industries.</span></div>
+        <div className="turnover-header-actions"><a className="radar-action turnover-original-link" href="https://ceo-turnover-index.vercel.app/" target="_blank" rel="noreferrer">Original CEO Turnover Index <span aria-hidden="true">↗</span></a>
         <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Coverage & method <span aria-hidden="true">ⓘ</span></button>
+        </div>
       </header>
       {error ? <p role="alert">{error}</p> : !data ? <p role="status">Loading the quarterly turnover snapshot…</p> : <>
         <div className="turnover-controls">

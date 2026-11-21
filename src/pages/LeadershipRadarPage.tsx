@@ -82,7 +82,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
     <section className="workspace-screen workspace-screen--radar radar-screen" id="workspace">
       <div className="radar-workspace radar-workspace--map">
         <header className="radar-title">
-          <div><p>Company leadership & shareholder voting</p><h1>DashBoard</h1><p className="workspace-guidance">Select a company to explore its leadership, tenure returns and governance evidence.</p></div>
+          <div><p>Company leadership & shareholder voting</p><h1>Heatmap</h1><p className="workspace-guidance">Select a company to explore its leadership, tenure returns and governance evidence.</p></div>
           <div className="market-switch" aria-label="Market">
             <button type="button" aria-pressed="true">UK · FTSE 100</button>
             <button type="button" aria-pressed="false" onClick={() => setMarket('us')}>US · S&P 100</button>

@@ -1,5 +1,13 @@
 # Project log
 
+## Chess landing and shared About, 21 November 2026
+
+- Added the original CEO Turnover Index chess photograph as a full-viewport landing page with three direct entrances. The landing page renders independently of dataset loading or failure.
+- Replaced DashBoard/Overview navigation with Heatmap, Turnover Trends and Proxy Voting plus a small shared About control. The previous Overview wording is preserved, apart from the requested Heatmap rename. The About dialog occupies 75% of the desktop viewport and adapts on mobile.
+- Kept legacy radar/dashboard links working through `/heatmap` redirects; `/overview` opens the About window. Native-dialog focus handling and Escape dismissal are retained.
+- Removed the small turnover chess image and added a new-tab link to the original standalone site. Proxy Voting layout and data were not changed.
+- Freshness check found the latest successful voting-source refresh on 20 November. The live dataset has 33 significant resolutions across 22 issuers, with a latest qualifying case dated 23 April 2026; reviewed issuer meetings extend to 14 July 2026. Only five post-register meetings are onboarded. Refreshing known sources is not comprehensive new-meeting discovery; broader 2026 issuer coverage remains the main data gap.
+
 ## CEO Turnover Index integration, 21 November 2026
 
 - Added a native Turnover Trends view with the original project's 2019 Q1–2026 Q3 CSV snapshot, local world-map data and chess photograph. The source project is unchanged, including its separate deployment.
