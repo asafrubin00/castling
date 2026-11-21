@@ -99,6 +99,16 @@ class LeadershipTests(unittest.TestCase):
         self.assertEqual(payload["metadata"]["reviewedCompanyCount"], len(sources["companies"]))
         self.assertEqual(len(payload["companies"]), len(coverage["issuers"]))
 
+    def test_published_universe_is_consistent(self):
+        data = json.loads((ROOT / "public/data/us-leadership.json").read_text())
+        companies = data["companies"]
+        self.assertEqual(len(companies), data["metadata"]["universeCount"])
+        self.assertEqual(len({c["cik"] for c in companies}), len(companies))
+        coverage = json.loads((ROOT / "public/data/us-filing-coverage.json").read_text())
+        self.assertEqual({c["cik"] for c in companies}, {c["cik"] for c in coverage["issuers"]})
+        if coverage.get("universeName") == "S&P 100":
+            self.assertEqual(len(companies), 100)
+
 
 class MarketTests(unittest.TestCase):
     def test_current_month_duplicate_is_consolidated(self):

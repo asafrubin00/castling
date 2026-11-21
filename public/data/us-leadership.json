@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-21T12:26:38.876926+00:00",
+    "generatedAt": "2026-11-21T12:30:49.081816+00:00",
     "asOfDate": "2026-11-21",
-    "filingsGeneratedAt": "2026-11-21T12:26:22.668873+00:00",
+    "filingsGeneratedAt": "2026-11-21T12:30:27.907430+00:00",
     "reviewPolicyDays": 30,
     "universeCount": 100,
     "universeName": "S&P 100",
@@ -4584,7 +4584,7 @@
           "filedDate": "2026-05-08",
           "reportDate": "2026-05-06",
           "items": [
-            "5.02"
+            "5.07"
           ],
           "accession": "0000077476-26-000024",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000024/pep-20260506.htm"
@@ -6135,25 +6135,31 @@
         {
           "status": "pending-review",
           "form": "8-K",
-          "filedDate": "2026-05-06",
-          "reportDate": "2026-05-05",
+          "filedDate": "2026-05-13",
+          "reportDate": "2026-05-12",
           "items": [
-            "5.02"
+            "5.07"
           ],
-          "accession": "0001137789-26-000093",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000093/stx-20260505.htm"
+          "accession": "0000936468-26-000011",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/936468/000093646826000011/lmt-20260512.htm"
         },
         {
           "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2025-10-28",
-          "reportDate": "2025-10-25",
-          "items": [
-            "5.02",
-            "5.07"
-          ],
-          "accession": "0001137789-25-000287",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1137789/000113778925000287/stx-20251025.htm"
+          "form": "DEFA14A",
+          "filedDate": "2026-03-26",
+          "reportDate": null,
+          "items": [],
+          "accession": "0000936468-26-000006",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/936468/000093646826000006/lmt-defa14amaterials2026.htm"
+        },
+        {
+          "status": "pending-review",
+          "form": "DEF 14A",
+          "filedDate": "2026-03-26",
+          "reportDate": "2026-05-12",
+          "items": [],
+          "accession": "0000936468-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm"
         }
       ],
       "currentSourceUrls": [],
@@ -6423,66 +6429,6 @@
           ],
           "accession": "0000092122-26-000002",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000002/so-20250721.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "APP",
-      "cik": "0001751008",
-      "companyName": "AppLovin Corp",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-11-04",
-          "reportDate": "2026-10-29",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001751008-26-000068",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000068/app-20261029.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-06-05",
-          "reportDate": "2026-06-03",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001751008-26-000050",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000050/app-20260603.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-04-21",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001751008-26-000029",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000029/applovinproxystatement2026.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-04-21",
-          "reportDate": "2026-06-03",
-          "items": [],
-          "accession": "0001751008-26-000028",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-04-07",
-          "reportDate": "2026-04-02",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001751008-26-000014",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000014/app-20260402.htm"
         }
       ],
       "currentSourceUrls": [],
@@ -6792,7 +6738,6 @@
           "filedDate": "2026-05-13",
           "reportDate": "2026-05-12",
           "items": [
-            "5.02",
             "5.07"
           ],
           "accession": "0000066740-26-000221",
@@ -6996,432 +6941,6 @@
           ],
           "accession": "0001193125-26-026195",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000119312526026195/d15559d8k.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "GD",
-      "cik": "0000040533",
-      "companyName": "GENERAL DYNAMICS CORP",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-10-08",
-          "reportDate": "2026-10-07",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-417188",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000119312526417188/d122892d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-08-07",
-          "reportDate": "2026-08-05",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-340490",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000119312526340490/d129075d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-05-11",
-          "reportDate": "2026-05-11",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0000040533-26-000014",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000004053326000014/gd-20260511.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-03-27",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001308179-26-000170",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000130817926000170/gd014595-defa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-03-27",
-          "reportDate": "2026-05-06",
-          "items": [],
-          "accession": "0001308179-26-000168",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000130817926000168/gd014595-def14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2025-12-05",
-          "reportDate": "2025-12-03",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-25-309762",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000119312525309762/d930089d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2025-12-05",
-          "reportDate": "2025-12-03",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-25-309757",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/40533/000119312525309757/d57599d8k.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "USB",
-      "cik": "0000036104",
-      "companyName": "US BANCORP \\DE\\",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-10-29",
-          "reportDate": "2026-10-23",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-437071",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000119312526437071/d294448d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-04-23",
-          "reportDate": "2026-04-21",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001193125-26-173818",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000119312526173818/d57257d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-03-10",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001104659-26-025856",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000110465926025856/tm261379d3_defa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-03-10",
-          "reportDate": "2026-04-21",
-          "items": [],
-          "accession": "0001104659-26-025844",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000110465926025844/tm261379-1_def14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-01-29",
-          "reportDate": "2026-01-27",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-029382",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000119312526029382/d25960d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-01-28",
-          "reportDate": "2026-01-27",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-026195",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/36104/000119312526026195/d15559d8k.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "WM",
-      "cik": "0000823768",
-      "companyName": "WASTE MANAGEMENT INC",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-08-26",
-          "reportDate": "2026-08-24",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001104659-26-101077",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926101077/tm2624023d1_8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-05-14",
-          "reportDate": "2026-05-12",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001104659-26-060755",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926060755/tm2614440d2_8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-05-13",
-          "reportDate": "2026-05-08",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001104659-26-059860",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926059860/tm2614440d1_8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-03-31",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001104659-26-037383",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926037383/tm261369d3_defa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-03-31",
-          "reportDate": "2026-05-12",
-          "items": [],
-          "accession": "0001104659-26-037381",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926037381/tm261369-1_def14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-03-13",
-          "reportDate": "2026-03-13",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001104659-26-027703",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926027703/tm268718d1_8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-03-06",
-          "reportDate": "2026-03-03",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001104659-26-024739",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/823768/000110465926024739/tm268015d1_8k.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "MAR",
-      "cik": "0001048286",
-      "companyName": "MARRIOTT INTERNATIONAL INC /MD/",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-05-13",
-          "reportDate": "2026-05-08",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001193125-26-220804",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1048286/000119312526220804/d152439d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-03-27",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001140361-26-011591",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1048286/000114036126011591/ny20062722x772_defa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-03-27",
-          "reportDate": "2026-05-08",
-          "items": [],
-          "accession": "0001140361-26-011590",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1048286/000114036126011590/ny20062722x771_def14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-02-06",
-          "reportDate": "2026-02-03",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-041097",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1048286/000119312526041097/d85627d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-01-09",
-          "reportDate": "2026-01-06",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-008335",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1048286/000119312526008335/d31810d8k.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "TT",
-      "cik": "0001466258",
-      "companyName": "Trane Technologies plc",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-07-22",
-          "reportDate": "2026-07-20",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001628280-26-049227",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1466258/000162828026049227/tt-20260720.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-06-10",
-          "reportDate": "2026-06-04",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001628280-26-042055",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1466258/000162828026042055/tt-20260604.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-06-05",
-          "reportDate": "2026-06-04",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001628280-26-041032",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1466258/000162828026041032/tt-20260604.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-04-23",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001628280-26-026680",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1466258/000162828026026680/a2026tranetechnologiesna.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-04-23",
-          "reportDate": "2026-06-04",
-          "items": [],
-          "accession": "0001628280-26-026679",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1466258/000162828026026679/tt-20260421.htm"
-        }
-      ],
-      "currentSourceUrls": [],
-      "roles": {}
-    },
-    {
-      "ticker": "PWR",
-      "cik": "0001050915",
-      "companyName": "QUANTA SERVICES, INC.",
-      "filings": [
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-09-15",
-          "reportDate": "2026-09-09",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-391989",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050915/000119312526391989/d78508d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-05-27",
-          "reportDate": "2026-05-21",
-          "items": [
-            "5.07"
-          ],
-          "accession": "0001193125-26-241989",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050915/000119312526241989/d122565d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-04-16",
-          "reportDate": "2026-04-10",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-159117",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050915/000119312526159117/d126144d8k.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2026-04-10",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001193125-26-150300",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050915/000119312526150300/d132638ddefa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEF 14A",
-          "filedDate": "2026-04-10",
-          "reportDate": "2026-05-21",
-          "items": [],
-          "accession": "0001193125-26-150293",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050915/000119312526150293/d118470ddef14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2026-03-04",
-          "reportDate": "2026-02-26",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0001193125-26-091646",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050915/000119312526091646/d115375d8k.htm"
         }
       ],
       "currentSourceUrls": [],
