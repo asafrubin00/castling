@@ -1,0 +1,2 @@
+# Preserve imported source bytes and recognise their original CSV line endings.
+data/turnover/*.csv -text whitespace=cr-at-eol
