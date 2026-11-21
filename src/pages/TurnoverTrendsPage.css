@@ -1,17 +1,17 @@
 .turnover-screen { padding-inline: 24px; }
 .turnover-workspace { width: min(1540px, 100%); height: calc(100svh - 106px); margin-inline: auto; display: grid; grid-template-rows: 86px auto auto auto auto minmax(0, 1fr) auto; gap: 10px; }
-.turnover-masthead { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: #0a1721; overflow: hidden; border-bottom: 1px solid #c7b17d44; }
+.turnover-masthead { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .turnover-header-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
 .turnover-original-link { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.turnover-masthead p, .turnover-eyebrow { margin: 0 0 5px; color: #bbaa81; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; }
-.turnover-masthead h1 { font-family: Georgia, serif; font-weight: 400; font-size: 1.7rem; margin: 0 0 3px; letter-spacing: -.025em; }
+.turnover-masthead p, .turnover-eyebrow { margin: 0 0 5px; color: var(--muted); font-size: .64rem; letter-spacing: .13em; text-transform: uppercase; }
+.turnover-masthead h1 { font-family: var(--font-editorial); font-weight: 400; font-size: 1.6rem; margin: 0 0 3px; letter-spacing: -.025em; }
 .turnover-masthead > div > span { color: #acbdc8; font-size: .77rem; }
-.turnover-controls { display: grid; grid-template-columns: auto minmax(180px, 1.6fr) minmax(120px, .8fr) minmax(120px, .8fr) auto; align-items: end; gap: 16px; padding: 10px 14px; background: #142c3d; border: 1px solid #ffffff0b; border-radius: 5px; }
+.turnover-controls { display: grid; grid-template-columns: auto minmax(180px, 1.6fr) minmax(120px, .8fr) minmax(120px, .8fr) auto; align-items: end; gap: 16px; padding: 10px 14px; background: var(--surface-controls); border: 1px solid var(--line); border-radius: var(--panel-radius); }
 .turnover-controls .radar-action { height: 35px; }
-.turnover-controls .radar-select select, .turnover-chart-heading .radar-select select { height: 35px; min-height: 35px; border-radius: 4px; font-size: .77rem; background: #0b1924; }
+.turnover-controls .radar-select select, .turnover-chart-heading .radar-select select { height: 35px; min-height: 35px; border-radius: var(--control-radius); font-size: .77rem; background: var(--surface); border-color: var(--line-strong); }
 .turnover-tabs { display: flex; gap: 27px; border-bottom: 1px solid #6a7d8a40; }
 .turnover-tabs button { padding: 4px 0 10px; border: 0; border-bottom: 1px solid transparent; background: none; color: #b4c3ce; font: inherit; font-size: .8rem; cursor: pointer; }
-.turnover-tabs [aria-selected="true"] { border-bottom-color: #cbb27c; color: #e1cc9d; }
+.turnover-tabs [aria-selected="true"] { border-bottom-color: var(--accent); color: var(--accent-bright); }
 .turnover-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 1px 0; min-width: 0; }
 .turnover-summary strong { font-size: .82rem; font-weight: 500; }
 .turnover-summary strong > span { color: #b0bec8; font-weight: 400; }
@@ -24,15 +24,15 @@
 .turnover-kpis strong { color: #f0f1ec; font-weight: 500; font-size: 1.35rem; font-variant-numeric: tabular-nums; line-height: 1.2; }
 .turnover-kpis small { color: #8da3b3; font-size: .67rem; line-height: 1.35; }
 .turnover-analysis { display: grid; grid-template-columns: minmax(0, 1fr) minmax(245px, 27%); gap: 14px; min-height: 0; }
-.turnover-chart-panel { min-width: 0; min-height: 0; padding: 15px 18px 10px; background: #0b1924; border: 1px solid #ffffff0b; border-radius: 5px; display: flex; flex-direction: column; gap: 10px; }
+.turnover-chart-panel { min-width: 0; min-height: 0; padding: 15px 18px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--panel-radius); display: flex; flex-direction: column; gap: 10px; }
 .turnover-chart-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.turnover-chart-heading h2, .turnover-rail h2 { margin: 3px 0; font-family: Georgia, serif; font-size: 1.12rem; font-weight: 400; }
+.turnover-chart-heading h2, .turnover-rail h2 { margin: 3px 0; font-family: var(--font-editorial); font-size: 1.12rem; font-weight: 400; }
 .turnover-chart-heading p { margin: 0; font-size: .67rem; color: #9db1bf; }
 .turnover-chart-heading .radar-select { width: min(245px, 40%); flex-shrink: 0; }
 .turnover-chart, .turnover-map { flex: 1; min-height: 0; min-width: 0; }
 .turnover-chart .recharts-legend-wrapper { font-size: .75rem; }
 .turnover-chart-footnote { margin: 0; color: #90a6b5; font-size: .65rem; line-height: 1.45; }
-.turnover-rail { min-height: 0; min-width: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; background: #0b1924; border: 1px solid #ffffff0b; border-radius: 5px; }
+.turnover-rail { min-height: 0; min-width: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--panel-radius); }
 .turnover-rail > section { padding: 15px 17px; min-height: 0; display: flex; flex-direction: column; }
 .turnover-rail > section > p:not(.turnover-eyebrow) { margin: 9px 0; font-size: .76rem; line-height: 1.6; color: #b7c6d0; }
 .turnover-rail dl { margin: 9px 0 0; font-size: .72rem; }
@@ -42,22 +42,22 @@
 .turnover-source-note { border-top: 1px solid #ffffff12; }
 .turnover-source-note > p:not(.turnover-eyebrow) { font-size: .74rem !important; margin: 4px 0 !important; }
 .turnover-source-note > span { color: #94a9b9; font-size: .66rem; }
-.turnover-source-note > button { margin-top: 10px; padding: 0; display: flex; justify-content: space-between; background: none; border: 0; color: #d7c398; font: inherit; font-size: .7rem; cursor: pointer; text-align: left; }
+.turnover-source-note > button { margin-top: 10px; padding: 0; display: flex; justify-content: space-between; background: none; border: 0; color: var(--accent-bright); font: inherit; font-size: .7rem; cursor: pointer; text-align: left; }
 .turnover-market-list { min-height: 0; overflow-y: auto; margin-top: 7px; scrollbar-width: thin; }
 .turnover-market-list button { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; padding: 8px 0; background: none; border: 0; border-bottom: 1px solid #ffffff12; color: #b7c6d0; font: inherit; font-size: .74rem; text-align: left; cursor: pointer; }
-.turnover-market-list button:hover { color: #e1cc9d; }
+.turnover-market-list button:hover { color: var(--accent-bright); }
 .turnover-market-list small { display: block; font-size: .6rem; color: #8da3b3; margin-top: 2px; }
-.turnover-market-list strong { font-weight: 500; color: #e1cc9d; }
+.turnover-market-list strong { font-weight: 500; color: var(--accent-bright); }
 .turnover-map { display: flex; flex-direction: column; }
 .turnover-map > svg { flex: 1; min-height: 0; width: 100%; }
 .turnover-map__land { fill: #1b303e; stroke: #324853; stroke-width: .6; }
-.turnover-map__marker { fill: #d0b67d; fill-opacity: .8; stroke: #f1e3bf; stroke-width: 1; cursor: pointer; }
+.turnover-map__marker { fill: var(--accent); fill-opacity: .8; stroke: var(--accent-bright); stroke-width: 1; cursor: pointer; }
 .turnover-map__selected { fill: #87bbcf; stroke: #d5f2ff; stroke-width: 2; cursor: pointer; }
 .turnover-map [role="button"]:focus-visible { outline: none; }
 .turnover-map [role="button"]:focus-visible circle { stroke: white; stroke-width: 4; }
 .turnover-footer { display: flex; justify-content: space-between; align-items: center; gap: 14px; font-size: .64rem; color: #93a8b7; }
 .turnover-empty { flex: 1; display: grid; place-content: center; color: #9fb2c0; font-size: .83rem; text-align: center; }
-.turnover-screen button:focus-visible, .turnover-screen select:focus-visible { outline: 2px solid #cfb77d; outline-offset: 3px; }
+.turnover-screen button:focus-visible, .turnover-screen select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-height: 790px) and (min-width: 901px) {
   .turnover-workspace { grid-template-rows: 74px auto auto auto auto minmax(0, 1fr) auto; gap: 7px; }
   .turnover-controls { padding-block: 7px; }
@@ -82,7 +82,7 @@
 }
 @media (max-width: 600px) {
   .turnover-screen { padding-inline: 16px; }
-  .turnover-masthead { padding: 14px; gap: 12px; flex-wrap: wrap; }
+  .turnover-masthead { gap: 12px; flex-wrap: wrap; }
   .turnover-masthead > div > span { font-size: .7rem; }
   .turnover-controls { grid-template-columns: 1fr 1fr; }
   .turnover-tabs { gap: 14px; flex-wrap: wrap; }

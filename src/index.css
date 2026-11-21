@@ -1,15 +1,27 @@
 :root {
-  color: #edf3f7;
-  background: #09192c;
-  font-family:
-    "Inter",
-    "IBM Plex Sans",
-    "Avenir Next",
-    "Segoe UI Variable",
-    "Segoe UI",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+  --canvas: #102335;
+  --canvas-light: #173245;
+  --workspace-background: radial-gradient(ellipse at top left, var(--canvas-light), var(--canvas) 75%);
+  --surface: #0b1924;
+  --surface-controls: #142c3d;
+  --ink: #edf2f4;
+  --muted: #afbec9;
+  --accent: #c7ad78;
+  --accent-bright: #e3cfaa;
+  --line: #8295a329;
+  --line-strong: #8295a35c;
+  --panel-radius: 6px;
+  --control-radius: 4px;
+  --font-ui: "Avenir Next", "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-editorial: "Iowan Old Style", Georgia, serif;
+  --chart-gold: #c7ad78;
+  --chart-blue: #89a9bb;
+  --chart-slate: #607d90;
+  --chart-steel: #476273;
+  --chart-copper: #b28b76;
+  color: var(--ink);
+  background: var(--canvas);
+  font-family: var(--font-ui);
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
@@ -41,11 +53,7 @@ h2,
 h3 {
   margin: 0;
   color: #f2f6fa;
-  font-family:
-    "Fraunces",
-    "Iowan Old Style",
-    Georgia,
-    serif;
+  font-family: var(--font-editorial);
   line-height: 1.05;
 }
 

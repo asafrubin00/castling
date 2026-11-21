@@ -3,6 +3,7 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart,
 import { LegalLine } from '../components/LegalLine'
 import { RadarDialog } from '../components/RadarDialog'
 import { TurnoverMarketMap } from '../components/TurnoverMarketMap'
+import { chartColours, chartTooltipStyle as tooltipStyle, chartAxisStyle as axis } from '../lib/chartTheme'
 import { comparisonRows, displaySegment, latestComposition, periodKey, periodLabel, previousQuarter, selectedSeries, trendRows, type Filters, type Scope, type TurnoverData } from '../lib/turnover'
 import './TurnoverTrendsPage.css'
 
@@ -14,8 +15,6 @@ type View = typeof views[number][0]
 const pct = (n: number | null | undefined) => n == null ? '—' : `${n.toFixed(1)}%`
 const count = (n: number | null | undefined) => n == null ? '—' : n.toLocaleString('en-GB')
 const quarterTick = (n: number) => `${Math.floor(n / 4)} Q${n % 4 + 1}`
-const tooltipStyle = { background: '#101c26', border: '1px solid #42515b', borderRadius: 5, color: '#eef2f4', fontSize: 12 }
-const axis = { fill: '#9aaebd', fontSize: 11 }
 const initialFilters: Filters = { scope: 'index', segment: 'Global', year: 'all', quarter: 'all' }
 
 export function TurnoverTrendsPage() {
@@ -124,19 +123,19 @@ export function TurnoverTrendsPage() {
                     {view === 'turnover' ? <LineChart data={trend} margin={{ top: 12, right: 18, bottom: 0, left: 0 }}>
                       <CartesianGrid stroke="#263743" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis domain={[0, rateCeiling]} tickCount={6} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} width={46} />
                       <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)}%`} contentStyle={tooltipStyle} /><Legend />
-                      <Line type="linear" name={peer ? selectedLabel : 'Departures'} dataKey="departures" stroke="#cfb77d" strokeWidth={2} dot={trend.length === 1} isAnimationActive={false} />
-                      <Line type="linear" name={peer ? displaySegment(peer) : 'Appointments'} dataKey={peer ? 'peer' : 'appointments'} stroke="#8ab1c5" strokeWidth={1.7} dot={trend.length === 1} isAnimationActive={false} />
+                      <Line type="linear" name={peer ? selectedLabel : 'Departures'} dataKey="departures" stroke={chartColours[0]} strokeWidth={2} dot={trend.length === 1} isAnimationActive={false} />
+                      <Line type="linear" name={peer ? displaySegment(peer) : 'Appointments'} dataKey={peer ? 'peer' : 'appointments'} stroke={chartColours[1]} strokeWidth={1.7} dot={trend.length === 1} isAnimationActive={false} />
                     </LineChart> : view === 'tenure' ? <AreaChart data={tenure} margin={{ top: 12, right: 18, bottom: 0, left: 0 }}>
-                      <defs><linearGradient id="turnover-tenure-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#cfb77d" stopOpacity={.18} /><stop offset="100%" stopColor="#cfb77d" stopOpacity={0} /></linearGradient></defs>
+                      <defs><linearGradient id="turnover-tenure-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={chartColours[0]} stopOpacity={.18} /><stop offset="100%" stopColor={chartColours[0]} stopOpacity={0} /></linearGradient></defs>
                       <CartesianGrid stroke="#263743" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis tickFormatter={(v) => `${v}y`} tick={axis} axisLine={false} tickLine={false} width={46} />
-                      <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)} years`} contentStyle={tooltipStyle} /><Area type="linear" dataKey="tenure" name="Average outgoing tenure" stroke="#cfb77d" strokeWidth={2} fill="url(#turnover-tenure-fill)" dot={tenure.length === 1} isAnimationActive={false} />
+                      <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)} years`} contentStyle={tooltipStyle} /><Area type="linear" dataKey="tenure" name="Average outgoing tenure" stroke={chartColours[0]} strokeWidth={2} fill="url(#turnover-tenure-fill)" dot={tenure.length === 1} isAnimationActive={false} />
                     </AreaChart> : view === 'segments' ? <BarChart data={comparisons.map((r) => ({ ...r, label: displaySegment(r.segment) }))} layout="vertical" margin={{ top: 6, right: 20, bottom: 0, left: 0 }}>
                       <CartesianGrid stroke="#263743" horizontal={false} /><XAxis type="number" tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} /><YAxis dataKey="label" type="category" interval={0} width={142} tick={axis} axisLine={false} tickLine={false} />
-                      <Tooltip contentStyle={tooltipStyle} labelFormatter={(_, payload) => { const row = payload[0]?.payload; return row ? `${row.label} · ${periodLabel(row)}` : '' }} formatter={(v) => `${Number(v).toFixed(1)}%`} /><Bar dataKey="outgoing_pct" name="Departure rate" fill="#cfb77d" maxBarSize={22} radius={[0, 3, 3, 0]} isAnimationActive={false} />
+                      <Tooltip contentStyle={tooltipStyle} labelFormatter={(_, payload) => { const row = payload[0]?.payload; return row ? `${row.label} · ${periodLabel(row)}` : '' }} formatter={(v) => `${Number(v).toFixed(1)}%`} /><Bar dataKey="outgoing_pct" name="Departure rate" fill={chartColours[0]} maxBarSize={22} radius={[0, 3, 3, 0]} isAnimationActive={false} />
                     </BarChart> : <BarChart data={composition} layout="vertical" margin={{ top: 20, right: 20, bottom: 12, left: 0 }}>
                       <CartesianGrid stroke="#263743" horizontal={false} /><XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} /><YAxis type="category" dataKey="name" width={116} tick={axis} axisLine={false} tickLine={false} />
                       <Tooltip contentStyle={tooltipStyle} formatter={(v, name, item) => [`${Number(v).toFixed(1)}% · ${count(item.payload.counts[String(name)])} CEOs`, String(name)]} /><Legend />
-                      {categories.map((category, i) => <Bar key={category} dataKey={category} name={category} stackId="composition" fill={i === 0 ? '#cfb77d' : '#547586'} maxBarSize={60} isAnimationActive={false} />)}
+                      {categories.map((category, i) => <Bar key={category} dataKey={category} name={category} stackId="composition" fill={chartColours[i]} maxBarSize={60} isAnimationActive={false} />)}
                     </BarChart>}
                   </ResponsiveContainer>
                 </div>}

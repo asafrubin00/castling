@@ -29,9 +29,8 @@ import {
   getTopDissent,
 } from '../lib/analytics'
 import { formatDate, formatShortPercent } from '../lib/format'
+import { chartColours as palette, chartTooltipStyle } from '../lib/chartTheme'
 import type { Filters, TrackerData } from '../types'
-
-const palette = ['#f0be2a', '#89a4ba', '#5f7a91', '#3f5d74', '#b99b68']
 
 type DashboardPageProps = {
   data: TrackerData
@@ -213,17 +212,12 @@ export function DashboardPage({ data }: DashboardPageProps) {
                       <Tooltip
                         formatter={(value) => [formatTooltipPercent(value), 'Opposition to management']}
                         labelFormatter={(label) => formatTooltipLabel(label, 'Company')}
-                        contentStyle={{
-                          background: '#07131d',
-                          border: '1px solid rgba(255,255,255,0.12)',
-                          borderRadius: 10,
-                          color: '#f3f7fb',
-                        }}
+                        contentStyle={chartTooltipStyle}
                         cursor={{ fill: 'rgba(255,255,255,0.03)' }}
                       />
                       <Bar
                         dataKey="managementDissentPct"
-                        fill="#c6ad71"
+                        fill={palette[0]}
                         radius={[0, 2, 2, 0]}
                         isAnimationActive={false}
                       >
@@ -257,12 +251,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         <Tooltip
                           formatter={(value) => [String(value ?? ''), 'Resolutions']}
                           labelFormatter={(label) => formatTooltipLabel(label, 'Category')}
-                          contentStyle={{
-                            background: '#07131d',
-                            border: '1px solid rgba(255,255,255,0.12)',
-                            borderRadius: 10,
-                            color: '#f3f7fb',
-                          }}
+                          contentStyle={chartTooltipStyle}
                         />
                       </PieChart>
                     </ResponsiveContainer>
@@ -324,26 +313,21 @@ export function DashboardPage({ data }: DashboardPageProps) {
                           return [formatTooltipPercent(value), 'Average management dissent']
                         }}
                         labelFormatter={(label) => formatTooltipLabel(label, 'Period')}
-                        contentStyle={{
-                          background: '#07131d',
-                          border: '1px solid rgba(255,255,255,0.12)',
-                          borderRadius: 10,
-                          color: '#f3f7fb',
-                        }}
+                        contentStyle={chartTooltipStyle}
                       />
                       <Bar
                         yAxisId="left"
                         dataKey="resolutions"
-                        fill="#10364c"
+                        fill={palette[3]}
                         radius={[8, 8, 0, 0]}
                       />
                       <Line
                         yAxisId="right"
                         type="monotone"
                         dataKey="avgAgainst"
-                        stroke="#f0be2a"
+                        stroke={palette[0]}
                         strokeWidth={2.6}
-                        dot={{ r: 3, fill: '#f0be2a' }}
+                        dot={{ r: 3, fill: palette[0] }}
                       />
                     </ComposedChart>
                   </ResponsiveContainer>

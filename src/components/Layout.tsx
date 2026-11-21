@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useLocation, useSearchParams } from 'react-router-dom'
+import { NavLink, Outlet, useLocation, useSearchParams } from 'react-router-dom'
 import { RadarDialog } from './RadarDialog'
 import { OverviewContent } from '../pages/HomePage'
 import type { LeadershipRadarData, TrackerData } from '../types'
@@ -25,9 +25,6 @@ export function Layout({ generatedAt, data, radarData, error }: LayoutProps) {
     <div className={`site-shell ${isLanding ? 'site-shell--landing' : ''}`}>
       <header className="site-header">
         <div className="site-header__inner">
-          <Link className="brand" to="/" aria-label="Proxy Wars home">
-            <span className="brand__title">Proxy Wars</span>
-          </Link>
           <div className="site-header__actions">
           {!isLanding && <nav className="site-nav" aria-label="Primary">
             <NavLink to="/heatmap" className={({ isActive }) => isActive || pathname === '/us-research' ? 'active' : ''}>Heatmap</NavLink>

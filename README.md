@@ -26,6 +26,8 @@ Original site design, analytical frameworks, scoring methodology, governance tax
 
 ![Integrated CEO Turnover Trends](docs/screenshots/turnover-trends.png)
 
+![Proxy Voting workspace](docs/screenshots/proxy-voting.png)
+
 ![Global turnover market reference](docs/screenshots/turnover-markets.png)
 
 ## Current coverage
@@ -73,6 +75,8 @@ The IA Public Register stopped adding new cases after its October 2025 policy ch
 The `/turnover` view imports the existing CEO Turnover Index CSV snapshot, covering 2019 Q1 through 2026 Q3. It includes 13 index series and five industry series, alongside the supplied Global series. Six views cover turnover, markets, segment comparisons, outgoing tenure, gender and internal/external appointments.
 
 The turnover workspace links to the original standalone site in a new browser tab. The chess image now belongs to the landing screen rather than its chart header. Existing `/radar` and `/dashboard` links redirect to `/heatmap`; `/overview` opens the shared About window from the landing page.
+
+The three workspaces share the navy/slate palette, restrained gold accents, typefaces and chart styling defined in `src/index.css` and `src/lib/chartTheme.ts`. The header wordmark is intentionally blank pending a naming decision. The landing photograph is a locally hosted, 3200-pixel-wide alternative to the original small banner; see [photograph credit and licence](docs/asset-credits.md).
 
 This is a quarterly snapshot with its own coverage label. It is separate from the company dashboard's FTSE 100/S&P 100 universe and its weekday source-monitoring schedule. AI analysis is disabled, so filtering and charting incur no model/API usage. Original Russell Reynolds Associates attribution, source-project revision and CSV fingerprints are preserved. See [integration methodology](docs/turnover-integration.md).
 
