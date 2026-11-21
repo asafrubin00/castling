@@ -1180,9 +1180,10 @@
   .proxy-screen .workspace-dashboard__tabs { gap: 12px; }
 }
 @media (max-width: 600px) {
-  .site-shell .site-nav { gap: 9px; }
-  .site-shell .site-nav a { font-size: .66rem; }
-  .site-shell .brand__title { font-size: .9rem; }
+  .site-shell .site-header__inner { width: calc(100vw - 24px); }
+  .site-shell .site-nav { gap: 7px; }
+  .site-shell .site-nav a { font-size: .6rem; }
+  .site-shell .brand__title { font-size: .78rem; }
   .radar-grid.radar-grid--us { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .radar-grid--us .radar-tile > span { font-size: .56rem !important; }
   .radar-controls.us-map-controls { grid-template-columns: auto 1fr; }

@@ -14,6 +14,7 @@ export function Layout({ generatedAt }: LayoutProps) {
           </Link>
           <nav className="site-nav" aria-label="Primary">
             <NavLink to="/radar">DashBoard</NavLink>
+            <NavLink to="/turnover">Turnover Trends</NavLink>
             <NavLink to="/proxy-voting">Proxy Voting</NavLink>
             <NavLink to="/overview">Overview</NavLink>
           </nav>

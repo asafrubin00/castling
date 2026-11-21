@@ -14,6 +14,8 @@
     "data:monitor:baseline": "python3 scripts/monitor_issuer_announcements.py --baseline",
     "data:us": "python3 scripts/build_us_leadership.py && python3 scripts/build_us_market_performance.py",
     "test:us": "python3 -m unittest discover -s scripts -p 'test_us_*.py'",
+    "data:turnover": "python3 scripts/build_turnover_data.py",
+    "test:turnover": "node --experimental-strip-types --test scripts/test_turnover.mts && python3 -m unittest discover -s scripts -p 'test_turnover_data.py'",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

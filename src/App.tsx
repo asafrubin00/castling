@@ -3,6 +3,10 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import type { LeadershipProfilesData, LeadershipRadarData, MarketPerformanceData, TrackerData } from './types'
 import './App.css'
+const TurnoverTrendsPage = lazy(async () => {
+  const module = await import('./pages/TurnoverTrendsPage')
+  return { default: module.TurnoverTrendsPage }
+})
 const USCoveragePage = lazy(async () => {
   const module = await import('./pages/USCoveragePage')
   return { default: module.USCoveragePage }
@@ -123,6 +127,7 @@ function App() {
           <Route element={<Layout generatedAt={radarData.metadata.generatedAt} />}>
             <Route index element={<Navigate replace to="/radar" />} />
             <Route path="/radar" element={<LeadershipRadarPage data={radarData} marketData={marketData} profilesData={profilesData} />} />
+            <Route path="/turnover" element={<TurnoverTrendsPage />} />
             <Route path="/overview" element={<HomePage data={data} radarData={radarData} />} />
             <Route path="/us-research" element={<USCoveragePage />} />
             <Route path="/proxy-voting" element={<DashboardPage data={data} />} />

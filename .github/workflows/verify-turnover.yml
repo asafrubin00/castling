@@ -1,0 +1,39 @@
+name: Verify turnover integration
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/turnover/**"
+      - "public/data/turnover-trends.json"
+      - "scripts/*turnover*"
+      - "src/lib/turnover.ts"
+      - "src/pages/TurnoverTrendsPage*"
+      - "src/components/TurnoverMarketMap.tsx"
+      - "package*.json"
+      - ".github/workflows/verify-turnover.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - run: npm run test:turnover
+      - run: npm run data:turnover
+      - name: Confirm reproducible snapshot
+        run: git diff --exit-code -- public/data/turnover-trends.json
+      - run: npm run lint
+      - run: npm run build

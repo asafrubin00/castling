@@ -1,5 +1,13 @@
 # Project log
 
+## CEO Turnover Index integration, 21 November 2026
+
+- Added a native Turnover Trends view with the original project's 2019 Q1–2026 Q3 CSV snapshot, local world-map data and chess photograph. The source project is unchanged, including its separate deployment.
+- Preserved 620 metric observations, 7,440 composition observations and 620 denominator rows, original attribution and source revision. CSV fingerprints support import reproducibility. Structural validation is not presented as independent publisher-level verification.
+- Added index/industry scope, year/quarter controls, benchmark comparisons and six analysis views. KPIs describe the latest visible quarter; no-departure tenures and compositions remain not applicable. Unreported periods have explicit empty states.
+- Reused the existing React/Recharts stack. No new package, API key or AI analysis route. The compact chess masthead preserves the single-screen desktop layout without restoring a cover-page scroll step. Name and favicon remain unchanged.
+- Turnover data remains a labelled imported quarterly snapshot. The existing company-evidence jobs and bounded weekly review automation are unchanged.
+
 ## S&P 100 focus and bounded review, 21 November 2026
 
 - Switched the active US universe to 100 distinct issuers from iShares OEF holdings, preserving the first ten companies' evidence and the highlighted/muted verification states. Alphabet share classes map to one CIK and canonical GOOGL ticker.

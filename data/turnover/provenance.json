@@ -1,0 +1,9 @@
+{
+  "sourceProject": "CEO Turnover Index",
+  "sourceRepository": "https://github.com/asafrubin00/ceo-turnover-index",
+  "sourceCommit": "a1c37525bd02bcd84ef147a9473bab1373692c7d",
+  "sourceUrl": "https://www.russellreynolds.com/en/insights/reports-surveys/global-ceo-turnover-index",
+  "sourceName": "Russell Reynolds Associates Global CEO Turnover Index",
+  "importedOn": "2026-11-21",
+  "review": "Imported unchanged from the existing CEO Turnover Index project. Structural and numerical checks are performed here; individual rows were not independently re-verified against the publisher during this integration."
+}

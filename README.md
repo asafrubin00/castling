@@ -4,6 +4,7 @@ Proxy Wars is a governance research portfolio project with a UK dashboard and a 
 
 - **Governance Radar**: the main source-backed FTSE 100 research surface, with integrated leadership-pressure and significant-voting lenses alongside profit-warning evidence, active succession processes, and tenure-period market performance.
 - **Vote Explorer**: the supporting resolution-level workspace for verified significant shareholder dissent against management.
+- **Turnover Trends**: global CEO turnover, tenure, gender and appointment-pathway analysis imported from the existing CEO Turnover Index, within the same navigation and visual system.
 
 DashBoard is the primary product, with a UK/US market switch. Proxy Voting has a direct navigation link for specialist resolution-level analysis. UK leadership evidence covers the 100-company roster, with externally managed issuers marked not applicable where appropriate. US coverage is published incrementally with explicit verification counts. Voting evidence covers significant dissent rather than general AGM voting books.
 
@@ -20,6 +21,10 @@ Original site design, analytical frameworks, scoring methodology, governance tax
 ![Verified US leadership cohort](docs/screenshots/us-leadership.png)
 
 ![US Chair tenure performance](docs/screenshots/us-tenure.png)
+
+![Integrated CEO Turnover Trends](docs/screenshots/turnover-trends.png)
+
+![Global turnover market reference](docs/screenshots/turnover-markets.png)
 
 ## Current coverage
 
@@ -60,6 +65,14 @@ The IA Public Register stopped adding new cases after its October 2025 policy ch
 - A Codex app automation reviews at most two companies each Monday at 09:00 Europe/London, prioritising changed evidence. Each run is limited to four targeted searches, six official documents and ten minutes. This uses Codex usage and depends on local Codex availability; it is separate from the ordinary GitHub data refresh.
 - Weekday discovery flags newer officer/director and proxy filings. Reviews expire after 30 days, without silently renewing the review date. The UI also detects overdue discovery independently of a new build.
 - Sources, date-precision treatment, publication rules and commands are documented in [US evidence methodology](docs/us-leadership-methodology.md).
+
+### Turnover Trends
+
+The `/turnover` view imports the existing CEO Turnover Index CSV snapshot, covering 2019 Q1 through 2026 Q3. It includes 13 index series and five industry series, alongside the supplied Global series. Six views cover turnover, markets, segment comparisons, outgoing tenure, gender and internal/external appointments.
+
+This is a quarterly snapshot with its own coverage label. It is separate from the company dashboard's FTSE 100/S&P 100 universe and its weekday source-monitoring schedule. AI analysis is disabled, so filtering and charting incur no model/API usage. Original Russell Reynolds Associates attribution, source-project revision and CSV fingerprints are preserved. See [integration methodology](docs/turnover-integration.md).
+
+Use `npm run data:turnover` to validate/rebuild the imported CSVs, and `npm run test:turnover` for calculation and data-integrity tests. The original standalone project is unchanged.
 
 ## Stack
 
