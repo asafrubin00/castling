@@ -1,11 +1,11 @@
-.site-shell.site-shell--landing { background: #030504; }
+.site-shell.site-shell--landing { background: #000; }
 .site-shell--landing .site-header { background: transparent; border-bottom: 0; }
 .site-shell--landing .site-about-button { color: #e9e2d0cc; font-size: var(--text-md); letter-spacing: 0.04em; }
 .site-shell--landing .site-about-button:hover { color: var(--accent-bright); }
 
-.landing-page { position: relative; isolation: isolate; height: 100svh; width: 100%; overflow: hidden; background: #030504; }
-.landing-page__image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 53%; }
-.landing-page__shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #030c1670, #05101b24 32%, #030c1640 58%, #030a12f5 100%); }
+.landing-page { position: relative; isolation: isolate; height: 100svh; width: 100%; overflow: hidden; background: #000; }
+.landing-page__image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 54% 50%; }
+.landing-page__shade { position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 80% 70% at 54% 55%, transparent 55%, #00000099 100%), linear-gradient(180deg, transparent 70%, #000000b3 100%); }
 
 .landing-page__entries {
   position: absolute;
@@ -38,7 +38,7 @@
 .landing-page__entries a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 5px; }
 
 @media (max-width: 600px) {
-  .landing-page__image { object-position: 48% center; }
+  .landing-page__image { object-position: 55% 50%; }
   .landing-page__entries { inset: auto 20px 30px; grid-template-columns: 1fr; gap: 0; }
   .landing-page__entries a { padding: 12px 0 8px; font-size: 21px; }
   .landing-page__entries small { font-size: 11px; }

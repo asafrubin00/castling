@@ -3,7 +3,7 @@ import './LandingPage.css'
 
 export function LandingPage() {
   return <section className="landing-page" aria-label="Leadership and governance research">
-    <img className="landing-page__image" src="/turnover/chess-hero-john-adeoye.jpg" alt="A white king in focus among chess pieces on a reflective board" fetchPriority="high" onError={(event) => {
+    <img className="landing-page__image" src="/turnover/chess-hero.jpg" alt="A white king in focus among chess pieces on a dark board" fetchPriority="high" onError={(event) => {
       if (!event.currentTarget.src.endsWith('/turnover/chess-banner.jpg')) event.currentTarget.src = '/turnover/chess-banner.jpg'
     }} />
     <div className="landing-page__shade" aria-hidden="true" />
