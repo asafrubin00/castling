@@ -52,11 +52,12 @@ The IA Public Register stopped adding new cases after its October 2025 policy ch
 
 ### US Leadership
 
-- Research roster contains 500 distinct SEC issuers from S&P 500 ETF holdings, consolidating duplicate share classes. This is not an official licensed constituent feed.
-- First verified batch contains 10 companies and 20 CEO/Chair records, reviewed on 19 November 2026. Apple, Microsoft, NVIDIA, AMD, Alphabet, Amazon, Tesla, Lilly, Visa and Walmart have linked appointment and current-role evidence.
+- Active research roster contains 100 distinct SEC issuers from iShares S&P 100 ETF holdings, consolidating duplicate share classes. This is not an official licensed constituent feed. S&P 500 expansion is deferred.
+- First evidence batch covers 10 companies and 20 CEO/Chair records, reviewed on 19 November 2026. Live verification counts can fall when new filings trigger a recheck. Checked companies are highlighted, while unreviewed or recheck-due companies remain muted.
 - Tenure, share-price and dividend-adjusted charts are available for reviewed roles with sufficient history. NVIDIA's new interim CEO/Chair tenures do not yet have two monthly observations. Amazon and Tesla disclose pre-listing gaps.
 - US tiles display **years in role**. US pressure scores remain unpublished pending jurisdiction-specific methodology and calibration.
-- The other 490 companies remain awaiting review. Filing collection alone does not verify role holders.
+- The other 90 companies remain awaiting their first review. Filing collection alone does not verify role holders.
+- A Codex app automation reviews at most two companies each Monday at 09:00 Europe/London, prioritising changed evidence. Each run is limited to four targeted searches, six official documents and ten minutes. This uses Codex usage and depends on local Codex availability; it is separate from the ordinary GitHub data refresh.
 - Weekday discovery flags newer officer/director and proxy filings. Reviews expire after 30 days, without silently renewing the review date. The UI also detects overdue discovery independently of a new build.
 - Sources, date-precision treatment, publication rules and commands are documented in [US evidence methodology](docs/us-leadership-methodology.md).
 
@@ -106,7 +107,7 @@ The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly 
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
-The US workflow in `.github/workflows/us-filing-review.yml` runs weekdays at 12:30 UTC when `US_FILING_SCHEDULE_ENABLED=true`. It collects SEC candidates, validates reviewed appointments, flags rechecks and refreshes US market series. These changes are committed for the Git-connected deployment. Evidence review remains editorial. A market-download failure preserves the last good price dataset and its actual timestamp while allowing successful evidence updates to publish.
+The US workflow in `.github/workflows/us-filing-review.yml` runs weekdays at 12:30 UTC when `US_FILING_SCHEDULE_ENABLED=true`. It collects SEC candidates for the active S&P 100 cohort, validates reviewed appointments, flags rechecks and refreshes US market series. These ordinary Python jobs do not call an AI model. Changes are committed for the Git-connected deployment. Evidence review is handled separately in bounded weekly batches. A market-download failure preserves the last good price dataset and its actual timestamp while allowing successful evidence updates to publish.
 
 `npm run data:us` rebuilds US leadership and prices using the saved filing catalog. `npm run test:us` runs offline publication-rule regressions. `npm run data` remains the UK pipeline.
 

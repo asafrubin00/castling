@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 from build_us_leadership import ROOT, build, start_bounds
 from build_us_market_performance import monthly_points
+from collect_us_filings import parse_holdings
 import build_us_market_performance as market_builder
 
 
@@ -127,6 +128,34 @@ class MarketTests(unittest.TestCase):
                 with self.assertRaises(RuntimeError):
                     market_builder.main()
             self.assertEqual(output.read_text(), "last good dataset")
+
+
+class HoldingsTests(unittest.TestCase):
+    def setUp(self):
+        self.mapping = {
+            "GOOG": {"ticker": "GOOG", "cik_str": 1652044},
+            "GOOGL": {"ticker": "GOOGL", "cik_str": 1652044},
+            "BRK.B": {"ticker": "BRK-B", "cik_str": 1067983},
+        }
+
+    def test_share_classes_consolidated_by_issuer(self):
+        csv = 'Fund Holdings as of,"Nov 19, 2026"\nTicker,Asset Class\nGOOG,Equity\nGOOGL,Equity\nBRK B,Equity\nUSD,Cash\n'
+        result = parse_holdings(csv, self.mapping)
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0]["ticker"], "GOOGL")
+        self.assertEqual(result[1]["ticker"], "BRK.B")
+
+    def test_legacy_equity_column_supported(self):
+        result = parse_holdings('Ticker,Type\nGOOGL,EQUITY\n', self.mapping)
+        self.assertEqual(len(result), 1)
+
+    def test_unmatched_equity_fails_closed(self):
+        with self.assertRaisesRegex(ValueError, "Unmatched"):
+            parse_holdings('Ticker,Asset Class\nUNKNOWN,Equity\n', self.mapping)
+
+    def test_missing_table_fails_closed(self):
+        with self.assertRaisesRegex(ValueError, "header"):
+            parse_holdings("Not a holdings table", self.mapping)
 
 
 if __name__ == "__main__":

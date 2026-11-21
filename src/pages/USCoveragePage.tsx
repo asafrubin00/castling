@@ -19,7 +19,7 @@ type Issuer = {
   currentSourceUrls: string[]; roles: Partial<Record<Role, Evidence>>
 }
 type Coverage = {
-  metadata: { generatedAt: string; asOfDate: string; filingsGeneratedAt: string; reviewPolicyDays: number; universeCount: number }
+  metadata: { generatedAt: string; asOfDate: string; filingsGeneratedAt: string; reviewPolicyDays: number; universeCount: number; universeName: string; rosterSourceUrl: string | null }
   companies: Issuer[]
 }
 const dates = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })
@@ -84,10 +84,10 @@ export function USCoveragePage({ onUK }: { onUK?: () => void }) {
       <div className="radar-workspace radar-workspace--map us-map-workspace">
         <header className="radar-title">
           <div><p>Company leadership & shareholder voting</p><h1>DashBoard</h1>
-            <p className="workspace-guidance">Explore US leadership tenure. Select a company for checked appointments, source evidence and performance.</p></div>
+            <p className="workspace-guidance">US leadership research in progress · S&P 100 first. Select a company for evidence and tenure performance.</p></div>
           <div className="market-switch" aria-label="Market">
             {onUK ? <button type="button" onClick={onUK}>UK · FTSE 100</button> : <Link to="/radar">UK · FTSE 100</Link>}
-            <button type="button" aria-pressed="true">US · S&P 500</button>
+            <button type="button" aria-pressed="true">US · S&P 100</button>
             <button type="button" onClick={() => setMethodOpen(true)}>Coverage & method</button>
           </div>
         </header>
@@ -121,7 +121,9 @@ export function USCoveragePage({ onUK }: { onUK?: () => void }) {
       {methodOpen && <RadarDialog title="US coverage" onClose={() => setMethodOpen(false)}>
         <header className="radar-drawer-heading"><h2>US coverage</h2></header>
         <div className="radar-method">
-          <p>The research cohort contains {data?.metadata.universeCount ?? 500} distinct SEC issuers mapped from S&P 500 fund holdings. Duplicate share classes are consolidated. This is a research roster, with index membership subject to review.</p>
+          <p>The research cohort contains {data?.metadata.universeCount ?? 100} distinct SEC issuers mapped from S&P 100 fund holdings. Duplicate share classes are consolidated. This is a research roster, with index membership subject to review.</p>
+          {data?.metadata.rosterSourceUrl && <p><a href={data.metadata.rosterSourceUrl} target="_blank" rel="noreferrer">iShares S&P 100 ETF holdings · roster source</a></p>}
+          <p>Evidence verification expands in small weekly batches of two companies. The wider S&P 500 remains a possible later expansion.</p>
           <p>{verified.length} {role === 'ceo' ? 'CEO' : 'Chair'} records currently meet the evidence policy. Each needs an appointment source, a current-role source and an explicit review date. Pending companies remain unscored.</p>
           <p>Tiles show tenure in years. US governance pressure scores remain under development. Longer tenure alone does not establish governance risk, and the UK Chair nine-year reference is not applied here.</p>
           <p>Filing discovery and market downloads run each weekday. New officer/director or proxy filings flag reviewed records for a recheck. Human evidence review is due after {data?.metadata.reviewPolicyDays ?? 30} days. Downloading filings does not renew the review date.</p>

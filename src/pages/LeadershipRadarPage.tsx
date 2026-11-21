@@ -85,7 +85,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
           <div><p>Company leadership & shareholder voting</p><h1>DashBoard</h1><p className="workspace-guidance">Select a company to explore its leadership, tenure returns and governance evidence.</p></div>
           <div className="market-switch" aria-label="Market">
             <button type="button" aria-pressed="true">UK · FTSE 100</button>
-            <button type="button" aria-pressed="false" onClick={() => setMarket('us')}>US · S&P 500</button>
+            <button type="button" aria-pressed="false" onClick={() => setMarket('us')}>US · S&P 100</button>
             <button className="radar-action" type="button" onClick={() => setMethodOpen(true)}>Method</button>
           </div>
         </header>

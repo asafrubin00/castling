@@ -103,6 +103,8 @@ def build(coverage: dict, sources: dict, today: date) -> dict:
             "filingsGeneratedAt": coverage["generatedAt"],
             "reviewPolicyDays": policy,
             "universeCount": len(roster),
+            "universeName": coverage.get("universeName", "US research"),
+            "rosterSourceUrl": coverage.get("rosterSourceUrl"),
             "reviewedCompanyCount": len(reviewed),
             "verifiedCounts": counts,
             "verifiedPairCount": sum(all(c["roles"].get(r, {}).get("status") == "verified" for r in ROLES) for c in companies),

@@ -16,6 +16,7 @@ from urllib.request import Request, urlopen
 
 SEC_TICKERS = "https://www.sec.gov/files/company_tickers.json"
 HOLDINGS = "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf/latest-holdings.csv"
+SP100_HOLDINGS = "https://www.ishares.com/us/products/239723/ishares-sp-100-etf/latest-holdings.csv"
 # S&P DJI removed Hologic on 9 April 2026. The fund still lists a residual line.
 RESEARCH_EXCLUSIONS = {"HOLX"}
 PILOT_TICKERS = (
@@ -36,9 +37,8 @@ def normalize_ticker(ticker):
     return re.sub(r"[ .-]+", ".", ticker.strip().upper())
 
 
-def research_holdings(by_ticker):
-    with urlopen(HOLDINGS, timeout=25) as response:
-        lines = response.read().decode("utf-8-sig").splitlines()
+def parse_holdings(text, by_ticker, exclusions=()):
+    lines = text.splitlines()
     header = next((index for index, line in enumerate(lines) if line.startswith("Ticker,")), None)
     if header is None:
         raise ValueError("Holdings CSV is missing the equity table header.")
@@ -46,10 +46,10 @@ def research_holdings(by_ticker):
     issuers = {}
     unmatched = set()
     for row in reader:
-        if row.get("Type") != "EQUITY":
+        if row.get("Type") != "EQUITY" and row.get("Asset Class") != "Equity":
             continue
         ticker = normalize_ticker(row["Ticker"])
-        if ticker in RESEARCH_EXCLUSIONS:
+        if ticker in exclusions:
             continue
         match = by_ticker.get(ticker)
         if match is None:
@@ -58,10 +58,21 @@ def research_holdings(by_ticker):
             issuers.setdefault(match["cik_str"], {"ticker": ticker, "cik": match["cik_str"]})
     if unmatched:
         raise ValueError("Unmatched equity holdings need review: " + ", ".join(sorted(unmatched)))
+    # Use a consistent Alphabet share class across both research universes.
+    for issuer in issuers.values():
+        if str(issuer["cik"]).zfill(10) == "0001652044":
+            issuer["ticker"] = "GOOGL"
     return list(issuers.values())
 
 
-def load_roster(path, contact, *, use_holdings=False):
+def research_holdings(by_ticker, url=HOLDINGS):
+    with urlopen(url, timeout=25) as response:
+        text = response.read().decode("utf-8-sig")
+    rows = parse_holdings(text, by_ticker, RESEARCH_EXCLUSIONS if url == HOLDINGS else ())
+    return rows
+
+
+def load_roster(path, contact, *, use_holdings=False, sp100=False):
     if path:
         with path.open(newline="", encoding="utf-8-sig") as source:
             rows = list(csv.DictReader(source))
@@ -69,9 +80,9 @@ def load_roster(path, contact, *, use_holdings=False):
     else:
         mapping = fetch_json(SEC_TICKERS, contact)
         by_ticker = {normalize_ticker(item["ticker"]): item for item in mapping.values()}
-        if use_holdings:
-            rows = research_holdings(by_ticker)
-            expected = 500
+        if use_holdings or sp100:
+            rows = research_holdings(by_ticker, SP100_HOLDINGS if sp100 else HOLDINGS)
+            expected = 100 if sp100 else 500
         else:
             rows = [{"ticker": ticker, "cik": by_ticker[ticker]["cik_str"]} for ticker in PILOT_TICKERS]
             expected = 25
@@ -122,6 +133,7 @@ def main():
     roster_options = parser.add_mutually_exclusive_group()
     roster_options.add_argument("--roster", type=Path, help="Approved 500-issuer CSV with ticker,cik columns")
     roster_options.add_argument("--holdings-research", action="store_true", help="Use ETF holdings for an internal 500-issuer research run")
+    roster_options.add_argument("--sp100-research", action="store_true", help="Use S&P 100 fund holdings for the active 100-issuer research cohort")
     parser.add_argument("--coverage-output", type=Path, help="Write public SEC filing coverage with review status")
     parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
@@ -131,7 +143,7 @@ def main():
     cutoff = date.today() - timedelta(days=400)
     try:
         probe = fetch_json("https://data.sec.gov/submissions/CIK0000320193.json", contact)
-        roster = load_roster(args.roster, contact, use_holdings=args.holdings_research)
+        roster = load_roster(args.roster, contact, use_holdings=args.holdings_research, sp100=args.sp100_research)
         issuers = []
         for ticker, cik in roster:
             submission = probe if cik == "0000320193" else fetch_json(
@@ -150,7 +162,7 @@ def main():
         return 1
     args.output.parent.mkdir(parents=True, exist_ok=True)
     temporary = args.output.with_suffix(args.output.suffix + ".tmp")
-    roster_source = HOLDINGS if args.holdings_research else "operator-supplied roster" if args.roster else "fixed 25-issuer pilot"
+    roster_source = SP100_HOLDINGS if args.sp100_research else HOLDINGS if args.holdings_research else "operator-supplied roster" if args.roster else "fixed 25-issuer pilot"
     temporary.write_text(json.dumps({
         "rosterSource": roster_source,
         "filedSince": cutoff.isoformat(),
@@ -162,7 +174,9 @@ def main():
         coverage = {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "filedSince": cutoff.isoformat(),
-            "universe": "500-issuer research cohort derived from fund holdings and SEC issuer IDs",
+            "universe": f"{len(roster)}-issuer research cohort derived from fund holdings and SEC issuer IDs",
+            "universeName": "S&P 100" if args.sp100_research else "S&P 500" if args.holdings_research or args.roster else "US pilot",
+            "rosterSourceUrl": roster_source,
             "issuers": issuers,
         }
         coverage_path = args.coverage_output.with_suffix(".tmp")

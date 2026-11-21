@@ -1,5 +1,7 @@
 # S&P 500 research pilot
 
+Scope update, 21 November 2026. The active product now focuses on S&P 100, with two-company weekly evidence batches. See [current methodology](us-leadership-methodology.md). The S&P 500 notes below are historical research provenance and do not describe current product coverage.
+
 Update, 19 November 2026. The full research roster now contains 500 issuers. A first batch of 10 has reviewed CEO and Chair records, source links and market histories in the US dashboard. Remaining issuers await evidence review. See [US leadership methodology](us-leadership-methodology.md) for current publication rules and coverage. The pilot notes below record the earlier discovery stage.
 
 The pilot cohort is the first 25 distinct issuers in the 13 November 2026 iShares Core S&P 500 ETF holdings snapshot, ordered by market value. Alphabet's two share classes count as one issuer. ETF holdings define the sample, and S&P DJI announcements should confirm membership changes for any ongoing index coverage. [Holdings snapshot source](https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf/latest-holdings.csv) · [S&P 500 benchmark statement](https://www.spglobal.com/spdji/en/documents/additional-material/sp500-indices-benchmark-statement.pdf)

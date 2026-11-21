@@ -1,5 +1,13 @@
 # Project log
 
+## S&P 100 focus and bounded review, 21 November 2026
+
+- Switched the active US universe to 100 distinct issuers from iShares OEF holdings, preserving the first ten companies' evidence and the highlighted/muted verification states. Alphabet share classes map to one CIK and canonical GOOGL ticker.
+- The page says US leadership research is in progress and identifies S&P 100 as the first scope. Broader S&P 500 expansion is deferred. The duplicate top-level US research tab is removed; UK/US switching remains in DashBoard.
+- Kept the weekday Python filing and price refresh. Added a local Codex weekly review capped at two companies, four targeted searches, six source documents and ten minutes. Changed evidence is prioritised; no automatic assertion that all leadership remains verified.
+- Tesla's new 19/20 November proxy materials triggered the existing recheck guard. Prior appointment evidence remains visible, with nine companies currently passing the freshness rules. No new role research was undertaken in this scope change.
+- Located the CEO Turnover Index source, CSV data and original chess banner locally. Integration, chess styling and naming remain a separate design step; that project was not modified.
+
 ## US leadership verification, 19 November 2026
 
 - Published the first 10 reviewed CEO/Chair pairs with separate effective dates, current-role sources and evidence-review dates. The remaining 490 research issuers retain pending status.
