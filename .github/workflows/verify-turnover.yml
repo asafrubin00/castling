@@ -8,6 +8,11 @@ on:
       - "data/turnover/**"
       - "public/data/turnover-trends.json"
       - "scripts/*turnover*"
+      - "scripts/*leadership*"
+      - "scripts/build_market_performance.py"
+      - "scripts/test_uk_*.py"
+      - "data/leadership_sources*.json"
+      - "data/succession_sources.json"
       - "src/lib/turnover.ts"
       - "src/lib/chartTheme.ts"
       - "src/index.css"
@@ -38,6 +43,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: npm ci
+      - run: python -m pip install -r requirements.txt
+      - run: npm run test:uk
       - run: npm run test:turnover
       - run: npm run data:turnover
       - name: Confirm reproducible snapshot

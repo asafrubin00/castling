@@ -9,6 +9,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from statistics import median
 from typing import Any
+from leadership_dates import role_at_date, succession_active_at
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -135,7 +136,10 @@ def main() -> None:
 
     outcome_cases = [dict(case, cohort="completed") for case in outcome_source["completedCases"]]
     for case in successions["cases"]:
-        role = leadership_by_ticker[case["ticker"]]["roles"][case["role"]]
+        if not succession_active_at(case, as_of):
+            continue
+        role = role_at_date(leadership_by_ticker[case["ticker"]], case["role"], case["announcedDate"])
+        role = role or {}
         role_start = role.get("roleStartDate")
         if not role_start or role_start >= case["announcedDate"]:
             excluded_active.append({
@@ -340,8 +344,8 @@ def main() -> None:
     comparisons: list[dict[str, Any]] = []
     for company in radar["companies"]:
         for role_name in ("ceo", "chair"):
-            role = company["roles"][role_name]
-            if not role.get("rated") or (company["ticker"], role_name) in active_keys:
+            role = role_at_date(leadership_by_ticker[company["ticker"]], role_name, as_of)
+            if not role or role.get("status") == "not-applicable" or (company["ticker"], role_name) in active_keys:
                 continue
             comparisons.append(enrich({
                 "id": f"{company['ticker'].lower()}-{role_name}-comparison",

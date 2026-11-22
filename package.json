@@ -6,6 +6,8 @@
   "scripts": {
     "data": "python3 scripts/build_dataset.py && python3 scripts/build_leadership_radar.py && python3 scripts/build_market_performance.py && python3 scripts/build_leadership_calibration.py && python3 scripts/build_leadership_profiles.py && python3 scripts/validate_leadership_profiles.py && python3 scripts/monitor_issuer_announcements.py",
     "data:radar": "python3 scripts/build_leadership_radar.py && python3 scripts/build_leadership_calibration.py",
+    "data:leadership": "npm run data:radar && python3 scripts/build_market_performance.py --align-roles && npm run data:profiles",
+    "test:uk": "python3 -m unittest discover -s scripts -p 'test_uk_*.py'",
     "data:market": "python3 scripts/build_market_performance.py && python3 scripts/build_leadership_calibration.py",
     "data:calibration": "python3 scripts/build_leadership_calibration.py",
     "data:profiles": "python3 scripts/build_leadership_profiles.py && python3 scripts/validate_leadership_profiles.py",

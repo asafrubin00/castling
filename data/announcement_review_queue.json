@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-20T16:23:13.754718+00:00",
+  "updatedAt": "2026-11-22T12:10:56.748549+00:00",
   "candidates": [
+    {
+      "id": "mtln-bde65ae4e156d736",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "Nine Months 2026 Trading Update",
+      "url": "https://www.metlen.com/media/t0xbvxbi/metlen-plc-announcement-on-final-offering-price.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-22T12:10:56.748549+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "sdlf-71c5d68cc38e11ec",
       "ticker": "SDLF",
@@ -180,8 +193,9 @@
         "succession"
       ],
       "detectedAt": "2026-11-16T16:52:40.161318+00:00",
-      "status": "pending",
-      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+      "status": "promoted",
+      "reviewedAt": "2026-11-22",
+      "reviewNote": "Official appointment, July start-date confirmation and current Board checked. Joanne McNamara took office on 14 September 2026; leadership corrected and the completed succession retained in the historical ledger, not the live overlay."
     },
     {
       "id": "blnd-8d8f006fe3bcd850",

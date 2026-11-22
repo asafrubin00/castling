@@ -1,22 +1,22 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-20T16:23:13.754718+00:00",
+    "generatedAt": "2026-11-22T12:10:56.748549+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 49,
-    "reachableSourceCount": 84,
-    "unavailableSourceCount": 16,
+    "activeSourceCount": 55,
+    "reachableSourceCount": 89,
+    "unavailableSourceCount": 11,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 14,
+      "access-blocked": 9,
       "not-found": 1,
       "timeout": 1
     },
     "newCandidateCount": 1,
     "pendingCandidateCount": 105,
     "pendingCandidateCountBySignal": {
-      "earnings": 83,
-      "succession": 23
+      "earnings": 84,
+      "succession": 22
     },
     "validation": {
       "status": "pass",
@@ -71,9 +71,12 @@
     },
     {
       "ticker": "ULVR",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.unilever.com/news/press-and-media/press-releases/: 403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "IHG",
@@ -119,9 +122,12 @@
     },
     {
       "ticker": "CCEP",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://ir.cocacolaep.com/financial-reports-and-results/financial-releases: 403 Client Error: Forbidden for url: https://ir.cocacolaep.com/financial-reports-and-results/financial-releases"
+      "status": "active",
+      "matchedLinkCount": 25,
+      "matchedLinkCountBySignal": {
+        "earnings": 25,
+        "succession": 0
+      }
     },
     {
       "ticker": "AAL",
@@ -140,9 +146,12 @@
     },
     {
       "ticker": "CCC",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://investors.computacenter.com/regulatory-news: 403 Client Error: Forbidden for url: https://investors.computacenter.com/regulatory-news"
+      "status": "active",
+      "matchedLinkCount": 3,
+      "matchedLinkCountBySignal": {
+        "earnings": 3,
+        "succession": 0
+      }
     },
     {
       "ticker": "IMI",
@@ -314,10 +323,10 @@
     },
     {
       "ticker": "BRBY",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -332,10 +341,10 @@
     },
     {
       "ticker": "CPG",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
+        "earnings": 3,
         "succession": 0
       }
     },
@@ -458,9 +467,12 @@
     },
     {
       "ticker": "ADM",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://admiralgroup.co.uk/media/news-releases-and-media-contacts: 403 Client Error: Forbidden for url: https://admiralgroup.co.uk/media/news-releases-and-media-contacts"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "AAF",
@@ -599,9 +611,12 @@
     },
     {
       "ticker": "INF",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.informa.com/investors/results-presentations/: 403 Client Error: Forbidden for url: https://www.informa.com/investors/results-presentations/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "ITRK",

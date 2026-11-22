@@ -36,6 +36,9 @@ jobs:
       - name: Refresh dataset
         run: npm run data
 
+      - name: Verify UK evidence publication rules
+        run: npm run test:uk
+
       - name: Verify build
         run: npm run build
 

@@ -149,7 +149,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
         <RadarDialog title="Data freshness" onClose={() => setFreshnessOpen(false)}>
           <header className="radar-drawer-heading"><h2>Data freshness</h2></header>
           <div className="radar-method">
-            <p>Leadership review cutoff · {dateLabel.format(new Date(data.metadata.asOfDate))}. This is the cohort-wide evidence and score calculation date. Individual records may have subsequent verified corrections.</p>
+            <p>Leadership review cutoff · {dateLabel.format(new Date(data.metadata.asOfDate))}. This is the original cohort-wide evidence date. Individually rechecked roles show their later verification and calculation dates; a dataset rebuild does not renew those reviews.</p>
             <p>Radar dataset built · {dateLabel.format(new Date(data.metadata.generatedAt))}.</p>
             <p>Market series built · {dateLabel.format(new Date(marketData.metadata.generatedAt))}.</p>
             <p>The weekly refresh fetches configured voting sources and market observations. Announcement monitoring sends potential CEO and Chair changes to a review queue. Verified updates require a source review before publication.</p>
@@ -186,7 +186,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: {
           {view === 'evidence' ? (
             <div className="radar-evidence">
               <section><h3>Leadership</h3>
-                <p>{selectedRole.verifiedAt ? 'Role verified ' + dateLabel.format(new Date(selectedRole.verifiedAt)) : 'Cohort review cutoff ' + dateLabel.format(new Date(data.metadata.asOfDate))}</p>
+                <p>{selectedRole.verifiedAt ? 'Role verified ' + dateLabel.format(new Date(selectedRole.verifiedAt)) : 'Cohort review cutoff ' + dateLabel.format(new Date(data.metadata.asOfDate))}{selectedRole.calculatedAsOf ? ' · Tenure calculated ' + dateLabel.format(new Date(selectedRole.calculatedAsOf)) : ''}</p>
                 {selectedRole.sourceUrl && <a href={selectedRole.sourceUrl} target="_blank" rel="noreferrer">Official leadership source</a>}
                 {profile && <details><summary>{profile.name} · profile</summary>
                   {profile.portraitPath && <img src={profile.portraitPath} alt={profile.name} />}

@@ -11,6 +11,7 @@ from typing import Any
 
 import requests
 from bs4 import BeautifulSoup
+from leadership_dates import calculation_date, role_at_date
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -318,7 +319,9 @@ def succession_by_company(
             continue
         if case.get("status") not in allowed_statuses:
             errors.append(f"Unsupported succession status for {case_id}.")
-        if case.get("incumbentName") != curated_by_ticker[ticker]["roles"][role]["name"]:
+        incumbent = (role_at_date(curated_by_ticker[ticker], role, case.get("announcedDate", ""))
+                     if case.get("completedAt") else curated_by_ticker[ticker]["roles"][role])
+        if not incumbent or case.get("incumbentName") != incumbent.get("name"):
             errors.append(f"Succession incumbent does not match leadership evidence for {case_id}.")
         if not case.get("sourceUrl") or not case.get("summary"):
             errors.append(f"Missing succession evidence for {case_id}.")
@@ -327,6 +330,20 @@ def succession_by_company(
                 errors.append(f"Future-dated succession case: {case_id}.")
         except (KeyError, ValueError):
             errors.append(f"Invalid succession announcement date for {case_id}.")
+        if case.get("completedAt"):
+            try:
+                completed = date.fromisoformat(case["completedAt"])
+                reviewed = date.fromisoformat(case["verifiedAt"])
+                current_role = curated_by_ticker[ticker]["roles"][role]
+                if not date.fromisoformat(case["announcedDate"]) <= completed <= reviewed <= date.today():
+                    errors.append(f"Invalid completed succession chronology for {case_id}.")
+                if current_role.get("name") != case.get("successorName"):
+                    errors.append(f"Completed succession successor does not match the current role for {case_id}.")
+                if not case.get("completionSourceUrl", "").startswith("https://"):
+                    errors.append(f"Missing completed succession source for {case_id}.")
+            except (KeyError, ValueError):
+                errors.append(f"Invalid completed succession evidence for {case_id}.")
+            continue
         grouped.setdefault(ticker, {"count": 0, "cases": []})
         grouped[ticker]["count"] += 1
         grouped[ticker]["cases"].append(case)
@@ -370,7 +387,8 @@ def validate(
                 errors.append(f"Missing structural source for {company['ticker']} {role_name}.")
             if role.get("sourceUrl") and not role["sourceUrl"].startswith("https://"):
                 errors.append(f"Non-HTTPS source URL for {company['ticker']} {role_name}.")
-            if role.get("roleStartDate") and date.fromisoformat(role["roleStartDate"]) > date.fromisoformat(as_of):
+            role_as_of = calculation_date(role, as_of)
+            if role.get("roleStartDate") and date.fromisoformat(role["roleStartDate"]) > date.fromisoformat(role_as_of):
                 errors.append(f"Future role start date for {company['ticker']} {role_name}.")
     return {"status": "pass" if not errors else "fail", "errors": errors, "warnings": warnings}
 
@@ -444,7 +462,8 @@ def main() -> None:
                     "band": "Not applicable",
                 }
                 continue
-            tenure_years = years_between(role["roleStartDate"], as_of)
+            role_as_of = calculation_date(role, as_of)
+            tenure_years = years_between(role["roleStartDate"], role_as_of)
             tenure_score = tenure_pressure(role_name, tenure_years)
             max_against = dissent_record["maxScoredManagementDissentPct"] if dissent_record else None
             dissent_count = dissent_record["scoredCount"] if dissent_record else 0
@@ -453,6 +472,7 @@ def main() -> None:
             role_output[role_name] = {
                 **role,
                 "rated": True,
+                "calculatedAsOf": role_as_of,
                 "tenureYears": tenure_years,
                 "score": score,
                 "band": pressure_band(score),
@@ -520,7 +540,8 @@ def main() -> None:
                 "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score pending calibration and outcome testing.",
             },
             "successionCoverage": {
-                "activeCaseCount": len(succession_source["cases"]),
+                "activeCaseCount": sum(item["count"] for item in successions.values()),
+                "completedCaseCount": sum(bool(case.get("completedAt")) for case in succession_source["cases"]),
                 "reviewedCompanyCount": sum(1 for row in roster if row["ticker"] in succession_source["reviewedTickers"]),
                 "asOfDate": succession_source["asOfDate"],
                 "definition": succession_source["definition"],

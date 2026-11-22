@@ -9,8 +9,7 @@ Nothing detected by the monitor changes the Leadership Pressure Radar or its sco
 ## Coverage
 
 - The configuration contains one official issuer landing page for each of the 100 companies in the source-verified leadership cohort.
-- The current monitor run reached 91 sources, of which 58 exposed monitorable links in server-rendered HTML; nine official sites remained unavailable to the responsible fetcher.
-- Fourteen sources were unavailable to that run because of access controls, timeouts, TLS incompatibility, or incompatible delivery.
+- Current reachability, matching-link coverage and failed-source counts are read from `public/data/announcement-monitor.json`, not fixed figures in this document. They can change on each run because of access controls, timeouts, TLS incompatibility or incompatible delivery.
 - Source health is recalculated on every run and written to `public/data/announcement-monitor.json`.
 
 Reachability is not the same as complete disclosure coverage. A reachable page may expose no matching links, and an unavailable page may still be accessible to a human browser.
@@ -38,7 +37,7 @@ The first successful set of links for a source establishes a baseline. Later uns
 
 ## Editorial workflow
 
-1. The weekly GitHub Action runs the monitor and commits newly detected candidates.
+1. The weekday leadership-monitor action and the weekly full refresh run the monitor and commit newly detected candidates.
 2. A reviewer opens the official issuer link and determines whether it meets the profit-warning or active-succession methodology.
 3. Non-qualifying items are marked `dismissed` in the queue with a short review note.
 4. Qualifying items are added to `data/profit_warning_sources.json` or `data/succession_sources.json` and marked `promoted` in the queue.

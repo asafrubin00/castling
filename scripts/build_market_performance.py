@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import argparse
+import copy
 import math
 import subprocess
 import time
@@ -120,6 +122,30 @@ def extreme_discontinuities(points: list[dict[str, float | str]]) -> list[str]:
 
 def market_symbol(ticker: str) -> str:
     return MARKET_SYMBOL_OVERRIDES.get(ticker, f"{ticker}.L")
+
+
+def align_roles(market: dict, leadership: dict) -> tuple[dict, int]:
+    """Rebind cached observations after an editorial role change, without fetching prices."""
+    if market.get("metadata", {}).get("validation", {}).get("status") != "pass":
+        raise ValueError("Cannot align an unvalidated market snapshot.")
+    result = copy.deepcopy(market)
+    indexed = {company["ticker"]: company for company in result["companies"]}
+    if len(indexed) != len(result["companies"]):
+        raise ValueError("Duplicate company in cached market snapshot.")
+    changed = 0
+    for company in leadership["companies"]:
+        if company["ticker"] not in indexed:
+            raise ValueError(f"No cached market history for {company['ticker']}; run a full market build.")
+        target = indexed[company["ticker"]]
+        roles = {key: {"name": company["roles"][key].get("name", "Not applicable"),
+                       "roleStartDate": company["roles"][key].get("roleStartDate")}
+                 for key in ("ceo", "chair")}
+        if target["roles"] != roles:
+            target["roles"] = roles
+            changed += 1
+    if changed:
+        result["metadata"]["leadershipAlignedAt"] = datetime.now(timezone.utc).isoformat()
+    return result, changed
 
 
 def main() -> None:
@@ -247,4 +273,15 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--align-roles", action="store_true", help="Update role references only; retain prices and their download timestamp.")
+    args = parser.parse_args()
+    if args.align_roles:
+        market = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        leadership = json.loads(LEADERSHIP_PATH.read_text(encoding="utf-8"))
+        aligned, changed = align_roles(market, leadership)
+        if changed:
+            OUTPUT_PATH.write_text(json.dumps(aligned, indent=2) + "\n", encoding="utf-8")
+        print(f"Aligned {changed} companies; cached prices and their timestamp are unchanged.")
+    else:
+        main()

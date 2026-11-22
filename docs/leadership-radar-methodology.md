@@ -19,6 +19,9 @@ Profit-warning and succession evidence are visible but not scored. Share-price s
 - FTSE Russell remains the index authority; the public table is not presented as an official licensed index feed.
 - All 100 companies have source-verified leadership records across `data/leadership_sources.json` and `data/leadership_sources_expansion.json`.
 - The evidence cutoff for the current cohort is 8 August 2026.
+- The baseline cohort was subsequently reviewed to 15 August 2026. A later `verifiedAt` applies only to the role explicitly rechecked, not to the other companies. `calculatedAsOf` is the later of that role's verification and the baseline date; an ordinary rebuild cannot renew a review. Future verification dates and verifications before appointment are rejected.
+- November's first incremental review covers British Land and Barratt Redrow, including both CEO and Chair records. Their completed CEO successions are archived with issuer evidence and excluded from the live overlay. Month-only appointments retain month precision rather than claiming an exact day.
+- Former role records are retained in `previousRoles`. Calibration resolves the incumbent at its original cutoff, rather than substituting a newly appointed CEO into an older observation. The evaluation cohort and production weights are unchanged.
 - Six externally managed issuers without a company CEO are marked `Not applicable`; no CEO score is inferred for them.
 
 ## Score construction
@@ -86,7 +89,7 @@ The market build validates all 100 company series and the FTSE 100 benchmark. Is
 
 An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office. Informal speculation, general succession-planning language, and completed appointments are excluded.
 
-All 100 companies were reviewed to 8 August 2026. The current release captures seven active processes: CEO transitions at Babcock International, Barratt Redrow, British Land, and Kingfisher, plus Chair processes at British American Tobacco, Burberry, and JD Sports. The exact incumbent, status, dates, named successor where available, and primary-source link are stored in `data/succession_sources.json`.
+The original cohort captured seven processes: CEO transitions at Babcock International, Barratt Redrow, British Land, and Kingfisher, plus Chair processes at British American Tobacco, Burberry, and JD Sports. The 22 November review confirmed the British Land and Barratt Redrow CEO handovers as completed. Those two cases remain in the historical ledger but not the live overlay; the other five captured cases retain their original review dates. The exact incumbent, status, dates, named successor where available, and primary-source link are stored in `data/succession_sources.json`.
 
 Succession status is displayed as live evidence and does not alter the pressure score. Absence means no qualifying official announcement was captured by the evidence date, not proof that a board is not planning succession privately.
 
@@ -127,6 +130,8 @@ The build fails if it finds:
 The generated file records validation status, methodology version, source mode, generation time, evidence date, and limitations.
 
 ## Refresh model
+
+For a bounded editorial appointment review, run `npm run test:uk` and `npm run data:leadership`. This rebuilds the radar and calibration, aligns existing market histories to the new role boundaries without downloading prices, and rebuilds/validates appointment profiles. Cached market points and their original download date are retained; role alignment has its own timestamp. A full price refresh still uses `npm run data:market`.
 
 `npm run data` refreshes the public constituent snapshot, rebuilds Proxy Voting, recalculates radar scores, refreshes market-performance series for all 100 companies, and runs as part of the weekly GitHub Actions workflow.
 

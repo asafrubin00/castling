@@ -1,5 +1,14 @@
 # Project log
 
+## Bounded UK leadership maintenance, 22 November 2026
+
+- Repaired the existing Monday review automation's moved-folder reference to `/Users/asafrubin/Developer/Castling`. The single job now alternates UK in even ISO weeks and US in odd weeks, preserving the total two-company, four-search, six-document and ten-minute limits rather than doubling token usage with another job.
+- Reviewed British Land and Barratt Redrow's current CEO/Chair evidence. Promoted Joanne McNamara's confirmed 14 September appointment and Dean Banks's month-precision September appointment, and corrected Caroline Silver's Chair date to month-precision July 2023. The other 98 companies have not been relabelled as newly reviewed.
+- Archived source-confirmed completed successions instead of leaving them live. Retained outgoing role records for the original historical audit and kept production weights unchanged.
+- Added offline regression checks and a bounded leadership rebuild that aligns cached tenure-chart role references, preserves price observations/download timestamps, and refreshes appointment profiles.
+- Reran the source monitor: 89 sources reachable, 11 unavailable, one new candidate. Monitoring alone did not promote any evidence. The manually reviewed British Land candidate was promoted; the new trading-update candidate remains pending.
+- Remaining work: the UK announcement backlog and unavailable sources still need bounded editorial triage; UK/US evidence reviews now alternate weekly; further AGM source onboarding and quarterly turnover imports remain separate tasks. No design changes.
+
 ## Chess landing and shared About, 21 November 2026
 
 - Added the original CEO Turnover Index chess photograph as a full-viewport landing page with three direct entrances. The landing page renders independently of dataset loading or failure.

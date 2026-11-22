@@ -20,6 +20,9 @@
     },
     {
       "id": "blnd-ceo-2026-07-02-successor-announced",
+      "completedAt": "2026-09-14",
+      "verifiedAt": "2026-11-22",
+      "completionSourceUrl": "https://www.britishland.com/about-us/board-and-leadership/",
       "ticker": "BLND",
       "role": "ceo",
       "status": "successor-announced",
@@ -62,6 +65,10 @@
     },
     {
       "id": "btrw-ceo-2026-03-04-successor-announced",
+      "completedAt": "2026-09-01",
+      "completedDatePrecision": "month",
+      "verifiedAt": "2026-11-22",
+      "completionSourceUrl": "https://www.barrattredrow.co.uk/about-us/leadership/the-board",
       "ticker": "BTRW",
       "role": "ceo",
       "status": "successor-announced",

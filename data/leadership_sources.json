@@ -616,20 +616,32 @@
       "companyName": "Barratt Redrow",
       "ticker": "BTRW",
       "trackerAliases": [],
-      "roles": {
-        "ceo": {
+      "previousRoles": [
+        {
+          "role": "ceo",
           "name": "David Thomas",
           "roleStartDate": "2015-07-01",
           "sourceUrl": "https://www.barrattredrow.co.uk/news/2015/pr-27-03-2015",
           "sourceLabel": "Barratt Chief Executive appointment",
           "datePrecision": "day"
+        }
+      ],
+      "roles": {
+        "ceo": {
+          "name": "Dean Banks",
+          "roleStartDate": "2026-09-01",
+          "sourceUrl": "https://www.barrattredrow.co.uk/about-us/leadership/the-board",
+          "sourceLabel": "Current Board profile confirms Chief Executive appointment in September 2026",
+          "datePrecision": "month",
+          "verifiedAt": "2026-11-22"
         },
         "chair": {
           "name": "Caroline Silver",
-          "roleStartDate": "2023-06-30",
+          "roleStartDate": "2023-07-01",
           "sourceUrl": "https://www.barrattredrow.co.uk/about-us/leadership/the-board",
-          "sourceLabel": "Barratt Redrow Board profile",
-          "datePrecision": "day"
+          "sourceLabel": "Current Board profile confirms Chair appointment in July 2023",
+          "datePrecision": "month",
+          "verifiedAt": "2026-11-22"
         }
       }
     },
@@ -681,20 +693,35 @@
       "companyName": "British Land",
       "ticker": "BLND",
       "trackerAliases": [],
-      "roles": {
-        "ceo": {
+      "previousRoles": [
+        {
+          "role": "ceo",
           "name": "Simon Carter",
           "roleStartDate": "2020-11-18",
+          "roleEndDate": "2026-08-31",
           "sourceUrl": "https://www.britishland.com/news/chris-grigg-to-step-down-as-chief-executive-officer-simon-carter-appointed-as-his-successor/",
           "sourceLabel": "British Land Chief Executive appointment",
           "datePrecision": "day"
+        }
+      ],
+      "roles": {
+        "ceo": {
+          "name": "Joanne McNamara",
+          "roleStartDate": "2026-09-14",
+          "sourceUrl": "https://www.britishland.com/media/haefn1kc/jm-sc-start-and-leave-dates.pdf",
+          "sourceLabel": "Confirmed CEO start date; current Board lists Jo McNamara",
+          "currentSourceUrl": "https://www.britishland.com/about-us/board-and-leadership/",
+          "datePrecision": "day",
+          "verifiedAt": "2026-11-22"
         },
         "chair": {
           "name": "William Rucker",
           "roleStartDate": "2024-07-09",
           "sourceUrl": "https://www.britishland.com/news/british-land-appoints-william-rucker-as-chair-designate/",
           "sourceLabel": "British Land Chair appointment",
-          "datePrecision": "day"
+          "datePrecision": "day",
+          "currentSourceUrl": "https://www.britishland.com/about-us/board-and-leadership/",
+          "verifiedAt": "2026-11-22"
         }
       }
     },

@@ -42,12 +42,14 @@ Original site design, analytical frameworks, scoring methodology, governance tax
 - Leadership coverage: all 100 companies have official issuer sources for current CEO and Chair appointments or a sourced structural `not applicable` designation.
 - Signals in methodology `v0.6`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
 - Profit-warning audit: all 100 companies reviewed over 36 months, with 16 qualifying official events across 12 issuers as of 15 August 2026.
-- Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
+- Succession review: the original 100-company window captured seven processes. Two CEO handovers were subsequently verified as completed and archived, leaving five unclosed captured cases with their original review dates.
 - Market-performance coverage: all 100 companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
 - Calibration audit: 50 completed transitions and six active processes compared with 188 current role observations; all 50 completed cases now have complete aligned warning windows, while live weights remain unchanged.
 - Leadership profiles: all 100 companies have source-backed CEO/Chair profile access. Thirty priority issuers have concise career biographies; the remaining 70 intentionally use appointment-only summaries from official evidence.
 - Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
+
+The cohort-wide leadership review cutoff remains 15 August 2026. A bounded 22 November review updated British Land and Barratt Redrow's CEOs, rechecked both Chairs, and closed their completed CEO succession overlays. Individual verification dates do not imply a new review of the other 98 companies. Historical incumbents remain available to the frozen calibration audit.
 
 The score is a research-prioritisation device, not a prediction that an individual will leave office. Full details are in [the radar methodology](docs/leadership-radar-methodology.md).
 
@@ -70,7 +72,7 @@ The IA Public Register stopped adding new cases after its October 2025 policy ch
 - Tenure, share-price and dividend-adjusted charts are available for reviewed roles with sufficient history. NVIDIA's new interim CEO/Chair tenures do not yet have two monthly observations. Amazon and Tesla disclose pre-listing gaps.
 - US tiles display **years in role**. US pressure scores remain unpublished pending jurisdiction-specific methodology and calibration.
 - The other 90 companies remain awaiting their first review. Filing collection alone does not verify role holders.
-- A Codex app automation reviews at most two companies each Monday at 09:00 Europe/London, prioritising changed evidence. Each run is limited to four targeted searches, six official documents and ten minutes. This uses Codex usage and depends on local Codex availability; it is separate from the ordinary GitHub data refresh.
+- A single Codex app automation reviews at most two companies each Monday at 09:00 Europe/London, alternating UK in even ISO weeks and US in odd ISO weeks. Each run shares a cap of four targeted searches, six official documents and ten minutes; alternating jurisdictions does not add a second research job. This uses Codex usage and depends on local Codex availability; it is separate from the ordinary GitHub data refresh.
 - Weekday discovery flags newer officer/director and proxy filings. Reviews expire after 30 days, without silently renewing the review date. The UI also detects overdue discovery independently of a new build.
 - Sources, date-precision treatment, publication rules and commands are documented in [US evidence methodology](docs/us-leadership-methodology.md).
 
@@ -85,6 +87,8 @@ The three workspaces share one compact design system: flat ink navy, warm ivory 
 This is a quarterly snapshot with its own coverage label. It is separate from the company dashboard's FTSE 100/S&P 100 universe and its weekday source-monitoring schedule. AI analysis is disabled, so filtering and charting incur no model/API usage. Original Russell Reynolds Associates attribution, source-project revision and CSV fingerprints are preserved. See [integration methodology](docs/turnover-integration.md).
 
 Use `npm run data:turnover` to validate/rebuild the imported CSVs, and `npm run test:turnover` for calculation and data-integrity tests. The original standalone project is unchanged.
+
+For incremental UK appointment maintenance, use `npm run test:uk` followed by `npm run data:leadership`. The latter also aligns cached tenure-chart role references and updates appointment profiles, without relabelling old market observations as newly downloaded.
 
 ## Stack
 
@@ -189,6 +193,7 @@ src/
 ## Product roadmap
 
 - Extend complete resolution-level AGM histories beyond the first eleven completed cases while preserving the 20% publication threshold.
+- Continue bounded UK leadership reviews, prioritising named-successor handovers and the announcement queue; repair unavailable source URLs without bypassing issuer access controls. A rebuild or successful source download alone never counts as a role verification.
 - Reserve future completed transitions as a genuinely untouched evaluation cohort before changing production weights.
 - Editorially enrich the 70 appointment-only leadership profiles only where stable official biographies add decision-useful context.
 - Expand the live direct-issuer AGM registry beyond the current five post-October-2025 meetings while retaining editorial parser review before publication.
