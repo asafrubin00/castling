@@ -24,6 +24,9 @@ export function TurnoverTrendsPage() {
   const [view, setView] = useState<View>('turnover')
   const [peer, setPeer] = useState('')
   const [methodOpen, setMethodOpen] = useState(false)
+  // Chart zoom: a From/To quarter window for the time-series views only (period keys, null = full range).
+  const [zoom, setZoom] = useState<{ from: number | null; to: number | null }>({ from: null, to: null })
+  const resetZoom = () => setZoom({ from: null, to: null })
   useEffect(() => {
     const controller = new AbortController()
     fetch('/data/turnover-trends.json', { signal: controller.signal, cache: 'no-cache' }).then((response) => {
@@ -42,9 +45,19 @@ export function TurnoverTrendsPage() {
   const delta = latest?.outgoing_pct != null && previous?.outgoing_pct != null ? latest.outgoing_pct - previous.outgoing_pct : null
   const comparisons = data ? comparisonRows(data, filters) : []
   const markets = data ? comparisonRows(data, filters, 'index') : []
-  const trend = data ? trendRows(data, filters, peer) : []
+  const trendFull = data ? trendRows(data, filters, peer) : []
+  const tenureFull = series.map((r) => ({ period: periodKey(r), tenure: r.outgoing_count === 0 ? null : r.avg_outgoing_tenure_years }))
+  const timeView = view === 'turnover' || view === 'tenure'
+  const zoomPeriods = [...new Set((view === 'turnover' ? trendFull : tenureFull).map((r) => r.period))].sort((a, b) => a - b)
+  const zoomFirst = zoomPeriods[0] ?? 0
+  const zoomLast = zoomPeriods.at(-1) ?? 0
+  const zoomFrom = zoom.from === null ? zoomFirst : Math.min(Math.max(zoom.from, zoomFirst), zoomLast)
+  const zoomTo = zoom.to === null ? zoomLast : Math.min(Math.max(zoom.to, zoomFirst), zoomLast)
+  const zoomed = timeView && zoomPeriods.length > 1 && (zoomFrom !== zoomFirst || zoomTo !== zoomLast)
+  const inZoom = (r: { period: number }) => !zoomed || (r.period >= zoomFrom && r.period <= zoomTo)
+  const trend = trendFull.filter(inZoom)
+  const tenure = tenureFull.filter(inZoom)
   const rateCeiling = Math.ceil(Math.max(1, ...trend.flatMap((r) => [r.departures ?? 0, peer ? r.peer ?? 0 : r.appointments ?? 0])) * 1.1)
-  const tenure = series.map((r) => ({ period: periodKey(r), tenure: r.outgoing_count === 0 ? null : r.avg_outgoing_tenure_years }))
   const splitRows = data ? latestComposition(data, filters, view === 'gender' ? 'gender' : 'appointment') : []
   const categories = view === 'gender' ? ['Women', 'Men'] : ['Internal', 'External']
   const composition = (['incoming', 'outgoing'] as const).map((flow) => {
@@ -60,6 +73,7 @@ export function TurnoverTrendsPage() {
   const chooseScope = (scope: Scope) => {
     setFilters((current) => ({ ...current, scope, segment: 'Global' }))
     setPeer('')
+    resetZoom()
     if (scope === 'industry' && view === 'markets') setView('segments')
   }
   const chooseView = (next: View) => {
@@ -86,9 +100,9 @@ export function TurnoverTrendsPage() {
           <div className="ws-toolbar__group">
             <fieldset className="segmented-control"><legend className="sr-only">Explore by</legend><button type="button" aria-pressed={filters.scope === 'index'} className={filters.scope === 'index' ? 'is-active' : ''} onClick={() => chooseScope('index')}>Index</button><button type="button" aria-pressed={filters.scope === 'industry'} className={filters.scope === 'industry' ? 'is-active' : ''} onClick={() => chooseScope('industry')}>Industry</button></fieldset>
             <label className="radar-select radar-select--wide"><span className="sr-only">{filters.scope === 'index' ? 'Market / index' : 'Industry'}</span><select aria-label={filters.scope === 'index' ? 'Market / index' : 'Industry'} value={filters.segment} onChange={(e) => { setFilters({ ...filters, segment: e.target.value }); if (peer === e.target.value) setPeer('') }}>{segments.map((s) => <option key={s} value={s}>{displaySegment(s)}</option>)}</select></label>
-            <label className="radar-select"><span className="sr-only">Year</span><select aria-label="Year" value={filters.year} onChange={(e) => setFilters({ ...filters, year: e.target.value })}><option value="all">All years</option>{years.map((y) => <option key={y}>{y}</option>)}</select></label>
-            <label className="radar-select"><span className="sr-only">Quarter</span><select aria-label="Quarter" value={filters.quarter} onChange={(e) => setFilters({ ...filters, quarter: e.target.value })}><option value="all">All quarters</option>{[1, 2, 3, 4].map((q) => <option key={q} value={q}>Q{q}</option>)}</select></label>
-            <button className="radar-action radar-action--quiet" type="button" onClick={() => { setFilters(initialFilters); setPeer(''); setView('turnover') }}>Reset</button>
+            <label className="radar-select"><span className="sr-only">Year</span><select aria-label="Year" value={filters.year} onChange={(e) => { setFilters({ ...filters, year: e.target.value }); resetZoom() }}><option value="all">All years</option>{years.map((y) => <option key={y}>{y}</option>)}</select></label>
+            <label className="radar-select"><span className="sr-only">Quarter</span><select aria-label="Quarter" value={filters.quarter} onChange={(e) => { setFilters({ ...filters, quarter: e.target.value }); resetZoom() }}><option value="all">All quarters</option>{[1, 2, 3, 4].map((q) => <option key={q} value={q}>Q{q}</option>)}</select></label>
+            <button className="radar-action radar-action--quiet" type="button" onClick={() => { setFilters(initialFilters); setPeer(''); setView('turnover'); resetZoom() }}>Reset</button>
           </div>
           <div className="ws-toolbar__group ws-toolbar__actions">
             <a className="radar-action" href="https://ceo-turnover-index.vercel.app/" target="_blank" rel="noreferrer">Original CEO Turnover Index <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
@@ -114,7 +128,13 @@ export function TurnoverTrendsPage() {
         </div>
         <div className="turnover-analysis" id="turnover-panel" role="tabpanel" aria-labelledby={`turnover-tab-${view}`}>
           <section className="turnover-chart-panel" aria-label={titles[view]}>
-            <header className="turnover-chart-heading"><div><p>{view === 'markets' || view === 'segments' ? 'Latest reported quarter within the filters' : `${selectedLabel} · ${view === 'gender' || view === 'appointments' ? splitRows[0] ? periodLabel(splitRows[0]) : 'No composition reported' : series.length ? `${periodLabel(series[0])} – ${periodText}` : 'No observations'}`}</p><h2>{titles[view]}</h2></div>
+            <header className="turnover-chart-heading"><div><p>{view === 'markets' || view === 'segments' ? 'Latest reported quarter within the filters' : `${selectedLabel} · ${view === 'gender' || view === 'appointments' ? splitRows[0] ? periodLabel(splitRows[0]) : 'No composition reported' : zoomed ? `showing ${quarterTick(zoomFrom)} – ${quarterTick(zoomTo)}` : series.length ? `${periodLabel(series[0])} – ${periodText}` : 'No observations'}`}</p><h2>{titles[view]}</h2></div>
+              {timeView && zoomPeriods.length > 1 && <div className="turnover-range" role="group" aria-label="Chart time range">
+                <label className="radar-select"><span className="sr-only">From quarter</span><select value={zoomFrom} onChange={(e) => { const from = Number(e.target.value); setZoom({ from, to: Math.max(from, zoomTo) }) }}>{zoomPeriods.map((p) => <option key={p} value={p}>{quarterTick(p)}</option>)}</select></label>
+                <span aria-hidden="true">to</span>
+                <label className="radar-select"><span className="sr-only">To quarter</span><select value={zoomTo} onChange={(e) => { const to = Number(e.target.value); setZoom({ from: Math.min(zoomFrom, to), to }) }}>{zoomPeriods.map((p) => <option key={p} value={p}>{quarterTick(p)}</option>)}</select></label>
+                {zoomed && <button type="button" className="radar-action radar-action--quiet" onClick={resetZoom}>Full range</button>}
+              </div>}
               {view === 'turnover' && <label className="radar-select"><span>Compare departure rates</span><select value={peer} onChange={(e) => setPeer(e.target.value)}><option value="">Appointments vs departures</option>{segments.filter((s) => s !== filters.segment).map((s) => <option key={s} value={s}>{displaySegment(s)}</option>)}</select></label>}
             </header>
             {view === 'markets' ? markets.length ? <TurnoverMarketMap rows={markets} selected={filters.segment} onSelect={selectMarket} /> : <p className="turnover-empty">No reported market data for this period.</p>
@@ -124,8 +144,8 @@ export function TurnoverTrendsPage() {
                     {view === 'turnover' ? <LineChart data={trend} margin={{ top: 12, right: 18, bottom: 0, left: 0 }}>
                       <CartesianGrid stroke="var(--chart-grid)" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis domain={[0, rateCeiling]} tickCount={6} tickFormatter={(v) => `${v}%`} tick={axis} axisLine={false} tickLine={false} width={46} />
                       <Tooltip labelFormatter={(v) => quarterTick(Number(v))} formatter={(v) => `${Number(v).toFixed(1)}%`} contentStyle={tooltipStyle} /><Legend iconType="plainline" iconSize={14} wrapperStyle={chartLegendStyle} />
-                      <Line type="linear" name={peer ? selectedLabel : 'Departures'} dataKey="departures" stroke={chartColours[0]} strokeWidth={1.75} dot={trend.length === 1} isAnimationActive={false} />
-                      <Line type="linear" name={peer ? displaySegment(peer) : 'Appointments'} dataKey={peer ? 'peer' : 'appointments'} stroke={chartColours[1]} strokeWidth={1.5} dot={trend.length === 1} isAnimationActive={false} />
+                      <Line type="linear" name={peer ? selectedLabel : 'Departures'} dataKey="departures" stroke={chartColours[0]} strokeWidth={1.75} dot={trend.length <= 16 ? { r: 2.5, strokeWidth: 0, fill: chartColours[0] } : false} isAnimationActive={false} />
+                      <Line type="linear" name={peer ? displaySegment(peer) : 'Appointments'} dataKey={peer ? 'peer' : 'appointments'} stroke={chartColours[1]} strokeWidth={1.5} dot={trend.length <= 16 ? { r: 2.5, strokeWidth: 0, fill: chartColours[1] } : false} isAnimationActive={false} />
                     </LineChart> : view === 'tenure' ? <AreaChart data={tenure} margin={{ top: 12, right: 18, bottom: 0, left: 0 }}>
                       <defs><linearGradient id="turnover-tenure-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={chartColours[0]} stopOpacity={.18} /><stop offset="100%" stopColor={chartColours[0]} stopOpacity={0} /></linearGradient></defs>
                       <CartesianGrid stroke="var(--chart-grid)" vertical={false} /><XAxis dataKey="period" type="number" domain={['dataMin', 'dataMax']} allowDecimals={false} tickCount={5} tickFormatter={quarterTick} tick={axis} axisLine={false} tickLine={false} /><YAxis tickFormatter={(v) => `${v}y`} tick={axis} axisLine={false} tickLine={false} width={46} />

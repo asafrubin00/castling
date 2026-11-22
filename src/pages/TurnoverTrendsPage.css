@@ -63,12 +63,26 @@
   font-size: 19px;
 }
 
-.turnover-chart-heading .radar-select {
+.turnover-chart-heading > .radar-select {
   flex-shrink: 0;
   width: min(240px, 40%);
 }
 
-.turnover-chart-heading .radar-select select {
+.turnover-range {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+.turnover-range select {
+  min-width: 96px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.turnover-chart-heading > .radar-select select {
   width: 100%;
 }
 
@@ -301,8 +315,12 @@
     flex-wrap: wrap;
   }
 
-  .turnover-chart-heading .radar-select {
+  .turnover-chart-heading > .radar-select {
     width: 100%;
+  }
+
+  .turnover-range {
+    margin-left: 0;
   }
 
   .turnover-rail {
