@@ -2,7 +2,7 @@
 
 ## Scope and provenance
 
-Turnover Trends is a native React view within Proxy Wars at `/turnover`. It imports the existing CEO Turnover Index project's five CSV files unchanged. `data/turnover/provenance.json` records the original repository, source revision, attribution and import date. The generated dataset contains SHA-256 fingerprints of each imported CSV.
+Turnover Trends is a native React view within Castling at `/turnover`. It imports the existing CEO Turnover Index project's five CSV files unchanged. `data/turnover/provenance.json` records the original repository, source revision, attribution and import date. The generated dataset contains SHA-256 fingerprints of each imported CSV.
 
 The imported snapshot covers 2019 Q1 through 2026 Q3, with 620 index/industry metric observations and 7,440 composition observations. There are 13 named index series plus Global, and five industry series plus Global. The global series is preserved as supplied; overlapping indices are never added into a synthetic global total.
 

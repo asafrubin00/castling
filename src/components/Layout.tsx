@@ -1,4 +1,5 @@
-import { NavLink, Outlet, useLocation, useSearchParams } from 'react-router-dom'
+import { Link, NavLink, Outlet, useLocation, useSearchParams } from 'react-router-dom'
+import { BrandMark } from './BrandMark'
 import { RadarDialog } from './RadarDialog'
 import { OverviewContent } from '../pages/HomePage'
 import type { LeadershipRadarData, TrackerData } from '../types'
@@ -25,8 +26,7 @@ export function Layout({ generatedAt, data, radarData, error }: LayoutProps) {
     <div className={`site-shell ${isLanding ? 'site-shell--landing' : ''}`}>
       <header className="site-header">
         <div className="site-header__inner">
-          {/* Branding slot: intentionally blank until the product name is settled. */}
-          <div className="site-header__brand" aria-hidden="true" />
+          {!isLanding && <Link className="site-brand" to="/" aria-label="Castling home"><BrandMark /><span>Castling</span></Link>}
           {!isLanding && <nav className="site-nav" aria-label="Primary">
             <NavLink to="/heatmap" className={({ isActive }) => isActive || pathname === '/us-research' ? 'active' : ''}>Heatmap</NavLink>
             <NavLink to="/turnover">Turnover Trends</NavLink>

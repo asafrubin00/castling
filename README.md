@@ -1,12 +1,14 @@
-# Proxy Wars
+# Castling
 
-Proxy Wars is a governance research portfolio project with a UK dashboard and a growing source-verified US leadership workspace.
+**CEO succession, turnover and shareholder dissent.** Castling is a governance research portfolio project with a UK dashboard and a growing source-verified US leadership workspace.
 
 - **Governance Radar**: the main source-backed FTSE 100 research surface, with integrated leadership-pressure and significant-voting lenses alongside profit-warning evidence, active succession processes, and tenure-period market performance.
 - **Vote Explorer**: the supporting resolution-level workspace for verified significant shareholder dissent against management.
 - **Turnover Trends**: global CEO turnover, tenure, gender and appointment-pathway analysis imported from the existing CEO Turnover Index, within the same navigation and visual system.
 
 The site opens on a full-screen chess landing page, with three entrances: Heatmap, Turnover Trends and Proxy Voting. Inside, the same three tabs provide navigation. About is available from the landing page or the small information button in each workspace; it reuses the previous Overview content in a 75%-viewport dialog. Heatmap retains the UK/US market switch. UK leadership evidence covers the 100-company roster, with externally managed issuers marked not applicable where appropriate. US coverage is published incrementally with explicit verification counts. Voting evidence covers significant dissent rather than general AGM voting books.
+
+The name comes from castling, the one chess move in which the king changes squares, here standing for a change of leadership. The mark (a rook and king side by side) lives in `src/components/BrandMark.tsx`; favicons and the link-preview image are in `public/`.
 
 Original site design, analytical frameworks, scoring methodology, governance taxonomy, visualisations, and written analysis are © 2026 Asaf Rubin. Public-source data and third-party materials remain the property of their respective owners. See the in-product Terms of Use for details.
 

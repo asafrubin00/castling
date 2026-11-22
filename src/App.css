@@ -33,8 +33,27 @@
   gap: 20px;
 }
 
-.site-header__brand:empty {
-  display: none;
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.site-brand .brand-mark {
+  color: var(--accent);
+  transition: color 120ms ease;
+}
+
+.site-brand:hover .brand-mark {
+  color: var(--accent-bright);
 }
 
 .site-nav {
@@ -1695,6 +1714,10 @@ body:has(.radar-dialog[open]) {
 
   .site-header__inner {
     gap: 8px;
+  }
+
+  .site-brand span {
+    display: none;
   }
 
   .site-nav a {

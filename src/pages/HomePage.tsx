@@ -5,7 +5,7 @@ import type { LeadershipRadarData, TrackerData } from '../types'
 export function OverviewContent({ data, radarData }: { data: TrackerData; radarData: LeadershipRadarData }) {
   return (
       <div className="overview-content">
-        <header><p className="overview-kicker">A guide to the workspace</p><h1>Understand who leads.<br />See where shareholders push back.</h1>
+        <header><p className="overview-kicker">About Castling</p><h1>Understand who leads.<br />See where shareholders push back.</h1>
           <p>Explore company leadership, global CEO turnover trends and significant shareholder dissent, with clear source and coverage notes.</p></header>
         <div className="overview-links">
           <Link to="/heatmap"><h2>Heatmap <span>↗</span></h2><p>Choose the UK or US market, select a company, and inspect its governance evidence.</p><small>UK leadership scores · US verified tenure coverage expanding</small></Link>

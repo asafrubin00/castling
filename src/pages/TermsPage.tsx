@@ -12,7 +12,7 @@ export function TermsPage() {
 
           <div className="terms-panel__copy">
             <p>
-              Proxy Wars and all original associated content, including the site design,
+              Castling and all original associated content, including the site design,
               analytical frameworks, scoring methodology, governance taxonomy,
               visualisations, and written analysis, are the proprietary work of{' '}
               <a href="https://asafrubin00.github.io/asaf-rubin-website/" target="_blank" rel="noreferrer">
@@ -28,7 +28,7 @@ export function TermsPage() {
             </p>
             <p>
               This website is made available for personal, non-commercial research and
-              portfolio demonstration only. No original part of Proxy Wars may be
+              portfolio demonstration only. No original part of Castling may be
               reproduced, distributed, licensed, or used for commercial purposes without
               the express prior written permission of the author.
             </p>
