@@ -771,20 +771,34 @@
       "companyName": "Burberry Group",
       "ticker": "BRBY",
       "trackerAliases": [],
+      "previousRoles": [
+        {
+          "role": "chair",
+          "name": "Gerry Murphy",
+          "roleStartDate": "2018-05-01",
+          "roleEndDate": "2026-11-12",
+          "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
+          "sourceLabel": "Burberry Chair succession announcement",
+          "datePrecision": "month"
+        }
+      ],
       "roles": {
         "ceo": {
           "name": "Joshua Schulman",
           "roleStartDate": "2024-07-17",
           "sourceUrl": "https://www.burberryplc.com/content/dam/burberryplc/corporate/oar/oar-2024-2025/burberry_annual_report_and_accounts_2024_25_accessibility.pdf",
-          "sourceLabel": "Burberry 2024/25 Annual Report",
-          "datePrecision": "day"
+          "sourceLabel": "Burberry 2024/25 Annual Report; current leadership page rechecked",
+          "currentSourceUrl": "https://www.burberryplc.com/company/leadership-team",
+          "datePrecision": "day",
+          "verifiedAt": "2026-11-23"
         },
         "chair": {
-          "name": "Gerry Murphy",
-          "roleStartDate": "2018-05-01",
-          "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
-          "sourceLabel": "Burberry Chair succession announcement",
-          "datePrecision": "month"
+          "name": "William Jackson",
+          "roleStartDate": "2026-11-12",
+          "sourceUrl": "https://www.burberryplc.com/company/leadership-team",
+          "sourceLabel": "Current leadership page confirms Chair appointment on 12 November 2026",
+          "datePrecision": "day",
+          "verifiedAt": "2026-11-23"
         }
       }
     },

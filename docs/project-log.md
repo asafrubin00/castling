@@ -1,5 +1,12 @@
 # Project log
 
+## Weekly UK evidence batch, 23 November 2026
+
+- Reviewed Burberry and Babcock within the two-company budget (two targeted searches, four official documents). Burberry's current leadership page confirms William Jackson became Chair on 12 November 2026 and Joshua Schulman remains CEO, appointed 17 July 2024. Published both verification dates, retained Gerry Murphy's historical role, and closed the completed Chair succession without advancing the global cohort cutoff.
+- Babcock is pending reconciliation, not newly verified: current official profiles identify Harry Holt as CEO and Ruth Cairnie as Chair, while the annual-report landing page gives Holt's start as 1 August 2026. This predates the frozen 15 August audit, which still labels Lockwood's succession active. Publishing it would change the frozen calibration cohort; the evidence and blocker are recorded in a pending editorial queue entry instead of silently rewriting the audit. Cairnie's current profile supports only July 2019, not the stored exact day.
+- No changes to design, score weights, turnover or voting data; no bulk market or monitor run. Rebuild aligns Burberry's cached tenure boundaries and appointment profiles while preserving existing price observations and their download date.
+- Checks passed: 14 UK regression tests, leadership/calibration/profile build and validation, and production build. All frozen calibration summaries, outcomes and comparisons are unchanged, as are every cached market observation and the original download timestamp. William Jackson's tenure is too recent for a two-observation monthly chart; no history is inferred.
+
 ## Bounded UK leadership maintenance, 22 November 2026
 
 - Repaired the existing Monday review automation's moved-folder reference to `/Users/asafrubin/Developer/Castling`. The single job now alternates UK in even ISO weeks and US in odd weeks, preserving the total two-company, four-search, six-document and ten-minute limits rather than doubling token usage with another job.

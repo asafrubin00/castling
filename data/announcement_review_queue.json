@@ -1,6 +1,18 @@
 {
-  "updatedAt": "2026-11-22T12:10:56.748549+00:00",
+  "updatedAt": "2026-11-23T15:38:58+00:00",
   "candidates": [
+    {
+      "id": "bab-ceo-2026-11-23-calibration-reconciliation",
+      "ticker": "BAB",
+      "companyName": "Babcock International",
+      "title": "Editorial review: Harry Holt CEO appointment conflicts with frozen audit snapshot",
+      "url": "https://www.babcockinternational.com/investors/annual-report-financial-statements-2026/",
+      "signalTypes": ["succession"],
+      "detectedAt": "2026-11-23T15:38:58+00:00",
+      "reviewedAt": "2026-11-23",
+      "status": "pending",
+      "reviewNote": "The annual-report landing page explicitly states Harry Holt becomes CEO on 1 August 2026, and his current Board profile confirms he is Group Chief Executive. Ruth Cairnie remains Chair; the current profile supports July 2019 but not the stored exact day. Publishing the CEO correction and completedAt=2026-08-01 would remove a process labelled active at the frozen 15 August calibration cutoff and change the historical comparison cohort. Held for dedicated audit reconciliation, outside this bounded batch; neither Babcock role was marked newly verified. Current profile: https://www.babcockinternational.com/who-we-are/leadership-and-governance/the-board/harry-holt-dso-obe/ ; Chair: https://www.babcockinternational.com/who-we-are/leadership-and-governance/the-board/ruth-cairnie/"
+    },
     {
       "id": "mtln-bde65ae4e156d736",
       "ticker": "MTLN",

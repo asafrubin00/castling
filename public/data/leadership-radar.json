@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-11-22T12:16:49.348889+00:00",
+    "generatedAt": "2026-11-23T15:38:38.309213+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -32,8 +32,8 @@
       "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score pending calibration and outcome testing."
     },
     "successionCoverage": {
-      "activeCaseCount": 5,
-      "completedCaseCount": 2,
+      "activeCaseCount": 4,
+      "completedCaseCount": 3,
       "reviewedCompanyCount": 100,
       "asOfDate": "2026-08-15",
       "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
@@ -1738,15 +1738,17 @@
           "name": "Joshua Schulman",
           "roleStartDate": "2024-07-17",
           "sourceUrl": "https://www.burberryplc.com/content/dam/burberryplc/corporate/oar/oar-2024-2025/burberry_annual_report_and_accounts_2024_25_accessibility.pdf",
-          "sourceLabel": "Burberry 2024/25 Annual Report",
+          "sourceLabel": "Burberry 2024/25 Annual Report; current leadership page rechecked",
+          "currentSourceUrl": "https://www.burberryplc.com/company/leadership-team",
           "datePrecision": "day",
+          "verifiedAt": "2026-11-23",
           "rated": true,
-          "calculatedAsOf": "2026-08-15",
-          "tenureYears": 2.1,
-          "score": 16.8,
+          "calculatedAsOf": "2026-11-23",
+          "tenureYears": 2.4,
+          "score": 19.2,
           "band": "Lower",
           "components": {
-            "tenurePressure": 16.8,
+            "tenurePressure": 19.2,
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
@@ -1756,21 +1758,22 @@
             "maxScoredManagementDissentPct": null,
             "records": []
           },
-          "reason": "2.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+          "reason": "2.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "name": "Gerry Murphy",
-          "roleStartDate": "2018-05-01",
-          "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
-          "sourceLabel": "Burberry Chair succession announcement",
-          "datePrecision": "month",
+          "name": "William Jackson",
+          "roleStartDate": "2026-11-12",
+          "sourceUrl": "https://www.burberryplc.com/company/leadership-team",
+          "sourceLabel": "Current leadership page confirms Chair appointment on 12 November 2026",
+          "datePrecision": "day",
+          "verifiedAt": "2026-11-23",
           "rated": true,
-          "calculatedAsOf": "2026-08-15",
-          "tenureYears": 8.3,
-          "score": 73.8,
-          "band": "Acute",
+          "calculatedAsOf": "2026-11-23",
+          "tenureYears": 0.0,
+          "score": 0,
+          "band": "Lower",
           "components": {
-            "tenurePressure": 73.8,
+            "tenurePressure": 0,
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
@@ -1780,7 +1783,7 @@
             "maxScoredManagementDissentPct": null,
             "records": []
           },
-          "reason": "8.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+          "reason": "0.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -1859,23 +1862,8 @@
         }
       },
       "successionEvidence": {
-        "count": 1,
-        "cases": [
-          {
-            "id": "brby-chair-2026-05-14-successor-announced",
-            "ticker": "BRBY",
-            "role": "chair",
-            "status": "successor-announced",
-            "announcedDate": "2026-05-14",
-            "incumbentName": "Gerry Murphy",
-            "successorName": "William Jackson",
-            "incumbentDepartureDate": null,
-            "successorStartDate": null,
-            "summary": "William Jackson will succeed Gerry Murphy as Chair when Murphy retires at Burberry's interim-results announcement in November 2026. Jackson joined the Board on 1 July 2026 for the handover.",
-            "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
-            "sourceLabel": "Burberry Chair succession announcement"
-          }
-        ]
+        "count": 0,
+        "cases": []
       }
     },
     {
