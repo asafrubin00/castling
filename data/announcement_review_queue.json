@@ -1,13 +1,28 @@
 {
-  "updatedAt": "2026-11-23T15:38:58+00:00",
+  "updatedAt": "2026-11-23T19:05:51.305247+00:00",
   "candidates": [
+    {
+      "id": "mtln-e6e65062b9bc14ba",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "Nine Months 2026 Trading Update",
+      "url": "https://www.metlen.com/media/xcdpzjwl/metlen_buyback_weekly_transaction_announcement_-23-11-26.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-23T19:05:51.305247+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "bab-ceo-2026-11-23-calibration-reconciliation",
       "ticker": "BAB",
       "companyName": "Babcock International",
       "title": "Editorial review: Harry Holt CEO appointment conflicts with frozen audit snapshot",
       "url": "https://www.babcockinternational.com/investors/annual-report-financial-statements-2026/",
-      "signalTypes": ["succession"],
+      "signalTypes": [
+        "succession"
+      ],
       "detectedAt": "2026-11-23T15:38:58+00:00",
       "reviewedAt": "2026-11-23",
       "status": "pending",

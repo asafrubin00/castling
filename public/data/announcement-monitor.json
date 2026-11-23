@@ -1,22 +1,22 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-22T12:10:56.748549+00:00",
+    "generatedAt": "2026-11-23T19:05:51.305247+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 55,
-    "reachableSourceCount": 89,
-    "unavailableSourceCount": 11,
+    "activeSourceCount": 49,
+    "reachableSourceCount": 84,
+    "unavailableSourceCount": 16,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 9,
+      "access-blocked": 14,
       "not-found": 1,
       "timeout": 1
     },
     "newCandidateCount": 1,
-    "pendingCandidateCount": 105,
+    "pendingCandidateCount": 107,
     "pendingCandidateCountBySignal": {
-      "earnings": 84,
-      "succession": 22
+      "earnings": 85,
+      "succession": 23
     },
     "validation": {
       "status": "pass",
@@ -71,12 +71,9 @@
     },
     {
       "ticker": "ULVR",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.unilever.com/news/press-and-media/press-releases/: 403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
     },
     {
       "ticker": "IHG",
@@ -122,12 +119,9 @@
     },
     {
       "ticker": "CCEP",
-      "status": "active",
-      "matchedLinkCount": 25,
-      "matchedLinkCountBySignal": {
-        "earnings": 25,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://ir.cocacolaep.com/financial-reports-and-results/financial-releases: 403 Client Error: Forbidden for url: https://ir.cocacolaep.com/financial-reports-and-results/financial-releases"
     },
     {
       "ticker": "AAL",
@@ -146,12 +140,9 @@
     },
     {
       "ticker": "CCC",
-      "status": "active",
-      "matchedLinkCount": 3,
-      "matchedLinkCountBySignal": {
-        "earnings": 3,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://investors.computacenter.com/regulatory-news: 403 Client Error: Forbidden for url: https://investors.computacenter.com/regulatory-news"
     },
     {
       "ticker": "IMI",
@@ -323,10 +314,10 @@
     },
     {
       "ticker": "BRBY",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -341,10 +332,10 @@
     },
     {
       "ticker": "CPG",
-      "status": "active",
-      "matchedLinkCount": 3,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 3,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -467,12 +458,9 @@
     },
     {
       "ticker": "ADM",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://admiralgroup.co.uk/media/news-releases-and-media-contacts: 403 Client Error: Forbidden for url: https://admiralgroup.co.uk/media/news-releases-and-media-contacts"
     },
     {
       "ticker": "AAF",
@@ -611,12 +599,9 @@
     },
     {
       "ticker": "INF",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.informa.com/investors/results-presentations/: 403 Client Error: Forbidden for url: https://www.informa.com/investors/results-presentations/"
     },
     {
       "ticker": "ITRK",
