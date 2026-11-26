@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-11-25T18:38:41.791430+00:00",
+    "generatedAt": "2026-11-26T18:25:19.137551+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -3719,7 +3719,7 @@
     {
       "companyName": "IG Group",
       "ticker": "IGG",
-      "sector": "GB00B06QFB75",
+      "sector": "JE00C08DXT95",
       "roles": {
         "ceo": {
           "name": "Breon Corcoran",
