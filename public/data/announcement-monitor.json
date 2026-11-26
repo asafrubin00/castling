@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-25T18:12:10.846709+00:00",
+    "generatedAt": "2026-11-26T17:54:05.398857+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
@@ -9,14 +9,14 @@
     "unavailableSourceCount": 16,
     "unavailableSourceCountByCategory": {
       "access-blocked": 14,
-      "not-found": 1,
+      "fetch-error": 1,
       "timeout": 1
     },
-    "newCandidateCount": 0,
-    "pendingCandidateCount": 107,
+    "newCandidateCount": 3,
+    "pendingCandidateCount": 110,
     "pendingCandidateCountBySignal": {
-      "earnings": 85,
-      "succession": 23
+      "earnings": 87,
+      "succession": 24
     },
     "validation": {
       "status": "pass",
@@ -63,9 +63,9 @@
     {
       "ticker": "LSEG",
       "status": "active",
-      "matchedLinkCount": 187,
+      "matchedLinkCount": 188,
       "matchedLinkCountBySignal": {
-        "earnings": 187,
+        "earnings": 188,
         "succession": 0
       }
     },
@@ -621,10 +621,10 @@
     {
       "ticker": "JD",
       "status": "active",
-      "matchedLinkCount": 10,
+      "matchedLinkCount": 11,
       "matchedLinkCountBySignal": {
         "earnings": 7,
-        "succession": 3
+        "succession": 4
       }
     },
     {
@@ -873,8 +873,8 @@
     {
       "ticker": "WTB",
       "status": "unavailable",
-      "failureCategory": "not-found",
-      "error": "https://www.whitbread.co.uk/media/press-releases/: 404 Client Error: Not Found for url: https://www.whitbread.co.uk/media/press-releases/"
+      "failureCategory": "fetch-error",
+      "error": "https://www.whitbread.co.uk/media/press-releases/: HTTPSConnectionPool(host='www.whitbread.co.uk', port=443): Max retries exceeded with url: /media/press-releases/ (Caused by ResponseError('too many 504 error responses'))"
     }
   ]
 }
