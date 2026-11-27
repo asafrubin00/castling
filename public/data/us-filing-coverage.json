@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-26T21:50:50.991448+00:00",
-  "filedSince": "2025-10-22",
+  "generatedAt": "2026-11-27T21:34:59.648320+00:00",
+  "filedSince": "2025-10-23",
   "universe": "100-issuer research cohort derived from fund holdings and SEC issuer IDs",
   "universeName": "S&P 100",
   "rosterSourceUrl": "https://www.ishares.com/us/products/239723/ishares-sp-100-etf/latest-holdings.csv",
@@ -924,15 +924,6 @@
           "items": [],
           "accession": "0001104659-25-101876",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925101876/tm252289d41_defa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2025-10-22",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001104659-25-101559",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925101559/tm252289d40_defa14a.htm"
         }
       ]
     },
@@ -1449,17 +1440,6 @@
           ],
           "accession": "0000104169-25-000172",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000172/wmt-20251111.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2025-10-22",
-          "reportDate": "2025-10-22",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0000104169-25-000168",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000168/wmt-20251022.htm"
         }
       ]
     },

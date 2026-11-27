@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-26T21:50:51.040699+00:00",
-    "asOfDate": "2026-11-26",
-    "filingsGeneratedAt": "2026-11-26T21:50:50.991448+00:00",
+    "generatedAt": "2026-11-27T21:34:59.700585+00:00",
+    "asOfDate": "2026-11-27",
+    "filingsGeneratedAt": "2026-11-27T21:34:59.648320+00:00",
     "reviewPolicyDays": 30,
     "universeCount": 100,
     "universeName": "S&P 100",
@@ -1183,15 +1183,6 @@
           "items": [],
           "accession": "0001104659-25-101876",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925101876/tm252289d41_defa14a.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "DEFA14A",
-          "filedDate": "2025-10-22",
-          "reportDate": null,
-          "items": [],
-          "accession": "0001104659-25-101559",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925101559/tm252289d40_defa14a.htm"
         }
       ],
       "currentSourceUrls": [
@@ -1906,17 +1897,6 @@
           ],
           "accession": "0000104169-25-000172",
           "sourceUrl": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000172/wmt-20251111.htm"
-        },
-        {
-          "status": "pending-review",
-          "form": "8-K",
-          "filedDate": "2025-10-22",
-          "reportDate": "2025-10-22",
-          "items": [
-            "5.02"
-          ],
-          "accession": "0000104169-25-000168",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000168/wmt-20251022.htm"
         }
       ],
       "currentSourceUrls": [
